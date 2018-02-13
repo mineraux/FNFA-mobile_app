@@ -14,7 +14,9 @@ class ModelController: NSObject {
     var places = [NSMutableDictionary]()
     
     func loadJSON() {
+        
         if loadSavedJSON() == false {
+            
             loadDefaultJSON()
             saveJSON()
         }
@@ -57,6 +59,7 @@ class ModelController: NSObject {
     }
     
     func loadSavedJSON() -> Bool {
+        
         let folderPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         do {
             let filePath = folderPath + "/events.json"
