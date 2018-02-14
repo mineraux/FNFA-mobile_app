@@ -10,8 +10,11 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell{
 
-    
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var eventCategory: UILabel!
 
-    
+    @IBOutlet weak var eventName: UILabel!
+
+    @IBOutlet weak var eventTime: UILabel!
+
+    @IBOutlet weak var eventPlace: UILabel!
 }
