@@ -13,8 +13,8 @@ class ModelController: NSObject {
     var events = [NSMutableDictionary]()
     var places = [NSMutableDictionary]()
     
+    
     func loadJSON() {
-        
         if loadSavedJSON() == false {
             
             loadDefaultJSON()
@@ -25,6 +25,7 @@ class ModelController: NSObject {
     func saveJSON() {
         let folderPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         saveJSONTo(folderPath, which: events, fileName: "events")
+        saveJSONTo(folderPath, which: categories, fileName: "categories")
     }
     
     // private
@@ -68,9 +69,33 @@ class ModelController: NSObject {
             events = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
         }
         catch {
-            print("loadSavedJSON: error")
+            print("loadSavedJSON events: error")
             return false
         }
+        
+        if let URL = Bundle.main.url(forResource: "places", withExtension: "json")  {
+            do {
+                let data = try Data.init(contentsOf: URL)
+                places = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
+            }
+            catch {
+                print(error)
+            }
+        }
+        
+        if let URL = Bundle.main.url(forResource: "categories", withExtension: "json")  {
+            do {
+                let data = try Data.init(contentsOf: URL)
+                categories = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
+            }
+            catch {
+                print(error)
+            }
+        }
+        
+        setEventCategory()
+        setEventPlaces()
+        
         return true
     }
     
@@ -84,5 +109,49 @@ class ModelController: NSObject {
         catch {
             print(error)
         }
+    }
+    
+    func setEventCategory() {
+        for category in categories {
+            for event in events {
+                if category["id"] as! Int == event["categoryId"] as! Int {
+                    event["category"] = category["name"]
+                }
+            }
+        }
+    }
+    
+    func setEventPlaces(){
+        
+        for event in events {
+            
+            var eventPlacesIds = event["placeIds"] as! [Int]
+            var eventPlaces  = event["place"] as! [String]
+            
+            for place in places {
+                var i = 0
+                while i < eventPlacesIds.count {
+                    
+                    if(place["id"] as! Int == eventPlacesIds[i]) {
+                        let placeName = place["name"] as! String
+                        eventPlaces.append(placeName)
+                    }
+                    
+                    i+=1
+                }
+            }
+            event["place"] = eventPlaces
+        }
+    }
+    
+    func getEventsInFav() -> [NSMutableDictionary]{
+        var favEvents = [NSMutableDictionary]()
+        for event in events {
+            if event["isFav"] as! Bool == true {
+                favEvents.append(event)
+            }
+        }
+        
+        return favEvents
     }
 }

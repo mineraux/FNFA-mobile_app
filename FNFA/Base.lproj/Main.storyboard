@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--about-->
+        <!--allEvents-->
         <scene sceneID="FRg-pG-PgH">
             <objects>
-                <viewControllerPlaceholder storyboardName="about" id="9Ee-Py-tsx" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="allEvents" id="9Ee-Py-tsx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="KC4-cT-caQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZC-0A-aCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -45,6 +45,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HP1-bz-Zav" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LY3-FK-dnv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
