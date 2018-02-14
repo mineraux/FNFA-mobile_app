@@ -35,7 +35,7 @@ class HomeViewContoller: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCollectionViewCell
         
-        cell.label.text = "test"
+        cell.label?.text = "test"
         return cell
     }
 

@@ -84,18 +84,90 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-Ts-U2o">
+                                <rect key="frame" x="75" y="64" width="300" height="554"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcq-XF-tYL">
+                                        <rect key="frame" x="25" y="253" width="112" height="30"/>
+                                        <state key="normal" title="Séance spéciale"/>
+                                        <connections>
+                                            <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="nE4-U6-qva"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4U-yd-NUN">
+                                        <rect key="frame" x="25" y="139" width="131" height="30"/>
+                                        <state key="normal" title="Volet professionnel"/>
+                                        <connections>
+                                            <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="5Jd-FP-ygI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0f-Oh-mte">
+                                        <rect key="frame" x="25" y="215" width="175" height="30"/>
+                                        <state key="normal" title="Compétition et sélections"/>
+                                        <connections>
+                                            <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="hxo-Sm-4Ni"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrer ma recherche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYW-Sn-aam">
+                                        <rect key="frame" x="73" y="75" width="154" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-9S-h94">
+                                        <rect key="frame" x="25" y="177" width="108" height="30"/>
+                                        <state key="normal" title="Séance scolaire"/>
+                                        <connections>
+                                            <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="NrS-kf-sIc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.61176470588235299" green="0.68235294117647061" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="q0f-Oh-mte" firstAttribute="leading" secondItem="QJz-Ts-U2o" secondAttribute="leading" constant="25" id="1Bf-BE-i9v"/>
+                                    <constraint firstItem="BYW-Sn-aam" firstAttribute="centerX" secondItem="QJz-Ts-U2o" secondAttribute="centerX" id="3eT-lz-s7q"/>
+                                    <constraint firstItem="j4U-yd-NUN" firstAttribute="leading" secondItem="QJz-Ts-U2o" secondAttribute="leading" constant="25" id="6al-te-dgc"/>
+                                    <constraint firstItem="0qA-9S-h94" firstAttribute="leading" secondItem="QJz-Ts-U2o" secondAttribute="leading" constant="25" id="Isc-fQ-gpm"/>
+                                    <constraint firstItem="Dcq-XF-tYL" firstAttribute="top" secondItem="q0f-Oh-mte" secondAttribute="bottom" constant="8" id="Szy-Rj-tXY"/>
+                                    <constraint firstItem="Dcq-XF-tYL" firstAttribute="leading" secondItem="QJz-Ts-U2o" secondAttribute="leading" constant="25" id="Z5B-fd-bgi"/>
+                                    <constraint firstItem="0qA-9S-h94" firstAttribute="top" secondItem="j4U-yd-NUN" secondAttribute="bottom" constant="8" id="bJ5-V6-M57"/>
+                                    <constraint firstItem="j4U-yd-NUN" firstAttribute="top" secondItem="BYW-Sn-aam" secondAttribute="bottom" constant="43" id="dEL-QG-zEq"/>
+                                    <constraint firstAttribute="width" constant="300" id="hIW-bF-oQ0"/>
+                                    <constraint firstItem="BYW-Sn-aam" firstAttribute="top" secondItem="QJz-Ts-U2o" secondAttribute="top" constant="75" id="oaF-xT-TVV"/>
+                                    <constraint firstItem="q0f-Oh-mte" firstAttribute="top" secondItem="0qA-9S-h94" secondAttribute="bottom" constant="8" id="xMU-Xu-rHC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6S-ep-f4g">
+                                <rect key="frame" x="296" y="64" width="79" height="30"/>
+                                <state key="normal" title="show filters"/>
+                                <connections>
+                                    <action selector="showFilters:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="EMY-7B-0go"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" id="6dJ-qf-HL1"/>
+                            <constraint firstItem="QJz-Ts-U2o" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="HVA-Ri-1xs"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="HfA-rK-fHe"/>
+                            <constraint firstItem="S6S-ep-f4g" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="IiC-mb-Ghw"/>
+                            <constraint firstItem="S6S-ep-f4g" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" id="JOM-VA-Lhd"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="60" id="VOZ-Wb-AWd"/>
+                            <constraint firstItem="QJz-Ts-U2o" firstAttribute="bottom" secondItem="4zl-xR-u59" secondAttribute="bottom" id="glg-nT-ueO"/>
+                            <constraint firstItem="QJz-Ts-U2o" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" id="hxc-Ic-1VA"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="bottom" secondItem="4zl-xR-u59" secondAttribute="bottom" id="nEQ-J8-Hfx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4zl-xR-u59"/>
                     </view>
                     <navigationItem key="navigationItem" id="QCk-TY-c9t"/>
                     <connections>
+                        <outlet property="filterTrailingConstraint" destination="HVA-Ri-1xs" id="l6p-hr-GLH"/>
+                        <outlet property="filtersBtn" destination="Dcq-XF-tYL" id="vJX-T1-V51"/>
+                        <outlet property="filtersContainer" destination="QJz-Ts-U2o" id="qJB-5J-kNN"/>
+                        <outlet property="singleFilter_compet" destination="q0f-Oh-mte" id="gYP-TC-PKn"/>
+                        <outlet property="singleFilter_sceance_spe" destination="Dcq-XF-tYL" id="Q0q-Iu-1e1"/>
+                        <outlet property="singleFilter_seance_scolaire" destination="0qA-9S-h94" id="tca-Ev-iWG"/>
+                        <outlet property="singleFilter_volet_pro" destination="j4U-yd-NUN" id="8gk-U9-jfj"/>
                         <outlet property="tableView" destination="rhN-0R-fJl" id="Tfb-H5-5lT"/>
                     </connections>
                 </viewController>
