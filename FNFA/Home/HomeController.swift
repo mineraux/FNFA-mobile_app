@@ -30,7 +30,6 @@ class HomeViewContoller: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (modelController?.events.count)!
     }
@@ -39,13 +38,32 @@ class HomeViewContoller: UIViewController, UICollectionViewDelegate, UICollectio
         let homeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCollectionViewCell
 
         let eventDict = modelController?.events[indexPath.row]
-        //let categorId = (eventDict?["categoryId"] as! Int)
-        //print(categorId)
+        
+        //Category
         homeCell.eventCategory.text = (eventDict?["category"] as! String)
+        
+        //Name
         homeCell.eventName.text = (eventDict?["name"] as! String)
-        homeCell.eventTime.text = "Heure"
-        homeCell.eventPlace.text = "Place"
+        
+        //Heure
+        let dateIso = eventDict!["startingDate"]
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
+        formatter.timeZone = TimeZone(identifier: "Europe/Paris")
+        
+        if let date = formatter.date(from: dateIso as! String) {
+            homeCell.eventTime!.text = date.hourDate
+        }
+
+        
+        //Places
+        homeCell.eventPlace!.text = (eventDict?["place"] as! [String]).joined(separator: ", ")
+        
+        //Image
+        homeCell.eventImage.image = UIImage(named:"seance_scolaire")
+        
         homeCell.layer.cornerRadius = 10;
+        
         return homeCell
     }
 

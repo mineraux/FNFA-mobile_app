@@ -17,4 +17,6 @@ class HomeCollectionViewCell: UICollectionViewCell{
     @IBOutlet weak var eventTime: UILabel!
 
     @IBOutlet weak var eventPlace: UILabel!
+    
+    @IBOutlet weak var eventImage: UIImageView!
 }
