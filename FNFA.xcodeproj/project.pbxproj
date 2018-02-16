@@ -28,6 +28,9 @@
 		5DAA45522031E11500A7408E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA45512031E11500A7408E /* TableViewController.swift */; };
 		A13057EA203340F4003246AF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057E9203340F4003246AF /* HomeController.swift */; };
 		A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057EB20334188003246AF /* HomeCollectionViewCell.swift */; };
+		FA109CF720360E2100B54CAD /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109CF620360E2100B54CAD /* HomeTableViewController.swift */; };
+		FA109CFA20364BC600B54CAD /* HomeMySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109CF920364BC600B54CAD /* HomeMySelectionViewController.swift */; };
+		FA109CFC20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109CFB20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		5DAA45512031E11500A7408E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A13057E9203340F4003246AF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A13057EB20334188003246AF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA109CF620360E2100B54CAD /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		FA109CF920364BC600B54CAD /* HomeMySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMySelectionViewController.swift; sourceTree = "<group>"; };
+		FA109CFB20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMySelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,11 +151,22 @@
 		A13057ED20334425003246AF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA109CF82036149D00B54CAD /* My selection */,
 				5D73FE1F2032FA7E007FB93A /* home.storyboard */,
+				FA109CF620360E2100B54CAD /* HomeTableViewController.swift */,
 				A13057EB20334188003246AF /* HomeCollectionViewCell.swift */,
 				A13057E9203340F4003246AF /* HomeController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FA109CF82036149D00B54CAD /* My selection */ = {
+			isa = PBXGroup;
+			children = (
+				FA109CF920364BC600B54CAD /* HomeMySelectionViewController.swift */,
+				FA109CFB20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift */,
+			);
+			path = "My selection";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,14 +250,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D6F768120331D980045D582 /* dateFormatter.swift in Sources */,
+				FA109CF720360E2100B54CAD /* HomeTableViewController.swift in Sources */,
 				5D50600A2031E456009F7E03 /* ModelController.swift in Sources */,
 				5DAA45402031DEE500A7408E /* AppDelegate.swift in Sources */,
 				5DAA45522031E11500A7408E /* TableViewController.swift in Sources */,
 				5D2CD57620343E7E0023073E /* favoritesController.swift in Sources */,
+				FA109CFA20364BC600B54CAD /* HomeMySelectionViewController.swift in Sources */,
 				5D6F768620331F000045D582 /* cellAllEventsController.swift in Sources */,
 				5D73FE2820330102007FB93A /* allEventsController.swift in Sources */,
 				5D2CD5782034463C0023073E /* cellFavoritesController.swift in Sources */,
 				A13057EA203340F4003246AF /* HomeController.swift in Sources */,
+				FA109CFC20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift in Sources */,
 				A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
