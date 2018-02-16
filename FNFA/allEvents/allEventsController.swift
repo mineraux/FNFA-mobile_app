@@ -8,18 +8,16 @@
 
 import UIKit
 
-class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
+    
 
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var filtersBtn: UIButton!
-    @IBOutlet weak var filtersContainer: UIView!
     @IBOutlet weak var filterTrailingConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var singleFilter_sceance_spe: UIButton!
     @IBOutlet weak var singleFilter_volet_pro: UIButton!
-    @IBOutlet weak var singleFilter_seance_scolaire: UIButton!
-    @IBOutlet weak var singleFilter_compet: UIButton!
     
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
@@ -34,7 +32,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.tableView.rowHeight = 94
+        // rowHeight = taille de la cellule + marge inter cellules = 90 + 12 + 12 = 114
+        self.tableView.rowHeight = 114
         
         filteredEvents = (modelController?.events)!
         
@@ -42,8 +41,9 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         styleBtn(btn: singleFilter_sceance_spe)
         styleBtn(btn: singleFilter_volet_pro)
-        styleBtn(btn: singleFilter_seance_scolaire)
-        styleBtn(btn: singleFilter_compet)
+//        styleBtn(btn: singleFilter_seance_scolaire)
+//        styleBtn(btn: singleFilter_compet)
+        
 
     }
     
@@ -76,11 +76,15 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         // Configure the cell...
         let eventDict = filteredEvents[indexPath.row]
         
+        cell.eventThumbnail.layer.cornerRadius = 4
+        cell.eventThumbnail.layer.masksToBounds = true
+        
         cell.eventName.text = (eventDict["name"] as! String)
         cell.eventCategory.text = (eventDict["category"] as! String)
+        cell.eventId = (eventDict["id"] as! Int)
         
         let isFav = (eventDict["isFav"] as! Bool)
-        cell.accessoryType = (isFav) ? .checkmark : .none
+//        cell.accessoryType = (isFav) ? .checkmark : .none
         
         // Set hour event
         let dateIso = eventDict["startingDate"]
@@ -91,6 +95,9 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         if let date = formatter.date(from: dateIso as! String) {
             cell.eventDate!.text = date.hourDate
         }
+        
+        cell.containerCell.layer.cornerRadius = 4
+        cell.containerCell.layer.masksToBounds = true
         
         // Set place event
         cell.eventPlaces!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
@@ -133,18 +140,18 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func showFilters(_ sender: Any) {
         if isFiltersHidden {
             filterTrailingConstraint.constant = 0
-            
+
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
         } else {
             filterTrailingConstraint.constant = 320
-            
+
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
         }
-        
+
         isFiltersHidden = !isFiltersHidden
     }
     /*
