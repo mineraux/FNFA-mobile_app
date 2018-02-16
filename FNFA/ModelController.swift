@@ -28,6 +28,17 @@ class ModelController: NSObject {
         saveJSONTo(folderPath, which: categories, fileName: "categories")
     }
     
+    func getEventsInFav() -> [NSMutableDictionary]{
+        var favEvents = [NSMutableDictionary]()
+        for event in events {
+            if event["isFav"] as! Bool == true {
+                favEvents.append(event)
+            }
+        }
+        
+        return favEvents
+    }
+    
     // private
     func loadDefaultJSON() {
         if let URL = Bundle.main.url(forResource: "categories", withExtension: "json")  {
@@ -125,33 +136,20 @@ class ModelController: NSObject {
         
         for event in events {
             
-            var eventPlacesIds = event["placeIds"] as! [Int]
+            let eventPlacesIds = event["placeIds"] as! [Int]
             var eventPlaces  = event["place"] as! [String]
             
             for place in places {
-                var i = 0
-                while i < eventPlacesIds.count {
+                
+                for id in eventPlacesIds {
                     
-                    if(place["id"] as! Int == eventPlacesIds[i]) {
+                    if(place["id"] as! Int == id) {
                         let placeName = place["name"] as! String
                         eventPlaces.append(placeName)
                     }
-                    
-                    i+=1
                 }
             }
             event["place"] = eventPlaces
         }
-    }
-    
-    func getEventsInFav() -> [NSMutableDictionary]{
-        var favEvents = [NSMutableDictionary]()
-        for event in events {
-            if event["isFav"] as! Bool == true {
-                favEvents.append(event)
-            }
-        }
-        
-        return favEvents
     }
 }

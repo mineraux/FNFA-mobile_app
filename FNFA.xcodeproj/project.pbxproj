@@ -21,6 +21,7 @@
 		5D73FE222032FA91007FB93A /* singleEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D73FE212032FA91007FB93A /* singleEvent.storyboard */; };
 		5D73FE242032FA9D007FB93A /* favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D73FE232032FA9D007FB93A /* favorites.storyboard */; };
 		5D73FE2820330102007FB93A /* allEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D73FE2720330102007FB93A /* allEventsController.swift */; };
+		5D98A3D020348081004ACDBD /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98A3CF20348081004ACDBD /* colors.swift */; };
 		5DAA45402031DEE500A7408E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA453F2031DEE500A7408E /* AppDelegate.swift */; };
 		5DAA45452031DEE500A7408E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA45432031DEE500A7408E /* Main.storyboard */; };
 		5DAA45472031DEE500A7408E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA45462031DEE500A7408E /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		5D73FE212032FA91007FB93A /* singleEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = singleEvent.storyboard; sourceTree = "<group>"; };
 		5D73FE232032FA9D007FB93A /* favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = favorites.storyboard; sourceTree = "<group>"; };
 		5D73FE2720330102007FB93A /* allEventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allEventsController.swift; sourceTree = "<group>"; };
+		5D98A3CF20348081004ACDBD /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		5DAA453C2031DEE500A7408E /* FNFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FNFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAA453F2031DEE500A7408E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAA45442031DEE500A7408E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5D6F768020331D980045D582 /* dateFormatter.swift */,
+				5D98A3CF20348081004ACDBD /* colors.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				5D2CD57620343E7E0023073E /* favoritesController.swift in Sources */,
 				FA109CFA20364BC600B54CAD /* HomeMySelectionViewController.swift in Sources */,
 				5D6F768620331F000045D582 /* cellAllEventsController.swift in Sources */,
+				5D98A3D020348081004ACDBD /* colors.swift in Sources */,
 				5D73FE2820330102007FB93A /* allEventsController.swift in Sources */,
 				5D2CD5782034463C0023073E /* cellFavoritesController.swift in Sources */,
 				A13057EA203340F4003246AF /* HomeController.swift in Sources */,
