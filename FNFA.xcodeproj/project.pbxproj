@@ -34,6 +34,8 @@
 		FA109CFC20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109CFB20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift */; };
 		FA109CFF2036605C00B54CAD /* HomeTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109CFE2036605C00B54CAD /* HomeTodayViewController.swift */; };
 		FA109D012036618A00B54CAD /* HomeTodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D002036618A00B54CAD /* HomeTodayCollectionViewCell.swift */; };
+		FA109D042036672500B54CAD /* HomeTomorrowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */; };
+		FA109D062036676D00B54CAD /* HomeTomorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D052036676D00B54CAD /* HomeTomorrowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		FA109CFB20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMySelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA109CFE2036605C00B54CAD /* HomeTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayViewController.swift; sourceTree = "<group>"; };
 		FA109D002036618A00B54CAD /* HomeTodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTomorrowCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA109D052036676D00B54CAD /* HomeTomorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTomorrowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +162,9 @@
 		A13057ED20334425003246AF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FA109CFD2036600E00B54CAD /* Today */,
 				FA109CF82036149D00B54CAD /* My selection */,
+				FA109CFD2036600E00B54CAD /* Today */,
+				FA109D02203666F900B54CAD /* Tomorrow */,
 				5D73FE1F2032FA7E007FB93A /* home.storyboard */,
 				FA109CF620360E2100B54CAD /* HomeTableViewController.swift */,
 				A13057EB20334188003246AF /* HomeCollectionViewCell.swift */,
@@ -184,6 +189,15 @@
 				FA109D002036618A00B54CAD /* HomeTodayCollectionViewCell.swift */,
 			);
 			path = Today;
+			sourceTree = "<group>";
+		};
+		FA109D02203666F900B54CAD /* Tomorrow */ = {
+			isa = PBXGroup;
+			children = (
+				FA109D052036676D00B54CAD /* HomeTomorrowViewController.swift */,
+				FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */,
+			);
+			path = Tomorrow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +292,11 @@
 				5D6F768620331F000045D582 /* cellAllEventsController.swift in Sources */,
 				5D98A3D020348081004ACDBD /* colors.swift in Sources */,
 				5D73FE2820330102007FB93A /* allEventsController.swift in Sources */,
+				FA109D062036676D00B54CAD /* HomeTomorrowViewController.swift in Sources */,
 				5D2CD5782034463C0023073E /* cellFavoritesController.swift in Sources */,
 				A13057EA203340F4003246AF /* HomeController.swift in Sources */,
 				FA109CFC20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift in Sources */,
+				FA109D042036672500B54CAD /* HomeTomorrowCollectionViewCell.swift in Sources */,
 				A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
