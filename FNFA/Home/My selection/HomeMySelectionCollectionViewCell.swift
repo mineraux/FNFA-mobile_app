@@ -14,6 +14,5 @@ class HomeMySelectionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventPlace: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
-
     @IBOutlet weak var eventDate: UILabel!
 }

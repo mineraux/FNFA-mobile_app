@@ -10,6 +10,8 @@ import UIKit
 
 class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var modelController: ModelController?
     
     override func viewDidLoad() {
@@ -18,6 +20,16 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
 
+    }
+    //For paging
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //var insets = self.collectionView.contentInset
+        //let value = (self.view.frame.size.width - (self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
+        //insets.left = value
+        //insets.right = value
+        //self.collectionView.contentInset = insets
+        self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
     }
 
     override func didReceiveMemoryWarning() {
