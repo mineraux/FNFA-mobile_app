@@ -11,6 +11,11 @@ import UIKit
 class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var sectionTitle: UILabel!
+
+    @IBOutlet weak var seeAllLabel: UILabel!
+    @IBOutlet weak var seeAllImage: UIImageView!
+    
     
     var modelController: ModelController?
     
@@ -20,7 +25,11 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
 
+        
+        seeAllImage.image = UIImage(named:"chevron")
+        
     }
+    
     //For paging
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -37,7 +46,6 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -47,6 +55,10 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    // COLLECTION VIEW
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (modelController?.events.count)!

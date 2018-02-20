@@ -24,11 +24,11 @@
 		5D98A3D020348081004ACDBD /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98A3CF20348081004ACDBD /* colors.swift */; };
 		5DAA45402031DEE500A7408E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA453F2031DEE500A7408E /* AppDelegate.swift */; };
 		5DAA45452031DEE500A7408E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA45432031DEE500A7408E /* Main.storyboard */; };
-		5DAA45472031DEE500A7408E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA45462031DEE500A7408E /* Assets.xcassets */; };
 		5DAA454A2031DEE500A7408E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */; };
 		5DAA45522031E11500A7408E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA45512031E11500A7408E /* TableViewController.swift */; };
 		A13057EA203340F4003246AF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057E9203340F4003246AF /* HomeController.swift */; };
 		A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057EB20334188003246AF /* HomeCollectionViewCell.swift */; };
+		A16CA5A6203C8104007ADAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16CA5A5203C8104007ADAB4 /* Assets.xcassets */; };
 		A1FD4E23203C1F2D002700B9 /* CenterCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD4E22203C1F2D002700B9 /* CenterCollectionViewFlowLayout.swift */; };
 		A1FD4E39203C36FF002700B9 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1FD4E27203C36FF002700B9 /* Raleway-Black.ttf */; };
 		A1FD4E3A203C36FF002700B9 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1FD4E28203C36FF002700B9 /* Raleway-BlackItalic.ttf */; };
@@ -94,12 +94,12 @@
 		5DAA453C2031DEE500A7408E /* FNFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FNFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAA453F2031DEE500A7408E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAA45442031DEE500A7408E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5DAA45462031DEE500A7408E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DAA45492031DEE500A7408E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAA454B2031DEE500A7408E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DAA45512031E11500A7408E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A13057E9203340F4003246AF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A13057EB20334188003246AF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A16CA5A5203C8104007ADAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1FD4E22203C1F2D002700B9 /* CenterCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		A1FD4E27203C36FF002700B9 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		A1FD4E28203C36FF002700B9 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -215,6 +215,7 @@
 		5DAA453E2031DEE500A7408E /* FNFA */ = {
 			isa = PBXGroup;
 			children = (
+				A16CA5A5203C8104007ADAB4 /* Assets.xcassets */,
 				A1FD4E24203C369E002700B9 /* Ressource */,
 				5DAA453F2031DEE500A7408E /* AppDelegate.swift */,
 				5D6F767F20331D570045D582 /* utils */,
@@ -226,7 +227,6 @@
 				5D73FE212032FA91007FB93A /* singleEvent.storyboard */,
 				5D2CD57420343E620023073E /* favorites */,
 				5D73FE1D2032F90B007FB93A /* about.storyboard */,
-				5DAA45462031DEE500A7408E /* Assets.xcassets */,
 				5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */,
 				5DAA454B2031DEE500A7408E /* Info.plist */,
 				5D5060062031E325009F7E03 /* JSON Files */,
@@ -426,6 +426,7 @@
 				A1FD4E47203C36FF002700B9 /* Raleway-SemiBold.ttf in Resources */,
 				5D73FE202032FA7E007FB93A /* home.storyboard in Resources */,
 				A1FD4E6F203C3913002700B9 /* Montserrat-ThinItalic.ttf in Resources */,
+				A16CA5A6203C8104007ADAB4 /* Assets.xcassets in Resources */,
 				A1FD4E61203C3913002700B9 /* Montserrat-BoldItalic.ttf in Resources */,
 				5D5060052031E31D009F7E03 /* places.json in Resources */,
 				A1FD4E62203C3913002700B9 /* Montserrat-ExtraBold.ttf in Resources */,
@@ -437,7 +438,6 @@
 				5D73FE242032FA9D007FB93A /* favorites.storyboard in Resources */,
 				A1FD4E66203C3913002700B9 /* Montserrat-Italic.ttf in Resources */,
 				A1FD4E39203C36FF002700B9 /* Raleway-Black.ttf in Resources */,
-				5DAA45472031DEE500A7408E /* Assets.xcassets in Resources */,
 				A1FD4E3A203C36FF002700B9 /* Raleway-BlackItalic.ttf in Resources */,
 				A1FD4E6C203C3913002700B9 /* Montserrat-SemiBold.ttf in Resources */,
 				A1FD4E3C203C36FF002700B9 /* Raleway-BoldItalic.ttf in Resources */,
