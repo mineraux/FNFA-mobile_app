@@ -46,8 +46,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         styleBtn(btn: singleFilter_volet_pro)
 //        styleBtn(btn: singleFilter_seance_scolaire)
 //        styleBtn(btn: singleFilter_compet)
-        
-//        print("test WORLD".capitalizingFirstLetter())
     }
     
     
@@ -88,7 +86,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.eventId = (eventDict["id"] as! Int)
         
         let isFav = (eventDict["isFav"] as! Bool)
-//        cell.accessoryType = (isFav) ? .checkmark : .none
         
         // Set hour event
         let dateIso = eventDict["startingDate"]

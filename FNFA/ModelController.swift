@@ -75,6 +75,7 @@ class ModelController: NSObject {
         let folderPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         do {
             let filePath = folderPath + "/events.json"
+            print(filePath)
             let url = URL.init(fileURLWithPath: filePath)
             let data = try Data.init(contentsOf: url)
             events = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
@@ -133,22 +134,23 @@ class ModelController: NSObject {
     }
     
     func setEventPlaces(){
-        
         for event in events {
             
             let eventPlacesIds = event["placeIds"] as! [Int]
             var eventPlaces  = event["place"] as! [String]
-            
-            for place in places {
-                
-                for id in eventPlacesIds {
+            if eventPlaces.count == 0 {
+                for place in places {
                     
-                    if(place["id"] as! Int == id) {
-                        let placeName = place["name"] as! String
-                        eventPlaces.append(placeName)
+                    for id in eventPlacesIds {
+                        
+                        if(place["id"] as! Int == id) {
+                            let placeName = place["name"] as! String
+                            eventPlaces.append(placeName)
+                        }
                     }
                 }
             }
+
             event["place"] = eventPlaces
         }
     }
