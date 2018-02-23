@@ -19,13 +19,16 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterTrailingConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var showFiltersBtn: UIButton!
     @IBOutlet weak var singleFilter_sceance_spe: UIButton!
     @IBOutlet weak var singleFilter_volet_pro: UIButton!
+    
+    @IBOutlet weak var closeFiltersBtn: UIButton!
+    
     
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
     var activeFilters = [String]()
-    var isFiltersHidden = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +43,22 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         filteredEvents = (modelController?.events)!
         
-        filterTrailingConstraint.constant = 320
+        filterTrailingConstraint.constant = 355
         
         styleBtn(btn: singleFilter_sceance_spe)
         styleBtn(btn: singleFilter_volet_pro)
 //        styleBtn(btn: singleFilter_seance_scolaire)
 //        styleBtn(btn: singleFilter_compet)
+        
+        // Style btn show filters
+        showFiltersBtn.layer.cornerRadius = 25
+        showFiltersBtn.contentEdgeInsets = UIEdgeInsets(top: 17, left: 25, bottom: 17, right: 16)
+        showFiltersBtn.setImage(UIImage(named:"filtersIco"), for: .normal)
+        showFiltersBtn.imageEdgeInsets = UIEdgeInsets(top: 0,left: -13,bottom: 0,right: 0)
+        
+        closeFiltersBtn.layer.cornerRadius = 25
+        closeFiltersBtn.contentEdgeInsets = UIEdgeInsets(top: 15, left: 16, bottom: 15, right: 86)
     }
-    
     
     func styleBtn(btn: UIButton!){
         btn.backgroundColor = .clear
@@ -158,22 +169,26 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func showFilters(_ sender: Any) {
-        if isFiltersHidden {
-            filterTrailingConstraint.constant = 0
+        filterTrailingConstraint.constant = 0
 
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.layoutIfNeeded()
-            })
-        } else {
-            filterTrailingConstraint.constant = 320
-
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.layoutIfNeeded()
-            })
-        }
-
-        isFiltersHidden = !isFiltersHidden
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+            self.tableView.alpha = 0.3
+        })
+        
+        
     }
+    
+    @IBAction func closeFilters(_ sender: Any) {
+        filterTrailingConstraint.constant = 355
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+            self.tableView.alpha = 1
+        })
+    }
+    
+    
     /*
     // MARK: - Navigation
 
