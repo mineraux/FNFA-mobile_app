@@ -47,6 +47,7 @@ class cellAllEventsController: UITableViewCell {
                 if event["isFav"] as! Bool == true {
                     let image = UIImage(named: "heart_full")
                     self.BtnAddToFav.setImage(image, for: .normal)
+
                 } else {
                     let image = UIImage(named: "heart_empty")
                     self.BtnAddToFav.setImage(image, for: .normal)
@@ -54,5 +55,16 @@ class cellAllEventsController: UITableViewCell {
                 break
             }
         }
+        
+        UIView.animate(
+            withDuration: 0.2,
+            animations: {
+                self.BtnAddToFav.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        },
+            completion: { _ in
+                UIView.animate(withDuration: 0.2) {
+                    self.BtnAddToFav.transform = CGAffineTransform.identity
+                }
+        })
     }
 }
