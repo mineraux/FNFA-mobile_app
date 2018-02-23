@@ -41,8 +41,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         styleBtn(btn: singleFilter_volet_pro)
 //        styleBtn(btn: singleFilter_seance_scolaire)
 //        styleBtn(btn: singleFilter_compet)
-        
-
     }
     
     
@@ -99,19 +97,36 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // Set place event
         cell.eventPlaces!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
-                
+        
+        favIconeManager(indexPath: indexPath, addToFavBtn: cell.BtnAddToFav)
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            let eventDict = filteredEvents[indexPath.row]
-            let isFav = !(eventDict["isFav"] as! Bool)
-            eventDict["isFav"] = isFav
-            modelController?.saveJSON()
-            cell.accessoryType = (isFav) ? .checkmark : .none
-            tableView.deselectRow(at: indexPath, animated: true)
+    // Gere quelle icone de favoris afficher pour chaque cell.
+    // On utilise IndexPath pour être sur de cibler la bonne cellule
+    // et ne pas avoir de problème lors du recyclage des cellules
+    
+    func favIconeManager(indexPath: IndexPath, addToFavBtn: UIButton) {
+        let eventDict = filteredEvents[indexPath.row]
+        if eventDict["isFav"] as! Bool == true {
+            let image = UIImage(named: "heart_full")
+            addToFavBtn.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "heart_empty")
+            addToFavBtn.setImage(image, for: .normal)
         }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let cell = tableView.cellForRow(at: indexPath) {
+//            let eventDict = filteredEvents[indexPath.row]
+//            let isFav = !(eventDict["isFav"] as! Bool)
+//            eventDict["isFav"] = isFav
+//            modelController?.saveJSON()
+//            cell.accessoryType = (isFav) ? .checkmark : .none
+            tableView.deselectRow(at: indexPath, animated: true)
     }
 
     @IBAction func onTouchFiltersBtn(_ sender: UIButton) {
