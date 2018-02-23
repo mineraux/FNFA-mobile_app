@@ -39,10 +39,6 @@ class cellAllEventsController: UITableViewCell {
     }
 
     @IBAction func addToFav(_ sender: Any) {
-        // filteredEvents =
-        // filteredEvents.filter { (event) -> Bool in
-           // event["id"] as! Int == eventId
-        // }.first
         for event in filteredEvents {
             if event["id"] as! Int == eventId {
                     let isFav = !(event["isFav"] as! Bool)

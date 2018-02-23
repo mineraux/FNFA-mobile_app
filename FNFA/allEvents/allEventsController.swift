@@ -8,11 +8,18 @@
 
 import UIKit
 
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
 class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    
-
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterTrailingConstraint: NSLayoutConstraint!
     
@@ -43,16 +50,19 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         styleBtn(btn: singleFilter_volet_pro)
 //        styleBtn(btn: singleFilter_seance_scolaire)
 //        styleBtn(btn: singleFilter_compet)
+        
+//        print("test WORLD".capitalizingFirstLetter())
     }
     
     
     func styleBtn(btn: UIButton!){
         btn.backgroundColor = .clear
-        btn.layer.cornerRadius = 20
+        btn.layer.cornerRadius = 18
         btn.layer.borderWidth = 2
-        btn.layer.borderColor = color_darkmauve.cgColor
-        btn.setTitleColor(color_darkmauve, for: .normal)
-        btn.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        btn.layer.borderColor = UIColor(named: "Black40")?.cgColor
+        btn.setTitleColor(UIColor(named: "Black40"), for: .normal)
+        btn.setTitle(btn.titleLabel?.text?.uppercased(), for: .normal)
+        btn.contentEdgeInsets = UIEdgeInsets(top: 12, left: 17, bottom: 12, right: 17)
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,7 +88,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.eventThumbnail.layer.masksToBounds = true
         
         cell.eventName.text = (eventDict["name"] as! String)
-        cell.eventCategory.text = (eventDict["category"] as! String)
+        cell.eventCategory.text = (eventDict["category"] as! String).uppercased()
         cell.eventId = (eventDict["id"] as! Int)
         
         let isFav = (eventDict["isFav"] as! Bool)
@@ -118,7 +128,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
             let image = UIImage(named: "heart_empty")
             addToFavBtn.setImage(image, for: .normal)
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -133,13 +142,16 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBAction func onTouchFiltersBtn(_ sender: UIButton) {
         
-        if let index = activeFilters.index(of: (sender.titleLabel?.text)!) {
+        let titleLowercased = sender.titleLabel?.text?.lowercased()
+        let titleCapitalized = titleLowercased?.capitalizingFirstLetter()
+        
+        if let index = activeFilters.index(of: (titleCapitalized)!) {
             activeFilters.remove(at: index)
             sender.backgroundColor = .clear
             sender.setTitleColor(color_darkmauve, for: .normal)
             
         } else {
-            activeFilters.append((sender.titleLabel?.text)!)
+            activeFilters.append((titleCapitalized)!)
             sender.backgroundColor = color_darkmauve
             sender.setTitleColor(UIColor.white, for: .normal)
         }
