@@ -174,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="287.19999999999999" y="77.811094452773617"/>
         </scene>
-        <!--allEvents-->
+        <!--allEventsController-->
         <scene sceneID="0i1-d0-N5K">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FgK-Bp-vt1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="allEvents" title="allEventsController" automaticallyAdjustsScrollViewInsets="NO" id="FgK-Bp-vt1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="allEvents" id="BRA-CG-CpV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

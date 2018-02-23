@@ -11,8 +11,6 @@ import UIKit
 class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     
-
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterTrailingConstraint: NSLayoutConstraint!
     

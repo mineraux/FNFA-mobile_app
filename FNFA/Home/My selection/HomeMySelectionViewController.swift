@@ -12,9 +12,16 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionTitle: UILabel!
-
+    
+    
     @IBOutlet weak var seeAllLabel: UILabel!
     @IBOutlet weak var seeAllImage: UIImageView!
+    
+    //Tap on seeAllView
+    @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
+        print("tap on seeAllView")
+        
+    }
     
     
     var modelController: ModelController?
@@ -27,6 +34,9 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
 
         
         seeAllImage.image = UIImage(named:"chevron")
+        
+        
+        
         
     }
     
