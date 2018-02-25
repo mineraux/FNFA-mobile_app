@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005804D120430B5C0055F42F /* SingleEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005804D020430B5C0055F42F /* SingleEventController.swift */; };
 		5D2CD57620343E7E0023073E /* favoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2CD57520343E7E0023073E /* favoritesController.swift */; };
 		5D2CD5782034463C0023073E /* cellFavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2CD5772034463C0023073E /* cellFavoritesController.swift */; };
 		5D5060032031E31D009F7E03 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D5060002031E31D009F7E03 /* categories.json */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005804D020430B5C0055F42F /* SingleEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventController.swift; sourceTree = "<group>"; };
 		5D2CD57520343E7E0023073E /* favoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritesController.swift; sourceTree = "<group>"; };
 		5D2CD5772034463C0023073E /* cellFavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellFavoritesController.swift; sourceTree = "<group>"; };
 		5D5060002031E31D009F7E03 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
@@ -157,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		005804CD204305570055F42F /* singleEvent */ = {
+			isa = PBXGroup;
+			children = (
+				5D73FE212032FA91007FB93A /* singleEvent.storyboard */,
+				005804D020430B5C0055F42F /* SingleEventController.swift */,
+			);
+			path = singleEvent;
+			sourceTree = "<group>";
+		};
 		5D2CD57420343E620023073E /* favorites */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +234,8 @@
 				5D5060092031E456009F7E03 /* ModelController.swift */,
 				5DAA45432031DEE500A7408E /* Main.storyboard */,
 				5D6F768220331EBA0045D582 /* allEvents */,
+				005804CD204305570055F42F /* singleEvent */,
 				A13057ED20334425003246AF /* Home */,
-				5D73FE212032FA91007FB93A /* singleEvent.storyboard */,
 				5D2CD57420343E620023073E /* favorites */,
 				5D73FE1D2032F90B007FB93A /* about.storyboard */,
 				5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */,
@@ -461,6 +472,7 @@
 			files = (
 				A1FD4E23203C1F2D002700B9 /* CenterCollectionViewFlowLayout.swift in Sources */,
 				5D6F768120331D980045D582 /* dateFormatter.swift in Sources */,
+				005804D120430B5C0055F42F /* SingleEventController.swift in Sources */,
 				FA109CFF2036605C00B54CAD /* HomeTodayViewController.swift in Sources */,
 				FA109CF720360E2100B54CAD /* HomeTableViewController.swift in Sources */,
 				5D50600A2031E456009F7E03 /* ModelController.swift in Sources */,

@@ -133,16 +133,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
             addToFavBtn.setImage(image, for: .normal)
         }
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let cell = tableView.cellForRow(at: indexPath) {
-//            let eventDict = filteredEvents[indexPath.row]
-//            let isFav = !(eventDict["isFav"] as! Bool)
-//            eventDict["isFav"] = isFav
-//            modelController?.saveJSON()
-//            cell.accessoryType = (isFav) ? .checkmark : .none
-            tableView.deselectRow(at: indexPath, animated: true)
-    }
 
     @IBAction func onTouchFiltersBtn(_ sender: UIButton) {
         
@@ -189,14 +179,17 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Navigation
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: self)
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SingleEventController {
+            print(segue.destination)
+            destination.event = filteredEvents
+        }
+    }
 
 }
