@@ -12,9 +12,10 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 
     var modelController: ModelController?
     
-    @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -22,6 +23,8 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.tableView.rowHeight = 114
     }
     
     // Rafraichit la tableView au chargement pour mettre à jour les favoris
@@ -47,10 +50,14 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         let favDict = modelController?.getEventsInFav()[indexPath.row]
         cell.eventName.text = (favDict?["name"] as! String)
         
+        cell.containerCell.layer.cornerRadius = 4
+        cell.containerCell.layer.masksToBounds = true
+        
+        cell.eventId = favDict!["id"] as! Int
+        
         return cell
     }
     
-
     /*
     // MARK: - Navigation
 

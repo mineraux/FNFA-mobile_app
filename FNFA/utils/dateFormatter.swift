@@ -32,4 +32,12 @@ extension Date {
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: self)
     }
+    
+    // Format : 2018-07-20 07:19:57 +0000
+    var iosDate: String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "fr_FR")
+        formatter.dateFormat = "AAAA-MM-EE"
+        return formatter.string(from: self)
+    }
 }

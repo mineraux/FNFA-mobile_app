@@ -39,22 +39,7 @@ class cellAllEventsController: UITableViewCell {
     }
 
     @IBAction func addToFav(_ sender: Any) {
-        for event in filteredEvents {
-            if event["id"] as! Int == eventId {
-                    let isFav = !(event["isFav"] as! Bool)
-                    event["isFav"] = isFav
-                    modelController?.saveJSON()
-                if event["isFav"] as! Bool == true {
-                    let image = UIImage(named: "heart_full")
-                    self.BtnAddToFav.setImage(image, for: .normal)
-
-                } else {
-                    let image = UIImage(named: "heart_empty")
-                    self.BtnAddToFav.setImage(image, for: .normal)
-                }
-                break
-            }
-        }
+        modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: BtnAddToFav)
         
         UIView.animate(
             withDuration: 0.2,

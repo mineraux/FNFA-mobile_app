@@ -53,7 +53,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auG-Nn-TVh">
                                                             <rect key="frame" x="98" y="35.5" width="82" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JW-hp-vEc">
@@ -207,17 +207,17 @@
                         <outlet property="singleFilter_sceance_spe" destination="dL8-ua-3KJ" id="mu7-6d-FGG"/>
                         <outlet property="singleFilter_volet_pro" destination="evZ-G2-UXm" id="2Zd-36-cLg"/>
                         <outlet property="tableView" destination="rhN-0R-fJl" id="Tfb-H5-5lT"/>
-                        <segue destination="NJW-LF-bj2" kind="showDetail" identifier="showDetails" id="tgg-i5-hZh"/>
+                        <segue destination="NJW-LF-bj2" kind="showDetail" identifier="test" id="tgg-i5-hZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhM-im-79x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="287.19999999999999" y="77.811094452773617"/>
         </scene>
-        <!--singleEvent-->
+        <!--singleEventController-->
         <scene sceneID="3qv-sC-VU5">
             <objects>
-                <viewControllerPlaceholder storyboardName="singleEvent" id="NJW-LF-bj2" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="singleEvent" referencedIdentifier="singleEventController" id="NJW-LF-bj2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewm-5J-aU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1114" y="77"/>

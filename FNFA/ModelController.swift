@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ModelController: NSObject {
     var categories = [NSMutableDictionary]()
@@ -37,6 +38,41 @@ class ModelController: NSObject {
         }
         
         return favEvents
+    }
+    
+    func removeOfFavs(eventId: Int) {
+        let favEvents = getEventsInFav()
+        
+        for event in favEvents {
+            if event["id"] as! Int == eventId {
+                let isFav = !(event["isFav"] as! Bool)
+                event["isFav"] = isFav
+                saveJSON()
+            }
+        }
+    }
+    
+    // On sépare les removeOfFavs et addToFavs car dans
+    // removeToFavs, pas besoin d'itérer sur tout les evenements (filteredEvents)
+    // mais seulement sur les elements en favoris
+    
+    func addToFavs(filteredEvents:[NSMutableDictionary], eventId: Int, BtnAddToFav: UIButton) {
+        for event in filteredEvents {
+            if (event["id"] as! Int) == eventId {
+                let isFav = !(event["isFav"] as! Bool)
+                event["isFav"] = isFav
+                saveJSON()
+                if event["isFav"] as! Bool == true {
+                    let image = UIImage(named: "heart_full")
+                    BtnAddToFav.setImage(image, for: .normal)
+                    
+                } else {
+                    let image = UIImage(named: "heart_empty")
+                    BtnAddToFav.setImage(image, for: .normal)
+                }
+                break
+            }
+        }
     }
     
     // private

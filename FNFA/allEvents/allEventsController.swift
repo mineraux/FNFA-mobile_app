@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Permet de ne mettre que la 1ere lettre en majuscule
+// meme si une string contient plusieurs mots
 extension String {
     func capitalizingFirstLetter() -> String {
         return prefix(1).uppercased() + dropFirst()
@@ -25,7 +27,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var closeFiltersBtn: UIButton!
     
-    
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
     var activeFilters = [String]()
@@ -38,26 +39,27 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
+        filteredEvents = (modelController?.events)!
+        
         // rowHeight = taille de la cellule + marge inter cellules = 90 + 12 + 12 = 114
         self.tableView.rowHeight = 114
         
-        filteredEvents = (modelController?.events)!
-        
+        // Valeur à animer pour deployer le volet des filtres
         filterTrailingConstraint.constant = 355
         
-        styleBtn(btn: singleFilter_sceance_spe)
-        styleBtn(btn: singleFilter_volet_pro)
-//        styleBtn(btn: singleFilter_seance_scolaire)
-//        styleBtn(btn: singleFilter_compet)
-        
-        // Style btn show filters
+        // Styles btn show filters
         showFiltersBtn.layer.cornerRadius = 25
         showFiltersBtn.contentEdgeInsets = UIEdgeInsets(top: 17, left: 25, bottom: 17, right: 16)
         showFiltersBtn.setImage(UIImage(named:"filtersIco"), for: .normal)
         showFiltersBtn.imageEdgeInsets = UIEdgeInsets(top: 0,left: -13,bottom: 0,right: 0)
         
+        // Styles btn close filters
         closeFiltersBtn.layer.cornerRadius = 25
         closeFiltersBtn.contentEdgeInsets = UIEdgeInsets(top: 15, left: 16, bottom: 15, right: 86)
+        
+        // Styles btn filters
+        styleBtn(btn: singleFilter_sceance_spe)
+        styleBtn(btn: singleFilter_volet_pro)
     }
     
     func styleBtn(btn: UIButton!){
@@ -85,8 +87,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellAllEventsController
-        
-        // Configure the cell...
         let eventDict = filteredEvents[indexPath.row]
         
         cell.eventThumbnail.layer.cornerRadius = 4
@@ -95,8 +95,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.eventName.text = (eventDict["name"] as! String)
         cell.eventCategory.text = (eventDict["category"] as! String).uppercased()
         cell.eventId = (eventDict["id"] as! Int)
-        
-        let isFav = (eventDict["isFav"] as! Bool)
         
         // Set hour event
         let dateIso = eventDict["startingDate"]
@@ -122,7 +120,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     // Gere quelle icone de favoris afficher pour chaque cell.
     // On utilise IndexPath pour être sur de cibler la bonne cellule
     // et ne pas avoir de problème lors du recyclage des cellules
-    
     func favIconeManager(indexPath: IndexPath, addToFavBtn: UIButton) {
         let eventDict = filteredEvents[indexPath.row]
         if eventDict["isFav"] as! Bool == true {
@@ -165,8 +162,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
             self.view.layoutIfNeeded()
             self.tableView.alpha = 0.3
         })
-        
-        
     }
     
     @IBAction func closeFilters(_ sender: Any) {
@@ -181,14 +176,14 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
-        //tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "test", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SingleEventController {
-            print(segue.destination)
-            destination.event = filteredEvents
+            destination.event = [filteredEvents[(tableView.indexPathForSelectedRow?.section)!]]
         }
     }
 

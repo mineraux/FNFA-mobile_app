@@ -25,7 +25,7 @@
         <!--Single Event Controller-->
         <scene sceneID="EIk-ct-ED6">
             <objects>
-                <viewController id="FpM-5m-XIx" customClass="SingleEventController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="singleEventController" id="FpM-5m-XIx" customClass="SingleEventController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jct-4z-IX5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,12 +75,27 @@
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_empty" translatesAutoresizingMaskIntoConstraints="NO" id="WzB-th-arb">
+                                <rect key="frame" x="330" y="184" width="25" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="i0l-FB-kWW"/>
+                                    <constraint firstAttribute="width" constant="25" id="yTn-FN-uL2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventDuration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChI-6z-EzO">
+                                <rect key="frame" x="267" y="266" width="88" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TN4-Ji-w8D" firstAttribute="leading" secondItem="Fpq-Dr-Zmh" secondAttribute="trailing" constant="35" id="8mL-ev-5O5"/>
+                            <constraint firstItem="PBj-5S-07b" firstAttribute="trailing" secondItem="WzB-th-arb" secondAttribute="trailing" constant="20" id="DDd-0e-LqM"/>
                             <constraint firstItem="Toc-VI-Avb" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="L4T-PR-nke"/>
                             <constraint firstItem="TN4-Ji-w8D" firstAttribute="top" secondItem="Toc-VI-Avb" secondAttribute="bottom" constant="19" id="MNg-vi-t8U"/>
+                            <constraint firstItem="ChI-6z-EzO" firstAttribute="top" secondItem="WzB-th-arb" secondAttribute="bottom" constant="61" id="Q1d-rw-CiP"/>
                             <constraint firstItem="2Jf-88-GBG" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="SMv-NE-DkK"/>
                             <constraint firstItem="2Jf-88-GBG" firstAttribute="top" secondItem="dIS-cM-egh" secondAttribute="bottom" constant="20" id="SUq-pT-Scm"/>
                             <constraint firstItem="dIS-cM-egh" firstAttribute="trailing" secondItem="PBj-5S-07b" secondAttribute="trailing" id="YAA-ug-0Gt"/>
@@ -91,16 +106,26 @@
                             <constraint firstItem="Fpq-Dr-Zmh" firstAttribute="top" secondItem="Toc-VI-Avb" secondAttribute="bottom" constant="15" id="gbd-xT-g1j"/>
                             <constraint firstItem="BXD-AC-eJG" firstAttribute="top" secondItem="rHK-Ld-KQk" secondAttribute="bottom" constant="25" id="iS1-CP-nir"/>
                             <constraint firstItem="zHk-kf-eiZ" firstAttribute="leading" secondItem="2Jf-88-GBG" secondAttribute="trailing" constant="25" id="jRP-Yd-1FL"/>
+                            <constraint firstItem="PBj-5S-07b" firstAttribute="trailing" secondItem="ChI-6z-EzO" secondAttribute="trailing" constant="20" id="kfm-mt-Zdq"/>
                             <constraint firstItem="dIS-cM-egh" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" id="kgA-Ff-nvB"/>
                             <constraint firstItem="Fpq-Dr-Zmh" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="mWc-gk-PsD"/>
                             <constraint firstItem="dIS-cM-egh" firstAttribute="top" secondItem="PBj-5S-07b" secondAttribute="top" id="o4r-yV-DzG"/>
+                            <constraint firstItem="WzB-th-arb" firstAttribute="top" secondItem="dIS-cM-egh" secondAttribute="bottom" constant="20" id="yDe-l8-em8"/>
                             <constraint firstItem="rHK-Ld-KQk" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="zom-A5-p82"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PBj-5S-07b"/>
                     </view>
                     <navigationItem key="navigationItem" id="8y4-Zw-qA8"/>
                     <connections>
+                        <outlet property="eventAuthor" destination="BXD-AC-eJG" id="gfo-z2-g8d"/>
+                        <outlet property="eventCategory" destination="2Jf-88-GBG" id="sPw-rW-GZu"/>
+                        <outlet property="eventDate" destination="Fpq-Dr-Zmh" id="DaX-V4-G5H"/>
+                        <outlet property="eventDuration" destination="ChI-6z-EzO" id="JOW-NE-rSa"/>
+                        <outlet property="eventExerpt" destination="rHK-Ld-KQk" id="8VV-Jz-fGr"/>
                         <outlet property="eventName" destination="Toc-VI-Avb" id="jP8-Xl-Qex"/>
+                        <outlet property="eventPlace" destination="TN4-Ji-w8D" id="1Sp-q3-5Qm"/>
+                        <outlet property="eventTypePublic" destination="zHk-kf-eiZ" id="edw-iH-3ga"/>
+                        <outlet property="isFav" destination="WzB-th-arb" id="EYc-9n-HZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdy-te-Dqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,7 +152,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart_empty" width="56" height="49"/>
         <image name="seance_scolaire" width="98" height="100"/>
+        <namedColor name="Black">
+            <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
