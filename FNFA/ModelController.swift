@@ -199,7 +199,6 @@ class ModelController: NSObject {
             let test = dateIso as! String
             if let date = formatter.date(from: test) {
                 event["startingDateDayNumber"]! = date.nameNumberDate
-                print(event["startingDateDayNumber"]!)
             }
         }
     }

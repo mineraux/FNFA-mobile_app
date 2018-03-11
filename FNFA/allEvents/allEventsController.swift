@@ -219,9 +219,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
-    @IBAction func backToHome(_ sender: Any) {
-    }
-    
     // Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "test", sender: self)

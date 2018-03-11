@@ -17,6 +17,7 @@ class cellFavoritesController: UITableViewCell {
     @IBOutlet weak var eventPlace: UILabel!
     @IBOutlet weak var containerCell: UIView!
     @IBOutlet weak var isFavBtn: UIButton!
+    @IBOutlet weak var marginTopContainerCell: NSLayoutConstraint!
     
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
@@ -30,12 +31,11 @@ class cellFavoritesController: UITableViewCell {
         modelController = appDelegate.modelController        
         favEvents = (modelController?.getEventsInFav())!
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
+    
 
     @IBAction func removeFav(_ sender: Any) {
         modelController?.removeOfFavs(eventId: eventId!)

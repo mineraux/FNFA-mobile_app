@@ -9,6 +9,14 @@
 import Foundation
 
 extension Date {
+    // Format : Mercredi
+    var nameDate: String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "fr_FR")
+        formatter.dateFormat = "EEEE"
+        return formatter.string(from: self)
+    }
+    
     // Format : Mercredi 10
     var nameNumberDate: String {
         let formatter = DateFormatter()
@@ -17,6 +25,14 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    // Format : 10 mars
+    var numberMonthDate: String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "fr_FR")
+        formatter.dateFormat = "d MMMM"
+        return formatter.string(from: self)
+    }
+
     // Format : Mercredi 10 mars
     var nameNumberMonthDate: String {
         let formatter = DateFormatter()

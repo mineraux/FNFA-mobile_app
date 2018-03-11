@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Favorites Controller-->
+        <!--Ma sélection-->
         <scene sceneID="IMe-im-CC1">
             <objects>
                 <viewController id="MB6-d5-73I" customClass="favoritesController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-Bd-sQo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" name="Black"/>
+                                <color key="backgroundColor" name="Gold"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="114" id="AOf-bm-QRs" customClass="cellFavoritesController" customModule="FNFA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="114"/>
@@ -111,7 +111,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="ZEn-Fh-CYL" secondAttribute="bottom" constant="12" id="kYN-nK-P1G"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.039215686270000001" green="0.070588235289999995" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" name="Gold"/>
                                         <connections>
                                             <outlet property="containerCell" destination="ZEn-Fh-CYL" id="NbF-Sh-RXp"/>
                                             <outlet property="eventCategory" destination="a9J-1h-v3P" id="6Kz-Ri-pEl"/>
@@ -120,6 +120,7 @@
                                             <outlet property="eventPlace" destination="Uoe-Wg-4i8" id="pKL-d1-Za7"/>
                                             <outlet property="eventThumbnail" destination="H58-aq-GMr" id="yWu-Pc-DaU"/>
                                             <outlet property="isFavBtn" destination="fXb-CR-3Uj" id="It1-sS-c1g"/>
+                                            <outlet property="marginTopContainerCell" destination="5pk-u0-SIQ" id="zfu-A0-XKa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -134,7 +135,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nfe-MI-Efb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Nga-iP-yVK"/>
+                    <navigationItem key="navigationItem" title="Ma sélection" id="Nga-iP-yVK"/>
                     <connections>
                         <outlet property="tableView" destination="c6x-Bd-sQo" id="rh6-kK-eKz"/>
                     </connections>
@@ -172,6 +173,9 @@
         <image name="seance_scolaire" width="98" height="100"/>
         <namedColor name="Black">
             <color red="0.031372549020000001" green="0.070588235289999995" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gold">
+            <color red="0.9882352941176471" green="0.80000000000000004" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MauveLight">
             <color red="0.59215686270000001" green="0.68235294120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
