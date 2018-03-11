@@ -34,6 +34,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var closeFiltersBtn: UIButton!
     
+    @IBOutlet weak var backToHome: UIStackView!
+    
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
     var activeFilters = [String]()
@@ -217,6 +219,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
+    @IBAction func backToHome(_ sender: Any) {
+    }
     
     // Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
