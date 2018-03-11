@@ -142,6 +142,7 @@ class ModelController: NSObject {
         
         setEventCategory()
         setEventPlaces()
+        setStartingDateDayNumber()
         
         return true
     }
@@ -187,6 +188,19 @@ class ModelController: NSObject {
             }
 
             event["place"] = eventPlaces
+        }
+    }
+    
+    func setStartingDateDayNumber() {
+        
+        for event in events {
+            let formatter = ISO8601DateFormatter()
+            let dateIso = event["startingDate"]!
+            let test = dateIso as! String
+            if let date = formatter.date(from: test) {
+                event["startingDateDayNumber"]! = date.nameNumberDate
+                print(event["startingDateDayNumber"]!)
+            }
         }
     }
 }

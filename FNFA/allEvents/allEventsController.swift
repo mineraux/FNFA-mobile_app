@@ -17,6 +17,13 @@ extension String {
 }
 
 class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    @objc func daySelected(_ notification: Notification) {
+        filteredEvents = (modelController?.events)!
+        var title = ((button.titleLabel?.text)!).lowercased()
+        filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == title }
+        self.tableView.reloadData()
+    }
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterTrailingConstraint: NSLayoutConstraint!
@@ -31,6 +38,9 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     var filteredEvents = [NSMutableDictionary]()
     var activeFilters = [String]()
     
+    // Dropdown stuff
+    var button = dropDownBtn()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -38,6 +48,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(daySelected), name: .daySelected, object: nil)
         
         filteredEvents = (modelController?.events)!
         
@@ -60,6 +72,38 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         // Styles btn filters
         styleBtn(btn: singleFilter_sceance_spe)
         styleBtn(btn: singleFilter_volet_pro)
+        
+        // Dropdown stuff
+        button = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(button)
+        
+        NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.topMargin, multiplier: 1.0, constant: 65.0).isActive = true
+        
+        NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.leadingMargin, multiplier: 1.0, constant: 0).isActive = true
+        
+        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        //button.dropView.dropDownOptions = ["Hello", "Wass up"]
+        
+        for event in filteredEvents {
+            
+            let dateIso = event["startingDate"]
+            let formatter = ISO8601DateFormatter()
+            if let date = formatter.date(from: dateIso as! String) {
+                
+                if button.dropView.dropDownOptions.contains((date.nameNumberDate).capitalized) {
+                    
+                } else {
+                    button.dropView.dropDownOptions.append((date.nameNumberDate).capitalized)
+                }
+                
+            }
+        }
+        
+        button.setTitle(button.dropView.dropDownOptions[0], for: .normal)
     }
     
     func styleBtn(btn: UIButton!){
