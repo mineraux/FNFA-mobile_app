@@ -20,6 +20,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @objc func daySelected(_ notification: Notification) {
         filteredEvents = (modelController?.events)!
+        
         var title = ((button.titleLabel?.text)!).lowercased()
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == title }
         self.tableView.reloadData()
@@ -38,6 +39,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
+    var valueToPass: NSMutableDictionary?
     var activeFilters = [String]()
     
     // Dropdown stuff
@@ -223,12 +225,13 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "test", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SingleEventController {
+            print(destination)
             destination.event = [filteredEvents[(tableView.indexPathForSelectedRow?.section)!]]
+            print(destination.event)
         }
     }
 

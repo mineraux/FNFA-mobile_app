@@ -12,8 +12,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 
     var modelController: ModelController?
     var dateUsed = [String]()
-    var indexPrev: IndexPath = []
-    
+    var reperetitre = [Int]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,6 +37,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         // (sinon le tableau est déjà rempli et les conditions qui définissent la taille de la cellule ne sont pas respectées)
         
         dateUsed = []
+        reperetitre = []
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,75 +52,95 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         return (modelController?.getEventsInFav().count)!
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
-        
         let favDict = modelController?.getEventsInFav()[indexPath.row]
-        cell.eventName.text = (favDict?["name"] as! String)
         
+        for id in reperetitre {
+            if (favDict?["id"] as! Int) == id {
+                cell.tag = 2
+            }
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
+        let favDict = modelController?.getEventsInFav()[indexPath.row]
+
+        cell.eventName.text = (favDict?["name"] as! String)
+
         // Set hour event
         var dateIso = favDict!["startingDate"]
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
         formatter.timeZone = TimeZone(identifier: "Europe/Paris")
         
-        
-        
+        self.tableView.rowHeight = 114
+        cell.marginTopContainerCell.constant = 0
+
         if let date = formatter.date(from: dateIso as! String) {
             cell.eventDate!.text = date.hourDate
         }
-        
-//        dateIso = favDict?["startingDate"]
-//        if let date = formatter.date(from: dateIso as! String) {
-//            let string = date.nameDate
-//            let numberMonth = date.numberMonthDate
-//
-//            if dateUsed.contains(string) {
-//                self.tableView.rowHeight = 114
-//            } else {
-//                self.tableView.rowHeight = (114 + 58)
-//                cell.marginTopContainerCell.constant = 70
-//
-//                dateUsed.append(string)
-//
-//                // Montserrat regular 11
-//                let nameDayLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 110, height: 30))
-//                nameDayLabel.center = CGPoint(x: 80, y: 15)
-//                nameDayLabel.textAlignment = .left
-//                nameDayLabel.text = string.uppercased()
-//                nameDayLabel.textColor = UIColor(named: "Black40")
-//                nameDayLabel.font = UIFont(name: "Montserrat-Regular", size: 11)
-//                cell.addSubview(nameDayLabel)
-//
-//                // Montserrat bold 24
-//                let numberMonthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 155, height: 30))
-//                numberMonthLabel.center = CGPoint(x: 60, y: 40)
-//                numberMonthLabel.textAlignment = .center
-//                numberMonthLabel.text = numberMonth
-//                numberMonthLabel.textColor = UIColor.white
-//                numberMonthLabel.font = UIFont(name: "Montserrat-Bold", size: 24)
-//                cell.addSubview(numberMonthLabel)
-//            }
-//        }
-        
+
+        // Choppe la date de l'event
+        if let date = formatter.date(from: dateIso as! String) {
+            // jour (ex mercredi)
+            let string = date.nameDate
+            
+            // numero + moi (ex 10 avril)
+            let numberMonth = date.numberMonthDate
+            
+
+            
+            if dateUsed.contains(string) {
+            } else {
+                dateUsed.append(string)
+                reperetitre.append((favDict?["id"] as! Int))
+            }
+            
+            cell.tag = 1
+            for id in reperetitre {
+                if (favDict?["id"] as! Int) == id {
+                    cell.tag = 2
+                }
+            }
+            
+            if cell.tag == 2 {
+                self.tableView.rowHeight = (114 + 58)
+                cell.marginTopContainerCell.constant = 70
+                
+                // Montserrat regular 11
+                let nameDayLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 110, height: 30))
+                nameDayLabel.center = CGPoint(x: 80, y: 15)
+                nameDayLabel.textAlignment = .left
+                nameDayLabel.text = string.uppercased()
+                nameDayLabel.textColor = UIColor(named: "Black40")
+                nameDayLabel.font = UIFont(name: "Montserrat-Regular", size: 11)
+                cell.addSubview(nameDayLabel)
+                
+                // Montserrat bold 24
+                let numberMonthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 155, height: 30))
+                numberMonthLabel.center = CGPoint(x: 60, y: 40)
+                numberMonthLabel.textAlignment = .center
+                numberMonthLabel.text = numberMonth
+                numberMonthLabel.textColor = UIColor.white
+                numberMonthLabel.font = UIFont(name: "Montserrat-Bold", size: 24)
+                cell.addSubview(numberMonthLabel)
+            } else {
+                self.tableView.rowHeight = 114
+                cell.marginTopContainerCell.constant = 0
+            }
+        }
         cell.containerCell.layer.cornerRadius = 4
         cell.containerCell.layer.masksToBounds = true
-        
+
         cell.eventId = (favDict!["id"] as! Int)
         
-        var indexCurrent = indexPath
-        test(indexPrev: indexCurrent, indexCurrent: indexPrev)
-        indexPrev = indexPath
-        
         return cell
-    }
-    
-    func test(indexPrev: IndexPath, indexCurrent: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexCurrent) as! cellFavoritesController
-        let prevCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPrev) as! cellFavoritesController
-        print(cell.eventName.text)
-        print(prevCell.eventName.text)
-        print("______")
     }
     
     /*

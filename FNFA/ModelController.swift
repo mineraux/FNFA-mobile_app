@@ -111,6 +111,7 @@ class ModelController: NSObject {
         let folderPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         do {
             let filePath = folderPath + "/events.json"
+            print(filePath)
             let url = URL.init(fileURLWithPath: filePath)
             let data = try Data.init(contentsOf: url)
             events = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]

@@ -69,16 +69,16 @@ class SingleEventController: UIViewController {
         let dateRangeEnd = dateFormatter.date(from: isoDate as! String)!
         
         let components = Calendar.current.dateComponents([.hour, .minute], from: dateRangeStart, to: dateRangeEnd)
-        print(currentEvent["startingDate"]!)
-        print(dateRangeStart)
-        print(dateRangeEnd)
+//        print(currentEvent["startingDate"]!)
+//        print(dateRangeStart)
+//        print(dateRangeEnd)
         
         
         let hour = String(describing: components.hour ?? 0)
         let minutes = String(describing: components.minute ?? 0)
         var eventDurationString = hour + " h " + minutes
         
-        print(eventDurationString)
+//        print(eventDurationString)
         eventDuration.text = eventDurationString
     }
 

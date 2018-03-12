@@ -123,6 +123,7 @@
                                             <outlet property="eventName" destination="auG-Nn-TVh" id="zRf-Hv-ZlH"/>
                                             <outlet property="eventPlaces" destination="Tbh-mg-PDg" id="dYP-4t-6R0"/>
                                             <outlet property="eventThumbnail" destination="4tF-Ct-IxE" id="anL-jg-T2I"/>
+                                            <segue destination="NJW-LF-bj2" kind="showDetail" identifier="test" id="VKM-fg-JNm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -204,8 +205,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="backToHome:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="KI2-6q-eBn"/>
-                                            <segue destination="bRT-0h-taT" kind="presentation" animates="NO" id="hnC-GV-3pW"/>
+                                            <segue destination="bRT-0h-taT" kind="show" animates="NO" id="hnC-GV-3pW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -229,13 +229,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Evenements" id="QCk-TY-c9t"/>
                     <connections>
+                        <outlet property="backToHome" destination="wur-X4-Cvc" id="zve-pd-ghJ"/>
                         <outlet property="closeFiltersBtn" destination="qiT-FN-0Ti" id="W9R-vV-esg"/>
                         <outlet property="filterTrailingConstraint" destination="pph-dd-QBe" id="BkI-Zn-2EC"/>
                         <outlet property="showFiltersBtn" destination="AU1-6l-8G0" id="Vq4-f4-h9d"/>
                         <outlet property="singleFilter_sceance_spe" destination="dL8-ua-3KJ" id="mu7-6d-FGG"/>
                         <outlet property="singleFilter_volet_pro" destination="evZ-G2-UXm" id="2Zd-36-cLg"/>
                         <outlet property="tableView" destination="rhN-0R-fJl" id="Tfb-H5-5lT"/>
-                        <segue destination="NJW-LF-bj2" kind="showDetail" identifier="test" id="tgg-i5-hZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhM-im-79x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="827" y="-138"/>
         </scene>
-        <!--singleEventController-->
+        <!--test1-->
         <scene sceneID="3qv-sC-VU5">
             <objects>
-                <viewControllerPlaceholder storyboardName="singleEvent" referencedIdentifier="singleEventController" id="NJW-LF-bj2" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="singleEvent" referencedIdentifier="test1" id="NJW-LF-bj2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewm-5J-aU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1114" y="77"/>
@@ -261,7 +261,7 @@
         <!--allEventsController-->
         <scene sceneID="0i1-d0-N5K">
             <objects>
-                <navigationController storyboardIdentifier="allEvents" title="allEventsController" automaticallyAdjustsScrollViewInsets="NO" id="FgK-Bp-vt1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="allo" title="allEventsController" automaticallyAdjustsScrollViewInsets="NO" id="FgK-Bp-vt1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="allEvents" id="BRA-CG-CpV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
