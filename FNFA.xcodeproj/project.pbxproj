@@ -31,6 +31,7 @@
 		A13057EA203340F4003246AF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057E9203340F4003246AF /* HomeController.swift */; };
 		A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057EB20334188003246AF /* HomeCollectionViewCell.swift */; };
 		A16CA5A6203C8104007ADAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16CA5A5203C8104007ADAB4 /* Assets.xcassets */; };
+		A1FABCD020568BD70001F3CE /* HomeHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FABCCF20568BD70001F3CE /* HomeHeaderViewController.swift */; };
 		A1FD4E23203C1F2D002700B9 /* CenterCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD4E22203C1F2D002700B9 /* CenterCollectionViewFlowLayout.swift */; };
 		A1FD4E39203C36FF002700B9 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1FD4E27203C36FF002700B9 /* Raleway-Black.ttf */; };
 		A1FD4E3A203C36FF002700B9 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1FD4E28203C36FF002700B9 /* Raleway-BlackItalic.ttf */; };
@@ -104,6 +105,7 @@
 		A13057E9203340F4003246AF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A13057EB20334188003246AF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A16CA5A5203C8104007ADAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1FABCCF20568BD70001F3CE /* HomeHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewController.swift; sourceTree = "<group>"; };
 		A1FD4E22203C1F2D002700B9 /* CenterCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		A1FD4E27203C36FF002700B9 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		A1FD4E28203C36FF002700B9 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		A13057ED20334425003246AF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A1FABCCE20568B2F0001F3CE /* Header */,
 				FA109CF82036149D00B54CAD /* My selection */,
 				FA109CFD2036600E00B54CAD /* Today */,
 				FA109D02203666F900B54CAD /* Tomorrow */,
@@ -260,6 +263,14 @@
 				A13057E9203340F4003246AF /* HomeController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A1FABCCE20568B2F0001F3CE /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				A1FABCCF20568BD70001F3CE /* HomeHeaderViewController.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		A1FD4E24203C369E002700B9 /* Ressource */ = {
@@ -481,6 +492,7 @@
 				5D50600A2031E456009F7E03 /* ModelController.swift in Sources */,
 				5DAA45402031DEE500A7408E /* AppDelegate.swift in Sources */,
 				5DAA45522031E11500A7408E /* TableViewController.swift in Sources */,
+				A1FABCD020568BD70001F3CE /* HomeHeaderViewController.swift in Sources */,
 				5D2CD57620343E7E0023073E /* favoritesController.swift in Sources */,
 				FA109D012036618A00B54CAD /* HomeTodayCollectionViewCell.swift in Sources */,
 				FA109CFA20364BC600B54CAD /* HomeMySelectionViewController.swift in Sources */,

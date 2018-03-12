@@ -40,21 +40,21 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         
     }
     
-    //For paging
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //var insets = self.collectionView.contentInset
-        //let value = (self.view.frame.size.width - (self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
-        //insets.left = value
-        //insets.right = value
-        //self.collectionView.contentInset = insets
-        self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    //For paging
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        //var insets = self.collectionView.contentInset
+//        //let value = (self.view.frame.size.width - (self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
+//        //insets.left = value
+//        //insets.right = value
+//        //self.collectionView.contentInset = insets
+//        self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
+//    }
+//
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
     
     /*
     // MARK: - Navigation
