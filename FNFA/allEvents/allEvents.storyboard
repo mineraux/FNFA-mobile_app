@@ -54,7 +54,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auG-Nn-TVh">
-                                                            <rect key="frame" x="98" y="35.5" width="82" height="18.5"/>
+                                                            <rect key="frame" x="98" y="36" width="170" height="19"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="170" id="g2Z-w1-1ne"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                                             <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
