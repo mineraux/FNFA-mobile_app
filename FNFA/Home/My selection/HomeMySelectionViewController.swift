@@ -12,8 +12,6 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionTitle: UILabel!
-    
-    
     @IBOutlet weak var seeAllLabel: UILabel!
     @IBOutlet weak var seeAllImage: UIImageView!
     
@@ -32,12 +30,14 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
 
-        
+        sectionTitle.text = "Ma sélection"
+        seeAllLabel.text = "Voir tout"
         seeAllImage.image = UIImage(named:"chevron")
         
-        
-        
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
     }
     
 //    //For paging
@@ -67,41 +67,41 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
     */
     
     
-    
     // COLLECTION VIEW
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (modelController?.events.count)!
+        return (modelController?.getEventsInFav().count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let mySelectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "mySelectionCell", for: indexPath) as! HomeMySelectionCollectionViewCell
         
-        let eventDict = modelController?.events[indexPath.row]
-        
+        let eventDict = modelController?.getEventsInFav()[indexPath.row]
+
+
         //Category
         mySelectionCell.eventCategory.text = (eventDict?["category"] as! String)
-        
+
         //Name
         mySelectionCell.eventName.text = (eventDict?["name"] as! String)
-        
-        
+
+
         //Heure
         let dateIso = eventDict!["startingDate"]
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
         formatter.timeZone = TimeZone(identifier: "Europe/Paris")
-        
+
         if let date = formatter.date(from: dateIso as! String) {
             mySelectionCell.eventDate!.text = date.hourDate
         }
-        
+
         //Places
         mySelectionCell.eventPlace!.text = (eventDict?["place"] as! [String]).joined(separator: ", ")
-        
+
         //Image
         mySelectionCell.eventImage.image = UIImage(named:"seance_scolaire")
-        
+
         mySelectionCell.layer.cornerRadius = 10;
         
         return  mySelectionCell

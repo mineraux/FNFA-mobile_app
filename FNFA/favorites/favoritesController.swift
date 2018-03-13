@@ -41,10 +41,10 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     // Rafraichit la tableView au chargement pour mettre à jour les favoris
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
-        
+
         // set le tableau vide pour le cas ou on change de view et qu'on revient sur les fav
         // (sinon le tableau est déjà rempli et les conditions qui définissent la taille de la cellule ne sont pas respectées)
-        
+
         dateUsed = []
         reperetitre = []
     }

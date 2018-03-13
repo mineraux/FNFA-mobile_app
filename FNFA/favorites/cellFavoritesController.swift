@@ -28,7 +28,7 @@ class cellFavoritesController: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        modelController = appDelegate.modelController        
+        modelController = appDelegate.modelController
         favEvents = (modelController?.getEventsInFav())!
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
