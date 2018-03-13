@@ -16,8 +16,6 @@ extension String {
     }
 }
 
-
-
 class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @objc func daySelected(_ notification: Notification) {
@@ -39,6 +37,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var backToHome: UIStackView!
     
+    @IBOutlet weak var filtersContainer: UIView!
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
     var valueToPass: NSMutableDictionary?
@@ -84,6 +83,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button)
+        
+        self.view.bringSubview(toFront: filtersContainer)
         
         NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.topMargin, multiplier: 1.0, constant: 65.0).isActive = true
         
