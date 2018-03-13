@@ -223,15 +223,15 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "test", sender: self)
+        //performSegue(withIdentifier: "test", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SingleEventController {
-            print(destination)
-            destination.event = [filteredEvents[(tableView.indexPathForSelectedRow?.section)!]]
-            print(destination.event)
+            destination.event = [filteredEvents[(tableView.indexPathForSelectedRow?.row)!]]
+            print((tableView.indexPathForSelectedRow?.row)!)
+            //print(destination.event)
         }
     }
 
