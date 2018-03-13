@@ -8,6 +8,10 @@
 
 import UIKit
 
+extension Notification.Name {
+    static let reloadData = Notification.Name("reloadData")
+}
+
 class favoritesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var modelController: ModelController?
@@ -15,6 +19,10 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     var reperetitre = [Int]()
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @objc func reloadData(_ notification: Notification) {
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         
@@ -27,6 +35,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         
         self.tableView.rowHeight = 114
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .reloadData, object: nil)
     }
     
     // Rafraichit la tableView au chargement pour mettre à jour les favoris
@@ -53,6 +62,10 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+    }
+    
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
         let favDict = modelController?.getEventsInFav()[indexPath.row]
@@ -62,7 +75,6 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
                 cell.tag = 2
             }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

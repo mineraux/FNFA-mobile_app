@@ -10,6 +10,7 @@ import UIKit
 
 class SingleEventController: UIViewController {
     
+    @IBOutlet weak var eventThumbnail: UIImageView!
     @IBOutlet weak var eventCategory: UILabel!
     @IBOutlet weak var eventTypePublic: UILabel!
     @IBOutlet weak var eventName: UILabel!
@@ -27,7 +28,7 @@ class SingleEventController: UIViewController {
         
         
         let currentEvent = event[0]
-        print(event)
+        //print(event)
 
         // Categorie de l'evenement
         eventCategory.text = (currentEvent["category"] as! String).uppercased()
@@ -71,18 +72,25 @@ class SingleEventController: UIViewController {
         let dateRangeEnd = dateFormatter.date(from: isoDate as! String)!
 
         let components = Calendar.current.dateComponents([.hour, .minute], from: dateRangeStart, to: dateRangeEnd)
-//        print(currentEvent["startingDate"]!)
-//        print(dateRangeStart)
-//        print(dateRangeEnd)
-
 
         let hour = String(describing: components.hour ?? 0)
         let minutes = String(describing: components.minute ?? 0)
         var eventDurationString = hour + " h " + minutes
-
-//        print(eventDurationString)
         eventDuration.text = eventDurationString
+
+        if (currentEvent["author"] as! String).count > 0 {
+            eventAuthor.text = (currentEvent["author"] as! String) + " | " + (currentEvent["producer"] as! String)
+        } else {
+            eventAuthor.text = currentEvent["author"] as! String
+        }
+        
+        let eventID = currentEvent["id"] as! Int
+        let imageName = String(describing:eventID)
+        
+        eventThumbnail.image = UIImage(named:imageName)
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

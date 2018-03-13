@@ -16,6 +16,8 @@ extension String {
     }
 }
 
+
+
 class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @objc func daySelected(_ notification: Notification) {
@@ -108,6 +110,9 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         button.setTitle(button.dropView.dropDownOptions[0], for: .normal)
+        filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
+        tableView.reloadData()
+        
     }
     
     func styleBtn(btn: UIButton!){
@@ -159,6 +164,13 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // Set place event
         cell.eventPlaces!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
+        //cell.eventThumbnail!.image = UIImage(named:imageName)
+        
+        let eventID = eventDict["id"] as! Int
+        let imageName = String(describing:eventID)
+        
+        cell.eventThumbnail!.image = UIImage(named:imageName)
+        
         
         favIconeManager(indexPath: indexPath, addToFavBtn: cell.BtnAddToFav)
         
@@ -176,6 +188,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             let image = UIImage(named: "heart_empty")
             addToFavBtn.setImage(image, for: .normal)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         }
     }
 
