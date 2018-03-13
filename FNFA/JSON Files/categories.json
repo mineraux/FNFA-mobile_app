@@ -5,30 +5,34 @@
   },
   {
     "id": 2,
-    "name": "Volet professionnel"
+    "name": "Compétition et panorama"
   },
   {
     "id": 3,
-    "name": "Séance scolaire"
+    "name": "Long métrage"
   },
   {
     "id": 4,
-    "name": "Compétition et sélections"
+    "name": "Volet professionnel"
   },
   {
     "id": 5,
-    "name": "Long métrage et rencontres"
+    "name": "Autour des films"
   },
   {
     "id": 6,
-    "name": "Atelier secret Fab"
-  },
-  {
-    "id": 7,
     "name": "Salon des nouvelles écritures"
   },
   {
+    "id": 7,
+    "name": "Cube animé"
+  },
+  {
     "id": 8,
+    "name": "Focus"
+  },
+  {
+    "id": 9,
     "name": "Unknown"
   }
 ]

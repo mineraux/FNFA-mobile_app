@@ -230,8 +230,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SingleEventController {
             destination.event = [filteredEvents[(tableView.indexPathForSelectedRow?.row)!]]
-            print((tableView.indexPathForSelectedRow?.row)!)
-            //print(destination.event)
         }
     }
 
