@@ -11,11 +11,25 @@ import UIKit
 class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, UICollectionViewDataSource {
     var modelController: ModelController?
     
+    @IBOutlet weak var sectionTitle: UILabel!
+    @IBOutlet weak var sectionTitleSmall: UILabel!
+    @IBOutlet weak var seeAllLabel: UILabel!
+    @IBOutlet weak var seeAllImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
+        
+        
+        let sectionTitleSmallText = "petit titre"
+        
+        sectionTitleSmall.text = sectionTitleSmallText.uppercased()
+        sectionTitle.text = "Grand titre"
+        seeAllLabel.text = "Voir tout"
+        seeAllImage.image = UIImage(named:"chevron")
+        
         
     }
     

@@ -12,8 +12,6 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionTitle: UILabel!
-    
-    
     @IBOutlet weak var seeAllLabel: UILabel!
     @IBOutlet weak var seeAllImage: UIImageView!
     
@@ -32,8 +30,12 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
 
-        
+        sectionTitle.text = "Ma sélection"
+        seeAllLabel.text = "Voir tout"
         seeAllImage.image = UIImage(named:"chevron")
+        
+        
+        
         
         
         
