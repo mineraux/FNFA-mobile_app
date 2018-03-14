@@ -15,6 +15,7 @@ class HomeMySelectionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventPlace: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var locationImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

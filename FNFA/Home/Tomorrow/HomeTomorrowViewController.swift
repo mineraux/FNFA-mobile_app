@@ -16,17 +16,21 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
     @IBOutlet weak var seeAllLabel: UILabel!
     @IBOutlet weak var seeAllImage: UIImageView!
     
+    var filteredEvents = [NSMutableDictionary]()
+    let dateFilter = "jeudi 5"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         
+         filteredEvents = (modelController?.getEventsByDate(events: (modelController?.events)!, date: dateFilter))!
         
-        let sectionTitleSmallText = "petit titre"
+        let sectionTitleSmallText = "JEUDI"
         
         sectionTitleSmall.text = sectionTitleSmallText.uppercased()
-        sectionTitle.text = "Grand titre"
+        sectionTitle.text = "5 avril"
         seeAllLabel.text = "Voir tout"
         seeAllImage.image = UIImage(named:"chevron")
         
@@ -50,23 +54,23 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
      */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (modelController?.events.count)!
+        return filteredEvents.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let tomorrowCell = collectionView.dequeueReusableCell(withReuseIdentifier: "tomorrowCell", for: indexPath) as! HomeTomorrowCollectionViewCell
         
-        let eventDict = modelController?.events[indexPath.row]
+        let eventDict = filteredEvents[indexPath.row]
         
         //Category
-        tomorrowCell.eventCategory.text = (eventDict?["category"] as! String)
+        tomorrowCell.eventCategory.text = (eventDict["category"] as! String)
         
         //Name
-        tomorrowCell.eventName.text = (eventDict?["name"] as! String)
+        tomorrowCell.eventName.text = (eventDict["name"] as! String)
         
         
         //Heure
-        let dateIso = eventDict!["startingDate"]
+        let dateIso = eventDict["startingDate"]
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
         formatter.timeZone = TimeZone(identifier: "Europe/Paris")
@@ -76,7 +80,10 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         }
         
         //Places
-        tomorrowCell.eventPlace!.text = (eventDict?["place"] as! [String]).joined(separator: ", ")
+        tomorrowCell.eventPlace!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
+        
+        //icone
+        tomorrowCell.locationImage.image = UIImage(named:"location")
         
         //Image
         tomorrowCell.eventImage.image = UIImage(named:"seance_scolaire")

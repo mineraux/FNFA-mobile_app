@@ -114,6 +114,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
         tableView.reloadData()
         
+        
     }
     
     func styleBtn(btn: UIButton!){

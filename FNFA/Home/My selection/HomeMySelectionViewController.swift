@@ -78,7 +78,6 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         
         let eventDict = modelController?.getEventsInFav()[indexPath.row]
 
-
         //Category
         mySelectionCell.eventCategory.text = (eventDict?["category"] as! String)
 
@@ -95,6 +94,9 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         if let date = formatter.date(from: dateIso as! String) {
             mySelectionCell.eventDate!.text = date.hourDate
         }
+        
+        //Icone
+        mySelectionCell.locationImage.image = UIImage(named:"location")
 
         //Places
         mySelectionCell.eventPlace!.text = (eventDict?["place"] as! [String]).joined(separator: ", ")

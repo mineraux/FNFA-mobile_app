@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-Bd-sQo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" name="Gold"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="114" id="AOf-bm-QRs" customClass="cellFavoritesController" customModule="FNFA" customModuleProvider="target">
@@ -136,6 +136,7 @@
                         <viewLayoutGuide key="safeArea" id="nfe-MI-Efb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ma sélection" id="Nga-iP-yVK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="c6x-Bd-sQo" id="rh6-kK-eKz"/>
                     </connections>
@@ -147,9 +148,10 @@
         <!--favorites-->
         <scene sceneID="aad-oV-Sal">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z6e-f8-JYG" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="z6e-f8-JYG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="favorites" id="tvm-yY-yhf"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cJC-bp-2Rb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -15,5 +15,6 @@ class HomeTodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventPlace: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var locationImage: UIImageView!
     
 }

@@ -52,6 +52,11 @@ class ModelController: NSObject {
         }
     }
     
+    func getEventsByDate(events:[NSMutableDictionary], date: String) -> [NSMutableDictionary] {
+        let filteredEvents = events.filter { $0["startingDateDayNumber"] as? String == date.lowercased()}
+        return filteredEvents
+    }
+    
     // On sépare les removeOfFavs et addToFavs car dans
     // removeToFavs, pas besoin d'itérer sur tout les evenements (filteredEvents)
     // mais seulement sur les elements en favoris
