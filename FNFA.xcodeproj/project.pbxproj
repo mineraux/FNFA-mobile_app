@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		005804D120430B5C0055F42F /* SingleEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005804D020430B5C0055F42F /* SingleEventController.swift */; };
 		00F18DFD205559CF0048479E /* DropDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F18DFC205559CF0048479E /* DropDownController.swift */; };
+		5D0B822B205978A000F719E4 /* aboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B822A205978A000F719E4 /* aboutController.swift */; };
 		5D2CD57620343E7E0023073E /* favoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2CD57520343E7E0023073E /* favoritesController.swift */; };
 		5D2CD5782034463C0023073E /* cellFavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2CD5772034463C0023073E /* cellFavoritesController.swift */; };
 		5D5060032031E31D009F7E03 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D5060002031E31D009F7E03 /* categories.json */; };
@@ -80,6 +81,7 @@
 /* Begin PBXFileReference section */
 		005804D020430B5C0055F42F /* SingleEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventController.swift; sourceTree = "<group>"; };
 		00F18DFC205559CF0048479E /* DropDownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
+		5D0B822A205978A000F719E4 /* aboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutController.swift; sourceTree = "<group>"; };
 		5D2CD57520343E7E0023073E /* favoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritesController.swift; sourceTree = "<group>"; };
 		5D2CD5772034463C0023073E /* cellFavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellFavoritesController.swift; sourceTree = "<group>"; };
 		5D5060002031E31D009F7E03 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				A13057ED20334425003246AF /* Home */,
 				5D2CD57420343E620023073E /* favorites */,
 				5D73FE1D2032F90B007FB93A /* about.storyboard */,
+				5D0B822A205978A000F719E4 /* aboutController.swift */,
 				5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */,
 				5DAA454B2031DEE500A7408E /* Info.plist */,
 				5D5060062031E325009F7E03 /* JSON Files */,
@@ -485,6 +488,7 @@
 				005804D120430B5C0055F42F /* SingleEventController.swift in Sources */,
 				FA109CFF2036605C00B54CAD /* HomeTodayViewController.swift in Sources */,
 				FA109CF720360E2100B54CAD /* HomeTableViewController.swift in Sources */,
+				5D0B822B205978A000F719E4 /* aboutController.swift in Sources */,
 				5D50600A2031E456009F7E03 /* ModelController.swift in Sources */,
 				5DAA45402031DEE500A7408E /* AppDelegate.swift in Sources */,
 				5DAA45522031E11500A7408E /* TableViewController.swift in Sources */,
@@ -639,9 +643,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q43SQQN57W;
 				INFOPLIST_FILE = FNFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.gobelins.FNFA;
+				PRODUCT_BUNDLE_IDENTIFIER = gobelins.FNFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -653,9 +658,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q43SQQN57W;
 				INFOPLIST_FILE = FNFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.gobelins.FNFA;
+				PRODUCT_BUNDLE_IDENTIFIER = gobelins.FNFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
