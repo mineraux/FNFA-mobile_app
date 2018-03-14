@@ -37,16 +37,18 @@ class ModelController: NSObject {
             }
         }
         
+        
         return favEvents
     }
     
-    func removeOfFavs(eventId: Int) {
-        let favEvents = getEventsInFav()
-        
-        for event in favEvents {
+    func removeOfFavs(eventId: Int, filteredEvents:[NSMutableDictionary]) {
+
+        for event in events {
             if event["id"] as! Int == eventId {
+                
                 let isFav = !(event["isFav"] as! Bool)
                 event["isFav"] = isFav
+                
                 saveJSON()
             }
         }

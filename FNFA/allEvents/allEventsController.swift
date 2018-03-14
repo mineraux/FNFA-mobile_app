@@ -93,8 +93,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         button.widthAnchor.constraint(equalToConstant: 150).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        //button.dropView.dropDownOptions = ["Hello", "Wass up"]
-        
         for event in filteredEvents {
             
             let dateIso = event["startingDate"]
@@ -113,7 +111,10 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         button.setTitle(button.dropView.dropDownOptions[0], for: .normal)
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
         tableView.reloadData()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isTranslucent = false
     }
     
     func styleBtn(btn: UIButton!){
@@ -165,7 +166,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // Set place event
         cell.eventPlaces!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
-        //cell.eventThumbnail!.image = UIImage(named:imageName)
         
         let eventID = eventDict["id"] as! Int
         let imageName = String(describing:eventID)
@@ -210,11 +210,14 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     
         // Gestion du cas où plusieurs filtres sont sélectionnés
-            filteredEvents = (modelController?.events)!
+        filteredEvents = (modelController?.events)!
+        filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
+        
         for filter in activeFilters {
             filteredEvents = filteredEvents.filter { $0["category"] as? String == filter }
         }
-            tableView.self.reloadData()
+        
+        tableView.self.reloadData()
     }
     
     @IBAction func showFilters(_ sender: Any) {

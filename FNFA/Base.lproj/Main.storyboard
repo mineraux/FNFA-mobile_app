@@ -12,12 +12,12 @@
         <!--allEvents-->
         <scene sceneID="FRg-pG-PgH">
             <objects>
-                <viewControllerPlaceholder storyboardName="allEvents" id="9Ee-Py-tsx" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="allEvents" storyboardName="allEvents" id="9Ee-Py-tsx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="KC4-cT-caQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZC-0A-aCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="-155"/>
+            <point key="canvasLocation" x="1934" y="-246"/>
         </scene>
         <!--home-->
         <scene sceneID="io8-yO-pfE">
@@ -27,17 +27,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTu-AN-rfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917" y="-495"/>
+            <point key="canvasLocation" x="1917" y="-399"/>
         </scene>
         <!--favorites-->
         <scene sceneID="dXy-zC-d0r">
             <objects>
-                <viewControllerPlaceholder storyboardName="favorites" id="Lqg-2k-E72" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="favorites" storyboardName="favorites" referencedIdentifier="favorites" id="Lqg-2k-E72" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5iC-fL-cv7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cf-xG-ZMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931" y="-41"/>
+            <point key="canvasLocation" x="1934" y="-44"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MgJ-QC-lwA">

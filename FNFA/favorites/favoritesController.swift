@@ -61,11 +61,6 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         return (modelController?.getEventsInFav().count)!
     }
     
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-
-    }
-    
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
         let favDict = modelController?.getEventsInFav()[indexPath.row]
@@ -77,6 +72,18 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
+        let favDict = modelController?.getEventsInFav()[indexPath.row]
+        
+        for id in reperetitre {
+            if (favDict?["id"] as! Int) == id {
+                cell.tag = 2
+            }
+        }
+    
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
@@ -84,6 +91,9 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         let favDict = modelController?.getEventsInFav()[indexPath.row]
 
         cell.eventName.text = (favDict?["name"] as! String)
+        
+        cell.eventCategory.text = (favDict?["category"] as! String)
+        cell.eventPlace!.text = (favDict?["place"] as! [String]).joined(separator: ", ")
 
         // Set hour event
         var dateIso = favDict!["startingDate"]
@@ -105,8 +115,6 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
             
             // numero + moi (ex 10 avril)
             let numberMonth = date.numberMonthDate
-            
-
             
             if dateUsed.contains(string) {
             } else {
@@ -151,6 +159,12 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.containerCell.layer.masksToBounds = true
 
         cell.eventId = (favDict!["id"] as! Int)
+    
+        cell.eventThumbnail.layer.cornerRadius = 4
+        cell.eventThumbnail.layer.masksToBounds = true
+        
+        let imageName = String(describing:cell.eventId!)
+        cell.eventThumbnail!.image = UIImage(named:imageName)
         
         return cell
     }
