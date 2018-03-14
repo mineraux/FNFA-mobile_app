@@ -38,10 +38,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEn-Fh-CYL">
                                                     <rect key="frame" x="20" y="12" width="335" height="90"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seance_scolaire" translatesAutoresizingMaskIntoConstraints="NO" id="H58-aq-GMr">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seance_scolaire" translatesAutoresizingMaskIntoConstraints="NO" id="H58-aq-GMr">
                                                             <rect key="frame" x="10" y="10" width="70" height="69.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="70" id="sdg-kk-WQ0"/>
+                                                                <constraint firstAttribute="width" constant="70" id="4pE-Pw-euZ"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventCategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9J-1h-v3P">
@@ -148,7 +148,7 @@
         <!--favorites-->
         <scene sceneID="aad-oV-Sal">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="z6e-f8-JYG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="favorites" automaticallyAdjustsScrollViewInsets="NO" id="z6e-f8-JYG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="favorites" id="tvm-yY-yhf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

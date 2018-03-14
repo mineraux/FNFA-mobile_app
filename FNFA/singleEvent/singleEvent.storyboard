@@ -108,7 +108,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="kKc-nb-GlB" kind="show" id="LtH-af-RPS"/>
+                                            <segue destination="kKc-nb-GlB" kind="showDetail" id="LtH-af-RPS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="319.19999999999999" y="129.08545727136433"/>
         </scene>
-        <!--allo-->
+        <!--Main-->
         <scene sceneID="dXT-fH-rsM">
             <objects>
-                <viewControllerPlaceholder storyboardName="allEvents" referencedIdentifier="allo" id="kKc-nb-GlB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" id="kKc-nb-GlB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xmK-R5-thZ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoX-MQ-crt" userLabel="First Responder" sceneMemberID="firstResponder"/>
