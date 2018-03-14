@@ -22,6 +22,11 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
     }
     
     
+    @objc func reloadData(_ notification: Notification) {
+        self.collectionView.reloadData()
+    }
+    
+    
     var modelController: ModelController?
     
     override func viewDidLoad() {
@@ -34,9 +39,13 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         seeAllLabel.text = "Voir tout"
         seeAllImage.image = UIImage(named:"chevron")
         
+        
+        // Observer
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .reloadData, object: nil)
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
     }
     
@@ -78,6 +87,9 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         
         let eventDict = modelController?.getEventsInFav()[indexPath.row]
 
+        //id
+        mySelectionCell.eventId = (eventDict!["id"] as! Int)
+        
         //Category
         mySelectionCell.eventCategory.text = (eventDict?["category"] as! String)
 
@@ -106,7 +118,24 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
 
         mySelectionCell.layer.cornerRadius = 10;
         
+        favIconeManager(indexPath: indexPath, addToFavBtn: mySelectionCell.favButton)
+        
         return  mySelectionCell
+    }
+    
+    // Gere quelle icone de favoris afficher pour chaque cell.
+    // On utilise IndexPath pour être sur de cibler la bonne cellule
+    // et ne pas avoir de problème lors du recyclage des cellules
+    func favIconeManager(indexPath: IndexPath, addToFavBtn: UIButton) {
+        let eventDict = modelController?.getEventsInFav()[indexPath.row]
+        if eventDict!["isFav"] as! Bool == true {
+            let image = UIImage(named: "heart_full")
+            addToFavBtn.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "heart_empty")
+            addToFavBtn.setImage(image, for: .normal)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
+        }
     }
 
 }

@@ -11,6 +11,7 @@ import UIKit
 class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var modelController: ModelController?
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionTitle: UILabel!
     @IBOutlet weak var sectionTitleSmall: UILabel!
     @IBOutlet weak var seeAllLabel: UILabel!
@@ -18,7 +19,7 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
     
     var filteredEvents = [NSMutableDictionary]()
     let dateFilter = "mercredi 4"
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,12 +63,14 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
         
         let eventDict = filteredEvents[indexPath.row]
         
+        //id
+        todayCell.eventId = (eventDict["id"] as! Int)
+        
         //Category
         todayCell.eventCategory.text = (eventDict["category"] as! String)
         
         //Name
         todayCell.eventName.text = (eventDict["name"] as! String)
-        
         
         //Heure
         let dateIso = eventDict["startingDate"]
@@ -90,6 +93,23 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
         
         todayCell.layer.cornerRadius = 10;
         
+        favIconeManager(indexPath: indexPath, addToFavBtn: todayCell.favButton)
+        
         return  todayCell
+    }
+    
+    // Gere quelle icone de favoris afficher pour chaque cell.
+    // On utilise IndexPath pour être sur de cibler la bonne cellule
+    // et ne pas avoir de problème lors du recyclage des cellules
+    func favIconeManager(indexPath: IndexPath, addToFavBtn: UIButton) {
+        let eventDict = filteredEvents[indexPath.row]
+        if eventDict["isFav"] as! Bool == true {
+            let image = UIImage(named: "heart_full")
+            addToFavBtn.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "heart_empty")
+            addToFavBtn.setImage(image, for: .normal)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
+        }
     }
 }

@@ -114,7 +114,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isTranslucent = false
+        // self.tabBarController?.tabBar.isTranslucent = false
+        self.tableView.reloadData()
     }
     
     func styleBtn(btn: UIButton!){

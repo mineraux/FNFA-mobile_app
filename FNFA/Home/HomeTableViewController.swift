@@ -8,8 +8,17 @@
 
 import UIKit
 
+extension Notification.Name {
+    static let reloadDataHomeTableView = Notification.Name("reloadDataHomeTableView")
+}
+
 class HomeTableViewController: UITableViewController {
 
+       @objc func reloadDataHomeTableView(_ notification: Notification) {
+        self.tableView.reloadData()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +27,10 @@ class HomeTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+
+        // Observer
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadDataHomeTableView), name: .reloadDataHomeTableView, object: nil)
     }
 
     override func didReceiveMemoryWarning() {

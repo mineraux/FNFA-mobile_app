@@ -62,6 +62,9 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         
         let eventDict = filteredEvents[indexPath.row]
         
+        //id
+        tomorrowCell.eventId = (eventDict["id"] as! Int)
+        
         //Category
         tomorrowCell.eventCategory.text = (eventDict["category"] as! String)
         
@@ -90,7 +93,25 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         
         tomorrowCell.layer.cornerRadius = 10;
         
+        favIconeManager(indexPath: indexPath, addToFavBtn: tomorrowCell.favButton)
+        
+        
         return  tomorrowCell
+    }
+    
+    // Gere quelle icone de favoris afficher pour chaque cell.
+    // On utilise IndexPath pour être sur de cibler la bonne cellule
+    // et ne pas avoir de problème lors du recyclage des cellules
+    func favIconeManager(indexPath: IndexPath, addToFavBtn: UIButton) {
+        let eventDict = filteredEvents[indexPath.row]
+        if eventDict["isFav"] as! Bool == true {
+            let image = UIImage(named: "heart_full")
+            addToFavBtn.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "heart_empty")
+            addToFavBtn.setImage(image, for: .normal)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
+        }
     }
 
 }

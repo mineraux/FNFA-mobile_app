@@ -56,7 +56,9 @@ class cellFavoritesController: UITableViewCell {
 //        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         print(favEvents)
         
-        modelController?.removeOfFavs(eventId: eventId as! Int, filteredEvents: favEvents)
+//        modelController?.removeOfFavs(eventId: eventId as! Int, filteredEvents: favEvents)
+        
+         modelController?.addToFavs(filteredEvents: favEvents, eventId: eventId!, BtnAddToFav: isFavBtn)
         print(favEvents)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         

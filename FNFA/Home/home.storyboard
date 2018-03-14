@@ -354,9 +354,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-F8-CFP">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-F8-CFP">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="82"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-HA-GjY">
                                                             <rect key="frame" x="8" y="29" width="184" height="21"/>
@@ -390,21 +389,46 @@
                                                             <rect key="frame" x="44" y="56" width="8" height="10"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UE-DH-ZSv">
+                                                            <rect key="frame" x="174" y="8" width="18" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="18" id="3JN-Gf-wU1"/>
+                                                                <constraint firstAttribute="height" constant="15" id="VMy-aR-RYm"/>
+                                                            </constraints>
+                                                            <state key="normal" image="heart_empty"/>
+                                                            <connections>
+                                                                <action selector="favAction:" destination="r7j-9A-5aJ" eventType="touchUpInside" id="Z7u-KT-eKj"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="9UE-DH-ZSv" firstAttribute="top" secondItem="yaT-F8-CFP" secondAttribute="top" constant="8" id="YlJ-FY-gPG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9UE-DH-ZSv" secondAttribute="trailing" constant="8" id="zEZ-wh-iwy"/>
+                                                    </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-o2-cAx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-o2-cAx">
                                                     <rect key="frame" x="0.0" y="82" width="200" height="138"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="yaT-F8-CFP" secondAttribute="bottom" constant="138" id="0Xn-LN-Awn"/>
+                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="leading" secondItem="r7j-9A-5aJ" secondAttribute="leading" id="2Qx-bP-Z0w"/>
+                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="leading" secondItem="XaD-o2-cAx" secondAttribute="leading" id="8dM-5x-dnV"/>
+                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="trailing" secondItem="XaD-o2-cAx" secondAttribute="trailing" id="ReK-YU-gha"/>
+                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="top" secondItem="r7j-9A-5aJ" secondAttribute="top" id="Wm8-8b-nFS"/>
+                                            <constraint firstAttribute="trailing" secondItem="yaT-F8-CFP" secondAttribute="trailing" id="hJw-06-FgT"/>
+                                            <constraint firstAttribute="bottom" secondItem="XaD-o2-cAx" secondAttribute="bottom" id="hdI-JL-bdl"/>
+                                            <constraint firstItem="XaD-o2-cAx" firstAttribute="top" secondItem="yaT-F8-CFP" secondAttribute="bottom" id="mTi-Ub-9yZ"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="eventCategory" destination="RiD-A3-b9V" id="8FH-cY-Tjf"/>
                                             <outlet property="eventDate" destination="1dq-JR-OTr" id="K5p-w9-ZSr"/>
                                             <outlet property="eventImage" destination="XaD-o2-cAx" id="Mdq-1q-nRK"/>
                                             <outlet property="eventName" destination="CdF-HA-GjY" id="cQX-JV-tcM"/>
                                             <outlet property="eventPlace" destination="s2h-TM-6la" id="HqI-M8-Bcj"/>
+                                            <outlet property="favButton" destination="9UE-DH-ZSv" id="PX1-CS-dcv"/>
                                             <outlet property="locationImage" destination="9mc-eU-Ldq" id="fAU-rN-djC"/>
                                         </connections>
                                     </collectionViewCell>
@@ -787,6 +811,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart_empty" width="56" height="49"/>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

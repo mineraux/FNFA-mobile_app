@@ -22,6 +22,9 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @objc func reloadData(_ notification: Notification) {
         self.tableView.reloadData()
+        
+        dateUsed = []
+        reperetitre = []
     }
     
     override func viewDidLoad() {
@@ -61,16 +64,17 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         return (modelController?.getEventsInFav().count)!
     }
     
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
-        let favDict = modelController?.getEventsInFav()[indexPath.row]
-        
-        for id in reperetitre {
-            if (favDict?["id"] as! Int) == id {
-                cell.tag = 2
-            }
-        }
-    }
+//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
+//        let favDict = modelController?.getEventsInFav()[indexPath.row]
+//
+//        for id in reperetitre {
+//            if (favDict?["id"] as! Int) == id {
+//                cell.tag = 2
+//            }
+//        }
+//    }
+    
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
