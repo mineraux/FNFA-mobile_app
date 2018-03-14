@@ -63,11 +63,11 @@
                         <sections>
                             <tableViewSection id="MUM-hl-7IJ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="1860" id="ZYo-Qc-t2F">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1860"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="2108" id="ZYo-Qc-t2F">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZYo-Qc-t2F" id="0rc-Zw-JWo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1860"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="2108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-UL-jn3">
@@ -473,6 +473,31 @@ de 20h à 21h.</string>
                                                         <constraint firstAttribute="width" secondItem="HIF-ue-aQ1" secondAttribute="height" multiplier="49:32" id="k9U-pf-HP5"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36K-Nt-LWk">
+                                                    <rect key="frame" x="16" y="1854" width="343" height="100"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOQ-fS-HLC">
+                                                            <rect key="frame" x="15" y="35" width="296" height="30"/>
+                                                            <state key="normal" title="Retrouver plus d'informations sur notre site">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="goToWebSite:" destination="4BH-Kc-TQQ" eventType="touchUpInside" id="x8p-xU-Kic"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-2" translatesAutoresizingMaskIntoConstraints="NO" id="ngp-hW-CPD">
+                                                            <rect key="frame" x="331" y="40" width="13" height="20"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="Black"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ngp-hW-CPD" firstAttribute="centerY" secondItem="36K-Nt-LWk" secondAttribute="centerY" id="G1H-ZN-dde"/>
+                                                        <constraint firstItem="ngp-hW-CPD" firstAttribute="leading" secondItem="jOQ-fS-HLC" secondAttribute="trailing" constant="20" id="GBV-Er-G4i"/>
+                                                        <constraint firstItem="jOQ-fS-HLC" firstAttribute="centerY" secondItem="36K-Nt-LWk" secondAttribute="centerY" id="PvK-Da-CxG"/>
+                                                        <constraint firstAttribute="height" constant="100" id="fza-f0-U6b"/>
+                                                        <constraint firstItem="jOQ-fS-HLC" firstAttribute="leading" secondItem="36K-Nt-LWk" secondAttribute="leading" constant="15" id="zl7-ai-hDN"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cNI-UL-jn3" firstAttribute="top" secondItem="0rc-Zw-JWo" secondAttribute="topMargin" constant="20" id="1qc-Qy-J1j"/>
@@ -513,12 +538,15 @@ de 20h à 21h.</string>
                                                 <constraint firstItem="Sec-u2-OiX" firstAttribute="top" secondItem="cNI-UL-jn3" secondAttribute="bottom" constant="25" id="mGf-Id-y9c"/>
                                                 <constraint firstItem="Sec-u2-OiX" firstAttribute="trailing" secondItem="0rc-Zw-JWo" secondAttribute="trailingMargin" id="n4Z-m1-arp"/>
                                                 <constraint firstItem="YZg-tQ-kRU" firstAttribute="top" secondItem="W9m-YT-YJL" secondAttribute="bottom" constant="30" id="q4U-A4-svv"/>
+                                                <constraint firstItem="36K-Nt-LWk" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leading" constant="16" id="rfo-2l-G1m"/>
                                                 <constraint firstItem="CYs-g3-waG" firstAttribute="trailing" secondItem="0rc-Zw-JWo" secondAttribute="trailingMargin" id="snS-4q-4sy"/>
                                                 <constraint firstItem="yVB-ij-cib" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="tik-SH-BFM"/>
                                                 <constraint firstItem="qdG-H3-LPb" firstAttribute="trailing" secondItem="0rc-Zw-JWo" secondAttribute="trailingMargin" id="u6c-kS-9Lx"/>
+                                                <constraint firstItem="36K-Nt-LWk" firstAttribute="top" secondItem="HIF-ue-aQ1" secondAttribute="bottom" constant="40" id="uBF-i3-wj7"/>
                                                 <constraint firstItem="a2F-Jg-Bpg" firstAttribute="top" secondItem="oPr-Hm-XLE" secondAttribute="bottom" constant="40" id="uiY-Ib-gzN"/>
                                                 <constraint firstItem="qdG-H3-LPb" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="vW2-Ph-Ee2"/>
                                                 <constraint firstItem="Sec-u2-OiX" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="w7M-G1-UKq"/>
+                                                <constraint firstAttribute="trailing" secondItem="36K-Nt-LWk" secondAttribute="trailing" constant="16" id="xaz-ro-rtn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Green"/>
@@ -533,6 +561,7 @@ de 20h à 21h.</string>
                     </tableView>
                     <navigationItem key="navigationItem" id="dAH-JQ-p5T"/>
                     <connections>
+                        <outlet property="containerGoToWebSite" destination="36K-Nt-LWk" id="Uvv-ha-JBF"/>
                         <outlet property="containerIntro" destination="Sec-u2-OiX" id="J5c-9g-clJ"/>
                         <outlet property="containerRestauration" destination="L6k-yd-csh" id="Gf6-Wh-uoL"/>
                         <outlet property="square" destination="ANk-Xm-QD9" id="Q3M-Sn-ZjB"/>
@@ -552,6 +581,7 @@ de 20h à 21h.</string>
     </scenes>
     <resources>
         <image name="about_intro" width="900" height="666"/>
+        <image name="chevron-2" width="13" height="20"/>
         <image name="map" width="360" height="224"/>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
