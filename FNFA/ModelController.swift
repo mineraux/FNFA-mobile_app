@@ -14,6 +14,13 @@ class ModelController: NSObject {
     var events = [NSMutableDictionary]()
     var places = [NSMutableDictionary]()
     
+    static func getDate(forString: String) -> Date {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
+        "yyyy-MM-dd"
+        formatter.timeZone = TimeZone(identifier: "Europe/Paris")
+        return formatter.date(from: forString )!
+    }
     
     func loadJSON() {
         if loadSavedJSON() == false {

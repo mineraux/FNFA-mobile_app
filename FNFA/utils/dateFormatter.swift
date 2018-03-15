@@ -32,6 +32,14 @@ extension Date {
         formatter.dateFormat = "d MMMM"
         return formatter.string(from: self)
     }
+    
+    // Format : 10
+    var numberDay: Int {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "fr_FR")
+        formatter.dateFormat = "d"
+        return Int(formatter.string(from: self))!
+    }
 
     // Format : Mercredi 10 mars
     var nameNumberMonthDate: String {

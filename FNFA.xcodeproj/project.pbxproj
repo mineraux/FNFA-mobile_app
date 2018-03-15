@@ -32,6 +32,7 @@
 		5DDDE66B205A6F8B00ECD84F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDE66A205A6F8B00ECD84F /* TabBarController.swift */; };
 		A13057EA203340F4003246AF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057E9203340F4003246AF /* HomeController.swift */; };
 		A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057EB20334188003246AF /* HomeCollectionViewCell.swift */; };
+		A16C69D8205AEE8900DFA1CC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16C69D7205AEE8900DFA1CC /* Extensions.swift */; };
 		A16CA5A6203C8104007ADAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16CA5A5203C8104007ADAB4 /* Assets.xcassets */; };
 		A1FABCD020568BD70001F3CE /* HomeHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FABCCF20568BD70001F3CE /* HomeHeaderViewController.swift */; };
 		A1FD4E39203C36FF002700B9 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1FD4E27203C36FF002700B9 /* Raleway-Black.ttf */; };
@@ -107,6 +108,7 @@
 		5DDDE66A205A6F8B00ECD84F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A13057E9203340F4003246AF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A13057EB20334188003246AF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A16C69D7205AEE8900DFA1CC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A16CA5A5203C8104007ADAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1FABCCF20568BD70001F3CE /* HomeHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewController.swift; sourceTree = "<group>"; };
 		A1FD4E27203C36FF002700B9 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				5D6F768020331D980045D582 /* dateFormatter.swift */,
 				5D98A3CF20348081004ACDBD /* colors.swift */,
+				A16C69D7205AEE8900DFA1CC /* Extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				5D73FE2820330102007FB93A /* allEventsController.swift in Sources */,
 				FA109D062036676D00B54CAD /* HomeTomorrowViewController.swift in Sources */,
 				5D2CD5782034463C0023073E /* cellFavoritesController.swift in Sources */,
+				A16C69D8205AEE8900DFA1CC /* Extensions.swift in Sources */,
 				A13057EA203340F4003246AF /* HomeController.swift in Sources */,
 				FA109CFC20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift in Sources */,
 				FA109D042036672500B54CAD /* HomeTomorrowCollectionViewCell.swift in Sources */,

@@ -26,7 +26,11 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         
-         filteredEvents = (modelController?.getEventsByDate(events: (modelController?.events)!, date: dateFilter))!
+        filteredEvents = (modelController?.events
+            .findBy(date: Date(timeIntervalSince1970: 1523095200))?
+            .sorted(by: .date))!
+        print(filteredEvents)
+        
         
         let sectionTitleSmallText = "JEUDI"
         
