@@ -28,6 +28,7 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
     
     
     var modelController: ModelController?
+    var filteredEvents = [NSMutableDictionary]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,8 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         
         // Observer
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .reloadData, object: nil)
+        
+        filteredEvents = (modelController?.events)!
         
     }
     
@@ -140,5 +143,16 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         }
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? HomeMySelectionCollectionViewCell,
+            let indexPath = self.collectionView.indexPath(for: cell) {
+            let vc = segue.destination as! SingleEventController
+            vc.event = [filteredEvents[indexPath.row]]
+        }
+    }
 }

@@ -11,6 +11,7 @@ import UIKit
 class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, UICollectionViewDataSource {
     var modelController: ModelController?
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionTitle: UILabel!
     @IBOutlet weak var sectionTitleSmall: UILabel!
     @IBOutlet weak var seeAllLabel: UILabel!
@@ -117,4 +118,15 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         }
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? HomeTomorrowCollectionViewCell,
+            let indexPath = self.collectionView.indexPath(for: cell) {
+            let vc = segue.destination as! SingleEventController
+            vc.event = [filteredEvents[indexPath.row]]
+        }
+    }
 }
