@@ -31,6 +31,8 @@ class HomeTableViewController: UITableViewController {
 
         // Observer
         NotificationCenter.default.addObserver(self, selector: #selector(reloadDataHomeTableView), name: .reloadDataHomeTableView, object: nil)
+        
+        tableView.allowsSelection = false;
     }
 
     override func didReceiveMemoryWarning() {

@@ -74,7 +74,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-UL-jn3">
                                                     <rect key="frame" x="137.5" y="31" width="101.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="Custom_white"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sec-u2-OiX">
@@ -721,6 +721,9 @@ de 20h à 21h.</string>
         <image name="map" width="360" height="224"/>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Custom_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Green">
             <color red="0.41176470588235292" green="0.82352941176470584" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
