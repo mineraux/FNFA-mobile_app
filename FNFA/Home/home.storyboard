@@ -180,7 +180,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Axy-6u-g5y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Axy-6u-g5y">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
@@ -347,7 +347,7 @@
                 <tapGestureRecognizer id="jHp-pM-i1z">
                     <connections>
                         <action selector="handleTap:" destination="ucU-Mh-Ej0" id="G19-h4-dEx"/>
-                        <segue destination="UDi-TF-KQ8" kind="show" id="ZVH-z3-Myn"/>
+                        <segue destination="UDi-TF-KQ8" kind="showDetail" action="showViewController:sender:" id="ZVH-z3-Myn"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -775,7 +775,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hzp-eC-CgK"/>
         <segue reference="ZVH-z3-Myn"/>
     </inferredMetricsTieBreakers>
 </document>

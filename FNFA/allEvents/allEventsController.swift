@@ -16,7 +16,7 @@ extension String {
     }
 }
 
-class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func daySelected(_ notification: Notification) {
         filteredEvents = (modelController?.events)!
@@ -51,6 +51,10 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // Dropdown stuff
     var button = dropDownBtn()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
