@@ -92,7 +92,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="yud-iv-nrL">
-                                <rect key="frame" x="20" y="38" width="83" height="17"/>
+                                <rect key="frame" x="20" y="38" width="82.5" height="17"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="R7m-fB-YTR">
                                         <rect key="frame" x="0.0" y="0.0" width="22" height="17"/>
@@ -101,17 +101,17 @@
                                             <constraint firstAttribute="height" constant="17" id="gPf-fU-v0B"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIY-79-5sl">
-                                        <rect key="frame" x="39" y="0.0" width="44" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBz-e2-PUF">
+                                        <rect key="frame" x="39" y="0.0" width="43.5" height="17"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
-                                        <state key="normal" title="Retour">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="kKc-nb-GlB" kind="showDetail" id="LtH-af-RPS"/>
-                                        </connections>
-                                    </button>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VAL-rk-7Bl" appends="YES" id="sO3-vX-EiU"/>
+                                </connections>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qbG-o2-ztK">
                                 <rect key="frame" x="142" y="500.5" width="85" height="15"/>
@@ -176,6 +176,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdy-te-Dqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VAL-rk-7Bl">
+                    <connections>
+                        <segue destination="kKc-nb-GlB" kind="show" id="au7-FU-Ilo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="319.19999999999999" y="129.08545727136433"/>
         </scene>
