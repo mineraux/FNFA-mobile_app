@@ -89,7 +89,10 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         tomorrowCell.locationImage.image = UIImage(named:"location")
         
         //Image
-        tomorrowCell.eventImage.image = UIImage(named:"seance_scolaire")
+        let eventID = eventDict["id"] as! Int
+        let imageName = String(describing:eventID)
+        
+        tomorrowCell.eventImage!.image = UIImage(named:imageName)
         
         tomorrowCell.layer.cornerRadius = 10;
         

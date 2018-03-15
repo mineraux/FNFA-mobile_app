@@ -39,6 +39,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.tableView.rowHeight = 114
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .reloadData, object: nil)
+        
     }
     
     // Rafraichit la tableView au chargement pour mettre à jour les favoris
@@ -50,6 +51,21 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 
         dateUsed = []
         reperetitre = []
+        
+        if modelController?.getEventsInFav().count == 0 {
+            print("test")
+            
+            let imageName = "visuel_wishlist_vide.png"
+            let image = UIImage(named: imageName)
+            let imageView = UIImageView(image: image!)
+            
+            imageView.frame = CGRect(x: 0, y: 0, width: 210, height: 259)
+            
+//            imageView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            
+            view.addSubview(imageView)
+        }
     }
 
     override func didReceiveMemoryWarning() {

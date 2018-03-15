@@ -114,7 +114,10 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         mySelectionCell.eventPlace!.text = (eventDict?["place"] as! [String]).joined(separator: ", ")
 
         //Image
-        mySelectionCell.eventImage.image = UIImage(named:"seance_scolaire")
+        let eventID = eventDict?["id"] as! Int
+        let imageName = String(describing:eventID)
+        
+        mySelectionCell.eventImage!.image = UIImage(named:imageName)
 
         mySelectionCell.layer.cornerRadius = 10;
         

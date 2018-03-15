@@ -89,7 +89,10 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
         todayCell.eventPlace!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
         
         //Image
-        todayCell.eventImage.image = UIImage(named:"seance_scolaire")
+        let eventID = eventDict["id"] as! Int
+        let imageName = String(describing:eventID)
+        
+        todayCell.eventImage!.image = UIImage(named:imageName)
         
         todayCell.layer.cornerRadius = 10;
         
