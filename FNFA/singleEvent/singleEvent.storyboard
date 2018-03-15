@@ -78,13 +78,6 @@
                                 <color key="textColor" name="Black60"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_empty" translatesAutoresizingMaskIntoConstraints="NO" id="WzB-th-arb">
-                                <rect key="frame" x="331" y="415" width="24" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="S3l-kr-Hbc"/>
-                                    <constraint firstAttribute="height" constant="21" id="ar1-V4-qzP"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="yud-iv-nrL">
                                 <rect key="frame" x="20" y="38" width="82.5" height="17"/>
                                 <subviews>
@@ -127,15 +120,26 @@
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5p1-Wm-AJE">
+                                <rect key="frame" x="331" y="415" width="24" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="F06-Z5-diR"/>
+                                    <constraint firstAttribute="width" constant="24" id="hwz-0L-QBU"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="heart_empty"/>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="FpM-5m-XIx" eventType="touchUpInside" id="KDJ-Ye-Lec"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r7a-Vk-TeD" firstAttribute="top" secondItem="dIS-cM-egh" secondAttribute="bottom" constant="20" id="2Hd-1K-7Iq"/>
                             <constraint firstItem="BXD-AC-eJG" firstAttribute="top" secondItem="rHK-Ld-KQk" secondAttribute="bottom" constant="24" id="5Gr-jy-lVK"/>
                             <constraint firstItem="PBj-5S-07b" firstAttribute="trailing" secondItem="rHK-Ld-KQk" secondAttribute="trailing" constant="20" id="8Rf-v3-Ccu"/>
-                            <constraint firstItem="PBj-5S-07b" firstAttribute="trailing" secondItem="WzB-th-arb" secondAttribute="trailing" constant="20" id="DZA-wi-1CL"/>
                             <constraint firstItem="dIS-cM-egh" firstAttribute="trailing" secondItem="PBj-5S-07b" secondAttribute="trailing" id="EHc-6l-abz"/>
                             <constraint firstItem="rHK-Ld-KQk" firstAttribute="top" secondItem="Fpq-Dr-Zmh" secondAttribute="bottom" constant="12.5" id="Ehv-nP-WK2"/>
+                            <constraint firstItem="5p1-Wm-AJE" firstAttribute="top" secondItem="dIS-cM-egh" secondAttribute="bottom" constant="20" id="P6i-QS-F3r"/>
                             <constraint firstItem="qbG-o2-ztK" firstAttribute="top" secondItem="Fpq-Dr-Zmh" secondAttribute="top" constant="5" id="P9B-aG-wk1"/>
                             <constraint firstItem="yud-iv-nrL" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="TBM-vE-QHh"/>
                             <constraint firstItem="dIS-cM-egh" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" id="Xpz-ub-47h"/>
@@ -143,8 +147,8 @@
                             <constraint firstItem="Toc-VI-Avb" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="aRx-8R-kJg"/>
                             <constraint firstItem="Toc-VI-Avb" firstAttribute="top" secondItem="r7a-Vk-TeD" secondAttribute="bottom" constant="20" id="ifp-IW-lyT"/>
                             <constraint firstItem="BXD-AC-eJG" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="lNR-Z5-Au5"/>
+                            <constraint firstItem="PBj-5S-07b" firstAttribute="trailing" secondItem="5p1-Wm-AJE" secondAttribute="trailing" constant="20" id="mRu-Qm-foa"/>
                             <constraint firstItem="Fpq-Dr-Zmh" firstAttribute="leading" secondItem="PBj-5S-07b" secondAttribute="leading" constant="20" id="mU5-Dq-l1o"/>
-                            <constraint firstItem="WzB-th-arb" firstAttribute="top" secondItem="dIS-cM-egh" secondAttribute="bottom" constant="20" id="pvr-ag-Wsr"/>
                             <constraint firstItem="ChI-6z-EzO" firstAttribute="top" secondItem="Fpq-Dr-Zmh" secondAttribute="top" constant="5" id="r63-GX-Mmh"/>
                             <constraint firstItem="PBj-5S-07b" firstAttribute="trailing" secondItem="ChI-6z-EzO" secondAttribute="trailing" constant="20" id="rLT-er-tRU"/>
                             <constraint firstItem="dIS-cM-egh" firstAttribute="top" secondItem="PBj-5S-07b" secondAttribute="top" id="tIe-pL-V5w"/>
@@ -165,7 +169,7 @@
                         <outlet property="eventName" destination="Toc-VI-Avb" id="jP8-Xl-Qex"/>
                         <outlet property="eventPlace" destination="TN4-Ji-w8D" id="1Sp-q3-5Qm"/>
                         <outlet property="eventThumbnail" destination="dIS-cM-egh" id="ZT1-ce-WNI"/>
-                        <outlet property="isFav" destination="WzB-th-arb" id="EYc-9n-HZM"/>
+                        <outlet property="favIcon" destination="5p1-Wm-AJE" id="tDc-Cz-gFN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdy-te-Dqr" userLabel="First Responder" sceneMemberID="firstResponder"/>

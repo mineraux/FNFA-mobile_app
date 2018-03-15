@@ -89,6 +89,17 @@ class ModelController: NSObject {
         }
     }
     
+    func addToFavWithId(eventId: Int) {
+        for event in events {
+            if (event["id"] as! Int) == eventId{
+                let isFav = !(event["isFav"] as! Bool)
+                event["isFav"] = isFav
+                saveJSON()
+                break
+            }
+        }
+    }
+    
     // private
     func loadDefaultJSON() {
         if let URL = Bundle.main.url(forResource: "categories", withExtension: "json")  {

@@ -12,22 +12,28 @@ class SingleEventController: UIViewController {
     
     @IBOutlet weak var eventThumbnail: UIImageView!
     @IBOutlet weak var eventCategory: UILabel!
-    @IBOutlet weak var eventTypePublic: UILabel!
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventPlace: UILabel!
     @IBOutlet weak var eventExerpt: UILabel!
     @IBOutlet weak var eventAuthor: UILabel!
-    @IBOutlet weak var isFav: UIImageView!
+    @IBOutlet weak var favIcon: UIButton!
+    
     @IBOutlet weak var eventDuration: UILabel!
     
+    var modelController: ModelController?
+    
     var event = [NSMutableDictionary]()
+    
+    var currentEvent: NSMutableDictionary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        modelController = appDelegate.modelController
         
-        let currentEvent = event[0]
+        currentEvent = event[0]
 
         // Categorie de l'evenement
         eventCategory.text = (currentEvent["category"] as! String).uppercased()
@@ -50,15 +56,6 @@ class SingleEventController: UIViewController {
 
         // Description de l'evenement
         eventExerpt.text = (currentEvent["excerpt"] as! String)
-
-        // Définir si l'evenement est en favoris pour determiner quel coeur afficher
-        if currentEvent["isFav"] as! Bool == true {
-            let image = UIImage(named: "heart_full")
-            isFav.image = image
-        } else {
-            let image = UIImage(named: "heart_empty")
-            isFav.image = image
-        }
 
         // Définir la durée de l'evenement
         var isoDate = currentEvent["startingDate"]!
@@ -95,8 +92,16 @@ class SingleEventController: UIViewController {
         let overlay: UIView = UIView(frame: CGRect(x: 0, y: 0, width: eventThumbnail.frame.size.width, height: eventThumbnail.frame.size.width))
         overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.2)
         eventThumbnail.addSubview(overlay)
-        
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if currentEvent["isFav"] as! Bool == true {
+            let image = UIImage(named: "heart_full")
+            favIcon.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "heart_empty")
+            favIcon.setImage(image, for: .normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,7 +109,16 @@ class SingleEventController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
-
+    @IBAction func toggleFavorite(_ sender: Any) {
+        //modelController?.addToFavs(filteredEvents: event, eventId: currentEvent["id"] as! Int, BtnAddToFav: favIcon)
+        modelController?.addToFavWithId(eventId: currentEvent["id"] as! Int)
+        if currentEvent["isFav"] as! Bool == true {
+            let image = UIImage(named: "heart_full")
+            favIcon.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "heart_empty")
+            favIcon.setImage(image, for: .normal)
+        }
+    }
+    
 }

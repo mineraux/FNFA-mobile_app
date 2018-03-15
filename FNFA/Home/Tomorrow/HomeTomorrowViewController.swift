@@ -29,8 +29,6 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         filteredEvents = (modelController?.events
             .findBy(date: Date(timeIntervalSince1970: 1523095200))?
             .sorted(by: .date))!
-        print(filteredEvents)
-        
         
         let sectionTitleSmallText = "JEUDI"
         
@@ -38,8 +36,6 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         sectionTitle.text = "5 avril"
         seeAllLabel.text = "Voir tout"
         seeAllImage.image = UIImage(named:"chevron")
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
