@@ -18,8 +18,8 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     var dateUsed = [String]()
     var reperetitre = [Int]()
     let stackView = UIStackView()
-    
     @IBOutlet weak var tableView: UITableView!
+    var events = [NSMutableDictionary]()
     
     @objc func reloadData(_ notification: Notification) {
         self.tableView.reloadData()
@@ -88,6 +88,8 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 
         dateUsed = []
         reperetitre = []
+        
+        events = (modelController?.getEventsInFav())!
         
         if modelController?.getEventsInFav().count == 0 {
             stackView.isHidden = false
@@ -216,14 +218,16 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Navigation
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //performSegue(withIdentifier: "test", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SingleEventController {
+            destination.event = [events[(tableView.indexPathForSelectedRow?.row)!]]
+        }
+    }
 
 }

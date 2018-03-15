@@ -124,6 +124,7 @@
                                             <outlet property="eventThumbnail" destination="H58-aq-GMr" id="yWu-Pc-DaU"/>
                                             <outlet property="isFavBtn" destination="fXb-CR-3Uj" id="It1-sS-c1g"/>
                                             <outlet property="marginTopContainerCell" destination="5pk-u0-SIQ" id="zfu-A0-XKa"/>
+                                            <segue destination="dnT-tY-7w4" kind="show" id="md1-Nr-gyV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -155,6 +156,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5U-RA-XpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="-127.28635682158921"/>
+        </scene>
+        <!--singleEventSB-->
+        <scene sceneID="shv-Yp-BeP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="singleEvent" referencedIdentifier="singleEventSB" id="dnT-tY-7w4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsm-fz-MxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474" y="-128"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aad-oV-Sal">

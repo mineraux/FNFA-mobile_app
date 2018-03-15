@@ -152,7 +152,7 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         if let cell = sender as? HomeMySelectionCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
             let vc = segue.destination as! SingleEventController
-            vc.event = [filteredEvents[indexPath.row]]
+            vc.event = [(modelController?.getEventsInFav()[indexPath.row])!]
         }
     }
 }
