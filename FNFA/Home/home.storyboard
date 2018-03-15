@@ -163,6 +163,14 @@
             </objects>
             <point key="canvasLocation" x="2353" y="873"/>
         </scene>
+        <!--singleEventSB-->
+        <scene sceneID="hNg-xN-EBf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQf-UI-Dfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="singleEvent" referencedIdentifier="singleEventSB" id="5LV-lh-81z" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="2415" y="643"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Eho-Eq-BIL">
             <objects>
@@ -287,6 +295,7 @@
                                             <outlet property="eventPlace" destination="s2h-TM-6la" id="HqI-M8-Bcj"/>
                                             <outlet property="favButton" destination="9UE-DH-ZSv" id="PX1-CS-dcv"/>
                                             <outlet property="locationImage" destination="9mc-eU-Ldq" id="fAU-rN-djC"/>
+                                            <segue destination="5LV-lh-81z" kind="show" id="hzp-eC-CgK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -454,6 +463,7 @@
                                             <outlet property="eventPlace" destination="DYM-57-Nlh" id="R46-FZ-945"/>
                                             <outlet property="favButton" destination="G4b-p5-6mL" id="kC2-jF-RYZ"/>
                                             <outlet property="locationImage" destination="sbd-dk-CvQ" id="dEN-ZN-bMG"/>
+                                            <segue destination="5LV-lh-81z" kind="show" id="pW0-26-wdW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -636,6 +646,7 @@
                                             <outlet property="eventPlace" destination="fxm-Y9-gN6" id="EpG-HH-0M5"/>
                                             <outlet property="favButton" destination="4Us-Ou-Xt6" id="3y0-7h-AHg"/>
                                             <outlet property="locationImage" destination="qhI-4H-nuN" id="lSh-pH-86C"/>
+                                            <segue destination="5LV-lh-81z" kind="show" id="6IH-iV-dFn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -670,6 +681,7 @@
                         <viewLayoutGuide key="safeArea" id="HWt-TZ-wxU"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="cwO-L5-gw4" id="TRO-De-GH9"/>
                         <outlet property="sectionTitle" destination="gWb-S9-IXk" id="LSG-1T-2eT"/>
                         <outlet property="sectionTitleSmall" destination="7du-6s-kX5" id="NB7-YL-3yz"/>
                         <outlet property="seeAllImage" destination="bKc-I7-fv5" id="WLh-gG-HE0"/>
@@ -761,14 +773,9 @@
         <namedColor name="SkyBlue">
             <color red="0.20000000000000001" green="0.75294117650000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="SkyBlue">
-            <color red="0.20000000000000001" green="0.75294117650000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SkyBlue">
-            <color red="0.20000000000000001" green="0.75294117650000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tCi-pC-X6L"/>
+        <segue reference="hzp-eC-CgK"/>
+        <segue reference="ZVH-z3-Myn"/>
     </inferredMetricsTieBreakers>
 </document>

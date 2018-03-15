@@ -115,4 +115,16 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? HomeTodayCollectionViewCell,
+            let indexPath = self.collectionView.indexPath(for: cell) {
+                let vc = segue.destination as! SingleEventController
+                vc.event = [filteredEvents[indexPath.row]]
+            }
+    }
 }
