@@ -67,7 +67,7 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
         todayCell.eventId = (eventDict["id"] as! Int)
         
         //Category
-        todayCell.eventCategory.text = (eventDict["category"] as! String)
+        todayCell.eventCategory.text = (eventDict["category"] as! String).uppercased()
         
         //Name
         todayCell.eventName.text = (eventDict["name"] as! String)

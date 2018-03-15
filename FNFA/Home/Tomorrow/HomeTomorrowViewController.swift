@@ -67,7 +67,7 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         tomorrowCell.eventId = (eventDict["id"] as! Int)
         
         //Category
-        tomorrowCell.eventCategory.text = (eventDict["category"] as! String)
+        tomorrowCell.eventCategory.text = (eventDict["category"] as! String).uppercased()
         
         //Name
         tomorrowCell.eventName.text = (eventDict["name"] as! String)

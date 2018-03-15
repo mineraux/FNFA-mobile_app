@@ -94,7 +94,7 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         mySelectionCell.eventId = (eventDict!["id"] as! Int)
         
         //Category
-        mySelectionCell.eventCategory.text = (eventDict?["category"] as! String)
+        mySelectionCell.eventCategory.text = (eventDict?["category"] as! String).uppercased()
 
         //Name
         mySelectionCell.eventName.text = (eventDict?["name"] as! String)
