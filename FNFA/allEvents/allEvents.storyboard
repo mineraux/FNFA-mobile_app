@@ -17,6 +17,9 @@
         <array key="Raleway-Regular.ttf">
             <string>Raleway-Regular</string>
         </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Evenements-->
@@ -28,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-0R-fJl">
-                                <rect key="frame" x="0.0" y="209" width="375" height="409"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="453"/>
                                 <color key="backgroundColor" name="Black"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="114" id="vjg-HZ-DEG" customClass="cellAllEventsController" customModule="FNFA" customModuleProvider="target">
@@ -132,7 +135,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU1-6l-8G0">
-                                <rect key="frame" x="316" y="129" width="39" height="29"/>
+                                <rect key="frame" x="316" y="85" width="39" height="29"/>
                                 <color key="backgroundColor" name="MauveLight"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -191,8 +194,15 @@
                                     <constraint firstItem="hH0-wt-T9O" firstAttribute="top" secondItem="aKx-S1-Jz5" secondAttribute="top" constant="105" id="wsU-Op-Gq8"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Événements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMv-d8-WZB">
+                                <rect key="frame" x="140" y="34" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="wur-X4-Cvc">
-                                <rect key="frame" x="20" y="82" width="83" height="17"/>
+                                <rect key="frame" x="16" y="36" width="82.5" height="17"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="APn-hZ-94w">
                                         <rect key="frame" x="0.0" y="0.0" width="22" height="17"/>
@@ -201,17 +211,17 @@
                                             <constraint firstAttribute="height" constant="17" id="qKV-0m-3NO"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCJ-4G-d9j">
-                                        <rect key="frame" x="39" y="0.0" width="44" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXT-2q-585">
+                                        <rect key="frame" x="39" y="0.0" width="43.5" height="17"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
-                                        <state key="normal" title="Retour">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="bRT-0h-taT" kind="show" animates="NO" id="hnC-GV-3pW"/>
-                                        </connections>
-                                    </button>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="c2V-95-0Ji" appends="YES" id="49s-IZ-CRw"/>
+                                </connections>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.039215686274509803" green="0.070588235294117646" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -222,11 +232,11 @@
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="145" id="Hid-sB-71v"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" id="MXE-fK-avV"/>
                             <constraint firstItem="4zl-xR-u59" firstAttribute="trailing" secondItem="AU1-6l-8G0" secondAttribute="trailing" constant="20" id="R0G-UF-QMh"/>
-                            <constraint firstItem="wur-X4-Cvc" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" constant="20" id="WYf-jP-QZP"/>
+                            <constraint firstItem="wur-X4-Cvc" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" constant="16" id="WYf-jP-QZP"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" id="grN-EN-LyT"/>
                             <constraint firstItem="AU1-6l-8G0" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="65" id="jgJ-7v-CQi"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="pph-dd-QBe"/>
-                            <constraint firstItem="wur-X4-Cvc" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="18" id="vCN-zT-iHL"/>
+                            <constraint firstItem="wur-X4-Cvc" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="16" id="vCN-zT-iHL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4zl-xR-u59"/>
                     </view>
@@ -243,6 +253,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhM-im-79x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="c2V-95-0Ji">
+                    <connections>
+                        <segue destination="bRT-0h-taT" kind="showDetail" action="showViewController:sender:" id="HD8-LG-bLj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="287.19999999999999" y="77.811094452773617"/>
         </scene>
@@ -265,12 +280,11 @@
         <!--allEventsController-->
         <scene sceneID="0i1-d0-N5K">
             <objects>
-                <navigationController storyboardIdentifier="allo" title="allEventsController" automaticallyAdjustsScrollViewInsets="NO" id="FgK-Bp-vt1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="allo" title="allEventsController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FgK-Bp-vt1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="allEvents" id="BRA-CG-CpV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RcM-0J-hRm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
