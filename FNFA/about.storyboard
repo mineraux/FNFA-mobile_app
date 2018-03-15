@@ -467,15 +467,12 @@ de 20h à 21h.</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="HIF-ue-aQ1">
-                                                    <rect key="frame" x="16" y="1590" width="343" height="224"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="HIF-ue-aQ1" secondAttribute="height" multiplier="49:32" id="k9U-pf-HP5"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36K-Nt-LWk">
-                                                    <rect key="frame" x="16" y="1854" width="343" height="100"/>
+                                                    <rect key="frame" x="16" y="2050" width="343" height="100"/>
                                                     <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-2" translatesAutoresizingMaskIntoConstraints="NO" id="ngp-hW-CPD">
+                                                            <rect key="frame" x="331" y="40" width="13" height="20"/>
+                                                        </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOQ-fS-HLC">
                                                             <rect key="frame" x="15" y="35" width="296" height="30"/>
                                                             <state key="normal" title="Retrouver plus d'informations sur notre site">
@@ -485,9 +482,6 @@ de 20h à 21h.</string>
                                                                 <action selector="goToWebSite:" destination="4BH-Kc-TQQ" eventType="touchUpInside" id="x8p-xU-Kic"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-2" translatesAutoresizingMaskIntoConstraints="NO" id="ngp-hW-CPD">
-                                                            <rect key="frame" x="331" y="40" width="13" height="20"/>
-                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="Black"/>
                                                     <constraints>
@@ -499,31 +493,31 @@ de 20h à 21h.</string>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partenaires" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGU-n3-Rpg">
-                                                    <rect key="frame" x="16" y="2034" width="132.5" height="27"/>
+                                                    <rect key="frame" x="16" y="2230" width="132.5" height="27"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organisé par" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdD-WT-XTS">
-                                                    <rect key="frame" x="16" y="2079" width="60" height="12"/>
+                                                    <rect key="frame" x="16" y="2275" width="60" height="12"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_afca" translatesAutoresizingMaskIntoConstraints="NO" id="6Yq-lS-AKk">
-                                                    <rect key="frame" x="16" y="2099" width="84.5" height="33"/>
+                                                    <rect key="frame" x="16" y="2295" width="84.5" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="6Yq-lS-AKk" secondAttribute="height" multiplier="120:47" id="emo-fE-KBU"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En partenariat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1q-iC-bxf">
-                                                    <rect key="frame" x="16" y="2162" width="66" height="12"/>
+                                                    <rect key="frame" x="16" y="2358" width="66" height="12"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cC5-cc-eOn">
-                                                    <rect key="frame" x="16" y="2182" width="344" height="38.5"/>
+                                                    <rect key="frame" x="16" y="2378" width="344" height="38.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_theatre" translatesAutoresizingMaskIntoConstraints="NO" id="ZJe-p1-HKB">
                                                             <rect key="frame" x="0.0" y="0.0" width="115.5" height="38.5"/>
@@ -546,13 +540,13 @@ de 20h à 21h.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avec le soutien de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bu-wi-rlI">
-                                                    <rect key="frame" x="16" y="2250.5" width="86.5" height="12"/>
+                                                    <rect key="frame" x="16" y="2446.5" width="86.5" height="12"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="4aH-lQ-Zhl">
-                                                    <rect key="frame" x="16" y="2270" width="338" height="32.5"/>
+                                                    <rect key="frame" x="16" y="2466" width="338" height="32.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_sacd" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-a0-STX">
                                                             <rect key="frame" x="0.0" y="0.0" width="65" height="32.5"/>
@@ -575,7 +569,7 @@ de 20h à 21h.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-GD-dG8">
-                                                    <rect key="frame" x="16" y="2313" width="309.5" height="47"/>
+                                                    <rect key="frame" x="16" y="2509" width="309.5" height="47"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_procirep" translatesAutoresizingMaskIntoConstraints="NO" id="deZ-cl-0gA">
                                                             <rect key="frame" x="0.0" y="0.0" width="110.5" height="47"/>
@@ -598,11 +592,17 @@ de 20h à 21h.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_rennes" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-Dj-GuF">
-                                                    <rect key="frame" x="16" y="2368" width="83" height="44"/>
+                                                    <rect key="frame" x="16" y="2564" width="83" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="EQH-Dj-GuF" secondAttribute="height" multiplier="17:9" id="xOp-tM-XdX"/>
                                                     </constraints>
                                                 </imageView>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xyj-DA-I4m">
+                                                    <rect key="frame" x="16" y="1580" width="343" height="400"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="400" id="2rq-cw-GGV"/>
+                                                    </constraints>
+                                                </mapView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cNI-UL-jn3" firstAttribute="top" secondItem="0rc-Zw-JWo" secondAttribute="topMargin" constant="20" id="1qc-Qy-J1j"/>
@@ -610,9 +610,9 @@ de 20h à 21h.</string>
                                                 <constraint firstItem="Onl-b7-o9Q" firstAttribute="top" secondItem="a2F-Jg-Bpg" secondAttribute="bottom" constant="8" id="2hf-yY-Zpk"/>
                                                 <constraint firstItem="L6k-yd-csh" firstAttribute="trailing" secondItem="0rc-Zw-JWo" secondAttribute="trailingMargin" id="43C-7t-Zld"/>
                                                 <constraint firstItem="hG3-GD-dG8" firstAttribute="top" secondItem="4aH-lQ-Zhl" secondAttribute="bottom" constant="10" id="4p7-vQ-17F"/>
-                                                <constraint firstItem="HIF-ue-aQ1" firstAttribute="top" secondItem="qdG-H3-LPb" secondAttribute="bottom" constant="30" id="63y-4v-jdN"/>
                                                 <constraint firstItem="gDJ-nf-GyC" firstAttribute="top" secondItem="CYs-g3-waG" secondAttribute="bottom" constant="8" id="6xo-zV-etR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="HIF-ue-aQ1" secondAttribute="trailing" id="AUZ-v2-J22"/>
+                                                <constraint firstItem="xyj-DA-I4m" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="Bte-YQ-G8J"/>
+                                                <constraint firstItem="xyj-DA-I4m" firstAttribute="top" secondItem="qdG-H3-LPb" secondAttribute="bottom" constant="20" id="CoG-0T-gch"/>
                                                 <constraint firstItem="EQH-Dj-GuF" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="FcB-ge-wKT"/>
                                                 <constraint firstItem="hG3-GD-dG8" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="HJu-4p-cvm"/>
                                                 <constraint firstItem="6Yq-lS-AKk" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="IRX-MN-NjN"/>
@@ -634,6 +634,7 @@ de 20h à 21h.</string>
                                                 <constraint firstItem="UBk-co-YWD" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="TMJ-sy-7d0"/>
                                                 <constraint firstItem="4aH-lQ-Zhl" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="TbA-Lw-2g1"/>
                                                 <constraint firstItem="EQH-Dj-GuF" firstAttribute="top" secondItem="hG3-GD-dG8" secondAttribute="bottom" constant="8" id="U6z-1C-29L"/>
+                                                <constraint firstItem="36K-Nt-LWk" firstAttribute="top" secondItem="xyj-DA-I4m" secondAttribute="bottom" constant="70" id="WpT-id-a44"/>
                                                 <constraint firstItem="bdD-WT-XTS" firstAttribute="top" secondItem="HGU-n3-Rpg" secondAttribute="bottom" constant="18" id="YgO-uy-uU2"/>
                                                 <constraint firstItem="P1q-iC-bxf" firstAttribute="top" secondItem="6Yq-lS-AKk" secondAttribute="bottom" constant="30" id="a8u-OH-DFP"/>
                                                 <constraint firstItem="bdD-WT-XTS" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="aEY-XI-63q"/>
@@ -644,7 +645,6 @@ de 20h à 21h.</string>
                                                 <constraint firstItem="CYs-g3-waG" firstAttribute="top" secondItem="UBk-co-YWD" secondAttribute="bottom" constant="8" id="d6H-8f-9Vj"/>
                                                 <constraint firstItem="oPr-Hm-XLE" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="eha-0f-Ug1"/>
                                                 <constraint firstItem="fDC-lt-Hb5" firstAttribute="leading" secondItem="yVB-ij-cib" secondAttribute="trailing" constant="31" id="f7a-Pt-y10"/>
-                                                <constraint firstItem="HIF-ue-aQ1" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="hXn-VC-Hzu"/>
                                                 <constraint firstItem="Onl-b7-o9Q" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="iIo-jf-ZMd"/>
                                                 <constraint firstItem="W9m-YT-YJL" firstAttribute="top" secondItem="a2F-Jg-Bpg" secondAttribute="bottom" constant="8" id="jEc-Cj-lmy"/>
                                                 <constraint firstItem="CYs-g3-waG" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="kmr-gr-LN3"/>
@@ -661,13 +661,13 @@ de 20h à 21h.</string>
                                                 <constraint firstItem="X8Z-3h-kgI" firstAttribute="leading" secondItem="Lcl-0s-B1v" secondAttribute="trailing" constant="34" id="syI-un-oaj"/>
                                                 <constraint firstItem="yVB-ij-cib" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="tik-SH-BFM"/>
                                                 <constraint firstItem="qdG-H3-LPb" firstAttribute="trailing" secondItem="0rc-Zw-JWo" secondAttribute="trailingMargin" id="u6c-kS-9Lx"/>
-                                                <constraint firstItem="36K-Nt-LWk" firstAttribute="top" secondItem="HIF-ue-aQ1" secondAttribute="bottom" constant="40" id="uBF-i3-wj7"/>
                                                 <constraint firstItem="a2F-Jg-Bpg" firstAttribute="top" secondItem="oPr-Hm-XLE" secondAttribute="bottom" constant="40" id="uiY-Ib-gzN"/>
                                                 <constraint firstItem="4aH-lQ-Zhl" firstAttribute="top" secondItem="9Bu-wi-rlI" secondAttribute="bottom" constant="8" id="v5m-93-WRf"/>
                                                 <constraint firstItem="qdG-H3-LPb" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="vW2-Ph-Ee2"/>
                                                 <constraint firstItem="Sec-u2-OiX" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leadingMargin" id="w7M-G1-UKq"/>
                                                 <constraint firstItem="cC5-cc-eOn" firstAttribute="leading" secondItem="0rc-Zw-JWo" secondAttribute="leading" constant="16" id="waP-1G-lxR"/>
                                                 <constraint firstAttribute="trailing" secondItem="36K-Nt-LWk" secondAttribute="trailing" constant="16" id="xaz-ro-rtn"/>
+                                                <constraint firstItem="xyj-DA-I4m" firstAttribute="trailing" secondItem="0rc-Zw-JWo" secondAttribute="trailingMargin" id="xrL-cC-Xju"/>
                                                 <constraint firstItem="6Yq-lS-AKk" firstAttribute="top" secondItem="bdD-WT-XTS" secondAttribute="bottom" constant="8" id="zkD-RP-gjN"/>
                                                 <constraint firstItem="cC5-cc-eOn" firstAttribute="top" secondItem="P1q-iC-bxf" secondAttribute="bottom" constant="8" id="ztS-cT-Vt3"/>
                                             </constraints>
@@ -687,6 +687,7 @@ de 20h à 21h.</string>
                         <outlet property="containerGoToWebSite" destination="36K-Nt-LWk" id="Uvv-ha-JBF"/>
                         <outlet property="containerIntro" destination="Sec-u2-OiX" id="J5c-9g-clJ"/>
                         <outlet property="containerRestauration" destination="L6k-yd-csh" id="Gf6-Wh-uoL"/>
+                        <outlet property="mapView" destination="xyj-DA-I4m" id="lRe-oK-b78"/>
                         <outlet property="square" destination="ANk-Xm-QD9" id="Q3M-Sn-ZjB"/>
                         <outlet property="square2" destination="weN-J6-5w8" id="a2d-hF-1es"/>
                         <outlet property="square3" destination="a3V-6v-XiQ" id="oyI-zV-DLG"/>
@@ -718,7 +719,6 @@ de 20h à 21h.</string>
         <image name="logo_sacd" width="65" height="23"/>
         <image name="logo_sacem" width="57" height="29"/>
         <image name="logo_theatre" width="109" height="37"/>
-        <image name="map" width="360" height="224"/>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
