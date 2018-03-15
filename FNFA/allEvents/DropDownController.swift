@@ -92,8 +92,8 @@ class dropDownBtn: UIButton, dropDownProtocol {
             
             NSLayoutConstraint.deactivate([self.height])
             
-            if self.dropView.tableView.contentSize.height > 150 {
-                self.height.constant = 150
+            if self.dropView.tableView.contentSize.height > 250 {
+                self.height.constant = 250
             } else {
                 self.height.constant = self.dropView.tableView.contentSize.height
             }

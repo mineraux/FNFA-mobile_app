@@ -32,6 +32,12 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var showFiltersBtn: UIButton!
     @IBOutlet weak var singleFilter_sceance_spe: UIButton!
     @IBOutlet weak var singleFilter_volet_pro: UIButton!
+    @IBOutlet weak var singleFilter_competition: UIButton!
+    @IBOutlet weak var singleFilter_long_metrage: UIButton!
+    @IBOutlet weak var singleFilter_volet_professionnel: UIButton!
+    @IBOutlet weak var singleFilter_autour_des_films: UIButton!
+    @IBOutlet weak var singleFilter_cube_anime: UIButton!
+    @IBOutlet weak var singleFilter_focus: UIButton!
     
     @IBOutlet weak var closeFiltersBtn: UIButton!
     
@@ -77,6 +83,12 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         // Styles btn filters
         styleBtn(btn: singleFilter_sceance_spe)
         styleBtn(btn: singleFilter_volet_pro)
+        styleBtn(btn: singleFilter_competition)
+        styleBtn(btn: singleFilter_long_metrage)
+        styleBtn(btn: singleFilter_volet_professionnel)
+        styleBtn(btn: singleFilter_autour_des_films)
+        styleBtn(btn: singleFilter_cube_anime)
+        styleBtn(btn: singleFilter_focus)
         
         // Dropdown stuff
         button = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
