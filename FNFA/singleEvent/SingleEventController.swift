@@ -92,7 +92,7 @@ class SingleEventController: UIViewController {
 //        eventThumbnail.tintColor = UIColor(named: "Black40")
         //eventThumbnail.backgroundColor = UIColor.black
         
-        let overlay: UIView = UIView(frame: CGRect(x: 0, y: 0, width: eventThumbnail.frame.size.width+40, height: eventThumbnail.frame.size.width+40))
+        let overlay: UIView = UIView(frame: CGRect(x: 0, y: 0, width: eventThumbnail.frame.size.width, height: eventThumbnail.frame.size.width))
         overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.2)
         eventThumbnail.addSubview(overlay)
         
