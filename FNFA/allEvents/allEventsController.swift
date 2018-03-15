@@ -266,5 +266,4 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.event = [filteredEvents[(tableView.indexPathForSelectedRow?.row)!]]
         }
     }
-
 }
