@@ -29,6 +29,7 @@
 		5DAA45452031DEE500A7408E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA45432031DEE500A7408E /* Main.storyboard */; };
 		5DAA454A2031DEE500A7408E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */; };
 		5DAA45522031E11500A7408E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA45512031E11500A7408E /* TableViewController.swift */; };
+		5DDDE66B205A6F8B00ECD84F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDE66A205A6F8B00ECD84F /* TabBarController.swift */; };
 		A13057EA203340F4003246AF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057E9203340F4003246AF /* HomeController.swift */; };
 		A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13057EB20334188003246AF /* HomeCollectionViewCell.swift */; };
 		A16CA5A6203C8104007ADAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16CA5A5203C8104007ADAB4 /* Assets.xcassets */; };
@@ -103,6 +104,7 @@
 		5DAA45492031DEE500A7408E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAA454B2031DEE500A7408E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DAA45512031E11500A7408E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5DDDE66A205A6F8B00ECD84F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A13057E9203340F4003246AF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A13057EB20334188003246AF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A16CA5A5203C8104007ADAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */,
 				5DAA454B2031DEE500A7408E /* Info.plist */,
 				5D5060062031E325009F7E03 /* JSON Files */,
+				5DDDE66A205A6F8B00ECD84F /* TabBarController.swift */,
 			);
 			path = FNFA;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				FA109CFF2036605C00B54CAD /* HomeTodayViewController.swift in Sources */,
 				FA109CF720360E2100B54CAD /* HomeTableViewController.swift in Sources */,
 				5D0B822B205978A000F719E4 /* aboutController.swift in Sources */,
+				5DDDE66B205A6F8B00ECD84F /* TabBarController.swift in Sources */,
 				5D50600A2031E456009F7E03 /* ModelController.swift in Sources */,
 				5DAA45402031DEE500A7408E /* AppDelegate.swift in Sources */,
 				5DAA45522031E11500A7408E /* TableViewController.swift in Sources */,

@@ -32,11 +32,13 @@
         </array>
     </customFonts>
     <scenes>
-        <!--about-->
+        <!--Navigation Controller-->
         <scene sceneID="LGY-IM-U6E">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="58I-XQ-4Qn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="about" id="BE6-k9-WSg"/>
+                    <tabBarItem key="tabBarItem" title="" image="logo_info_30" selectedImage="logo_info" id="BE6-k9-WSg">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-11"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JB1-bd-6Cz">
@@ -708,6 +710,8 @@ de 20h à 21h.</string>
         <image name="logo_cine" width="46" height="32"/>
         <image name="logo_copie_prive" width="86" height="31"/>
         <image name="logo_ille" width="62" height="43"/>
+        <image name="logo_info" width="27" height="30"/>
+        <image name="logo_info_30" width="27" height="30"/>
         <image name="logo_logis" width="73" height="21"/>
         <image name="logo_procirep" width="68" height="20"/>
         <image name="logo_rennes" width="83" height="30"/>

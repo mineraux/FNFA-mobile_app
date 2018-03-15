@@ -156,11 +156,13 @@
             </objects>
             <point key="canvasLocation" x="772" y="-127.28635682158921"/>
         </scene>
-        <!--favorites-->
+        <!--Navigation Controller-->
         <scene sceneID="aad-oV-Sal">
             <objects>
                 <navigationController storyboardIdentifier="favorites" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="z6e-f8-JYG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="favorites" id="tvm-yY-yhf"/>
+                    <tabBarItem key="tabBarItem" title="" image="logo_fav_30" selectedImage="logo_fav" id="tvm-yY-yhf">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-11"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cJC-bp-2Rb">
@@ -181,6 +183,8 @@
     </scenes>
     <resources>
         <image name="heart_full" width="56" height="48"/>
+        <image name="logo_fav" width="34" height="28"/>
+        <image name="logo_fav_30" width="34" height="28"/>
         <image name="marker" width="12" height="14"/>
         <image name="seance_scolaire" width="98" height="100"/>
         <namedColor name="Black">

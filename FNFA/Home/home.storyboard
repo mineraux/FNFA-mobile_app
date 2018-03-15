@@ -308,15 +308,18 @@
             </objects>
             <point key="canvasLocation" x="794" y="-640"/>
         </scene>
-        <!--home-->
+        <!--Navigation Controller-->
         <scene sceneID="Eho-Eq-BIL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="WKH-ux-B0J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="home" id="vj9-EZ-OcS"/>
+                    <tabBarItem key="tabBarItem" title="" image="logo_home_30" selectedImage="logo_home" id="vj9-EZ-OcS">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-11"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Axy-6u-g5y">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -862,6 +865,8 @@
     </scenes>
     <resources>
         <image name="heart_empty" width="56" height="49"/>
+        <image name="logo_home" width="27" height="30"/>
+        <image name="logo_home_30" width="27" height="30"/>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
