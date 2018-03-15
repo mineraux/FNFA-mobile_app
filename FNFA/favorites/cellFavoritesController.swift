@@ -39,27 +39,8 @@ class cellFavoritesController: UITableViewCell {
     
 
     @IBAction func removeFav(_ sender: Any) {
-//        //modelController?.removeOfFavs(eventId: eventId!)
-//        modelController?.removeOfFavs(eventId: eventId!)
-//
-//        UIView.animate(
-//            withDuration: 0.2,
-//            animations: {
-//                self.isFavBtn.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-//        },
-//            completion: { _ in
-//                UIView.animate(withDuration: 0.2) {
-//                    self.isFavBtn.transform = CGAffineTransform.identity
-//                }
-//        })
-//
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
-        print(favEvents)
-        
-//        modelController?.removeOfFavs(eventId: eventId as! Int, filteredEvents: favEvents)
-        
-         modelController?.addToFavs(filteredEvents: favEvents, eventId: eventId!, BtnAddToFav: isFavBtn)
-        print(favEvents)
+       
+        modelController?.addToFavs(filteredEvents: favEvents, eventId: eventId!, BtnAddToFav: isFavBtn)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         
         UIView.animate(

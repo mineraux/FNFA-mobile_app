@@ -17,6 +17,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     var modelController: ModelController?
     var dateUsed = [String]()
     var reperetitre = [Int]()
+    let stackView = UIStackView()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,6 +26,12 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         
         dateUsed = []
         reperetitre = []
+        
+        if modelController?.getEventsInFav().count == 0 {
+            stackView.isHidden = false
+        } else {
+            stackView.isHidden = true
+        }
     }
     
     override func viewDidLoad() {
@@ -40,6 +47,36 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.rowHeight = 114
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .reloadData, object: nil)
         
+        //Image View
+        let imageView = UIImageView()
+        imageView.heightAnchor.constraint(equalToConstant: 259.0).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 210.0).isActive = true
+        imageView.image = UIImage(named: "visuel_wishlist_vide.png")
+        
+        //Text Label
+        let textLabel = UILabel()
+        textLabel.widthAnchor.constraint(equalToConstant: 259.0).isActive = true
+        textLabel.numberOfLines = 0
+        textLabel.text  = "Vous n'avez encore rien ajouté dans votre selection"
+        textLabel.textAlignment = .center
+        textLabel.textColor = UIColor.white
+        
+        //Stack View
+        stackView.axis  = UILayoutConstraintAxis.vertical
+        stackView.distribution  = UIStackViewDistribution.equalSpacing
+        stackView.alignment = UIStackViewAlignment.center
+        stackView.spacing   = 16.0
+        
+        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(textLabel)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(stackView)
+        
+        //Constraints
+        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        
     }
     
     // Rafraichit la tableView au chargement pour mettre à jour les favoris
@@ -53,18 +90,9 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         reperetitre = []
         
         if modelController?.getEventsInFav().count == 0 {
-            print("test")
-            
-            let imageName = "visuel_wishlist_vide.png"
-            let image = UIImage(named: imageName)
-            let imageView = UIImageView(image: image!)
-            
-            imageView.frame = CGRect(x: 0, y: 0, width: 210, height: 259)
-            
-//            imageView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-//            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            
-            view.addSubview(imageView)
+            stackView.isHidden = false
+        } else {
+            stackView.isHidden = true
         }
     }
 
@@ -101,7 +129,6 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
                 cell.tag = 2
             }
         }
-    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
