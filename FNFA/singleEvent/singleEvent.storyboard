@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxD-Jf-Fjh">
-                                <rect key="frame" x="20" y="359" width="300" height="29.5"/>
+                                <rect key="frame" x="20" y="353.5" width="300" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="cjW-BZ-xKi"/>
                                 </constraints>
@@ -61,19 +61,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfh-y1-utN">
-                                <rect key="frame" x="20" y="413" width="97" height="22"/>
+                                <rect key="frame" x="20" y="407.5" width="97" height="22"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventExcerpt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCW-UI-t8l">
-                                <rect key="frame" x="20" y="460" width="335" height="16.5"/>
+                                <rect key="frame" x="20" y="454.5" width="335" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="14"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventAuthor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-7H-N61">
-                                <rect key="frame" x="20" y="506" width="69.5" height="13.5"/>
+                                <rect key="frame" x="20" y="500.5" width="69.5" height="13.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="PTJ-b3-Tdd">
-                                <rect key="frame" x="142" y="417.5" width="80.5" height="14"/>
+                                <rect key="frame" x="142" y="412" width="80.5" height="14"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="uQG-mU-IgW">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="14"/>
@@ -103,7 +103,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="zFO-Wb-zz0">
-                                <rect key="frame" x="259" y="416.5" width="96" height="16"/>
+                                <rect key="frame" x="259" y="411" width="96" height="16"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="zOn-GF-LJn">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="16"/>
@@ -121,7 +121,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYC-QE-lbQ">
-                                <rect key="frame" x="20" y="564.5" width="335" height="110"/>
+                                <rect key="frame" x="20" y="559" width="335" height="110"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_linkToSite" translatesAutoresizingMaskIntoConstraints="NO" id="xEH-JY-1fG">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="110"/>
@@ -184,7 +184,7 @@
                             <constraint firstItem="JYC-QE-lbQ" firstAttribute="top" secondItem="ILB-7H-N61" secondAttribute="bottom" constant="45" id="JZX-rp-9BH"/>
                             <constraint firstItem="PTJ-b3-Tdd" firstAttribute="centerY" secondItem="dfh-y1-utN" secondAttribute="centerY" id="PRe-aa-mPq"/>
                             <constraint firstItem="rJU-CH-PZW" firstAttribute="trailing" secondItem="zFO-Wb-zz0" secondAttribute="trailing" constant="20" id="Pc0-EE-add"/>
-                            <constraint firstItem="TxD-Jf-Fjh" firstAttribute="top" secondItem="LLw-z4-MLj" secondAttribute="bottom" constant="25" id="PvJ-KE-0NY"/>
+                            <constraint firstItem="TxD-Jf-Fjh" firstAttribute="top" secondItem="LLw-z4-MLj" secondAttribute="bottom" constant="20" id="PvJ-KE-0NY"/>
                             <constraint firstItem="YJ3-oB-IHE" firstAttribute="leading" secondItem="rJU-CH-PZW" secondAttribute="leading" id="QQr-m6-sKD"/>
                             <constraint firstItem="hCW-UI-t8l" firstAttribute="leading" secondItem="rJU-CH-PZW" secondAttribute="leading" constant="20" id="RXh-J5-Fj4"/>
                             <constraint firstItem="rJU-CH-PZW" firstAttribute="trailing" secondItem="JYC-QE-lbQ" secondAttribute="trailing" constant="20" id="ZNj-rG-qPH"/>

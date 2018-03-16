@@ -13,6 +13,11 @@ class ModelController: NSObject {
     var categories = [NSMutableDictionary]()
     var events = [NSMutableDictionary]()
     var places = [NSMutableDictionary]()
+    let timestamp4Avril = Date(timeIntervalSince1970: 1522836000), // 4 Avril 2018, 12:00
+    timestamp5Avril = Date(timeIntervalSince1970: 1522922400), // 5 Avril 2018, 12:00
+    timestamp6Avril = Date(timeIntervalSince1970: 1523008800), // 6 Avril 2018, 12:00
+    timestamp7Avril = Date(timeIntervalSince1970: 1523095200), // 7 Avril 2018, 12:00
+    timestamp8Avril = Date(timeIntervalSince1970: 1523181600)  // 8 Avril 2018, 12:00
     
     static func getDate(forString: String) -> Date {
         let formatter = ISO8601DateFormatter()

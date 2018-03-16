@@ -11,8 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Helvetica.ttc">
-            <string>Helvetica</string>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -45,8 +51,8 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventCategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9J-1h-v3P">
-                                                            <rect key="frame" x="98" y="17" width="72" height="13"/>
-                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                                            <rect key="frame" x="98" y="17" width="77" height="13"/>
+                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="11"/>
                                                             <color key="textColor" name="MauveLight"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -55,20 +61,14 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="185" id="q8m-kN-MtM"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
                                                             <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIw-dX-EdR">
-                                                            <rect key="frame" x="98" y="56.5" width="64" height="16.5"/>
-                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventPlaces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-Wg-4i8">
-                                                            <rect key="frame" x="192" y="58" width="60" height="13"/>
-                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="98" y="59.5" width="75.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                                            <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXb-CR-3Uj">
@@ -82,9 +82,24 @@
                                                                 <action selector="removeFav:" destination="AOf-bm-QRs" eventType="touchUpInside" id="66c-Aa-ajW"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="VTt-QF-hD3">
-                                                            <rect key="frame" x="175" y="57" width="12" height="14"/>
-                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FnO-qv-Fs6">
+                                                            <rect key="frame" x="186.5" y="61.5" width="82.5" height="14"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="VTt-QF-hD3">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="14"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="12" id="4Ab-Qb-Pb0"/>
+                                                                        <constraint firstAttribute="height" constant="14" id="EVK-Mn-GLg"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventPlaces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-Wg-4i8">
+                                                                    <rect key="frame" x="20" y="0.0" width="62.5" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
+                                                                    <color key="textColor" name="Black"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,16 +108,14 @@
                                                         <constraint firstItem="MIw-dX-EdR" firstAttribute="leading" secondItem="H58-aq-GMr" secondAttribute="trailing" constant="18" id="Cw8-Ps-Eq2"/>
                                                         <constraint firstItem="dc6-Qr-FR6" firstAttribute="centerY" secondItem="ZEn-Fh-CYL" secondAttribute="centerY" id="MJF-2h-aIA"/>
                                                         <constraint firstItem="H58-aq-GMr" firstAttribute="top" secondItem="ZEn-Fh-CYL" secondAttribute="top" constant="10" id="MlW-Wt-5pJ"/>
-                                                        <constraint firstItem="Uoe-Wg-4i8" firstAttribute="leading" secondItem="MIw-dX-EdR" secondAttribute="trailing" constant="30" id="N85-ki-C5p"/>
                                                         <constraint firstAttribute="trailing" secondItem="fXb-CR-3Uj" secondAttribute="trailing" constant="10" id="NaY-SG-ccB"/>
-                                                        <constraint firstItem="Uoe-Wg-4i8" firstAttribute="leading" secondItem="VTt-QF-hD3" secondAttribute="trailing" constant="5" id="Rci-IU-RWl"/>
                                                         <constraint firstItem="H58-aq-GMr" firstAttribute="leading" secondItem="ZEn-Fh-CYL" secondAttribute="leading" constant="10" id="STr-lc-g5f"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Uoe-Wg-4i8" secondAttribute="bottom" constant="19" id="aWm-Ij-0Df"/>
-                                                        <constraint firstAttribute="bottom" secondItem="MIw-dX-EdR" secondAttribute="bottom" constant="17" id="gFT-c8-OOc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="MIw-dX-EdR" secondAttribute="bottom" constant="13" id="gFT-c8-OOc"/>
+                                                        <constraint firstItem="FnO-qv-Fs6" firstAttribute="leading" secondItem="MIw-dX-EdR" secondAttribute="trailing" constant="13" id="n9d-nT-JG5"/>
                                                         <constraint firstItem="a9J-1h-v3P" firstAttribute="leading" secondItem="H58-aq-GMr" secondAttribute="trailing" constant="18" id="oua-pX-MSF"/>
                                                         <constraint firstAttribute="bottom" secondItem="H58-aq-GMr" secondAttribute="bottom" constant="10" id="pA3-cX-tnX"/>
                                                         <constraint firstItem="a9J-1h-v3P" firstAttribute="top" secondItem="ZEn-Fh-CYL" secondAttribute="top" constant="17" id="pao-EE-mNT"/>
-                                                        <constraint firstAttribute="bottom" secondItem="VTt-QF-hD3" secondAttribute="bottom" constant="19" id="qwO-Gb-mna"/>
+                                                        <constraint firstItem="FnO-qv-Fs6" firstAttribute="centerY" secondItem="MIw-dX-EdR" secondAttribute="centerY" id="xrk-XG-yp1"/>
                                                         <constraint firstItem="fXb-CR-3Uj" firstAttribute="centerY" secondItem="ZEn-Fh-CYL" secondAttribute="centerY" id="zHo-ya-xcb"/>
                                                     </constraints>
                                                 </view>
@@ -198,11 +211,14 @@
         <namedColor name="Black">
             <color red="0.031372549020000001" green="0.070588235289999995" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Black">
+            <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Gold">
             <color red="0.9882352941176471" green="0.80000000000000004" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MauveLight">
-            <color red="0.59215686270000001" green="0.68235294120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.59215686274509804" green="0.68235294117647061" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -960,8 +960,5 @@ de 20h à 21h.</string>
         <namedColor name="Green">
             <color red="0.41176470588235292" green="0.82352941176470584" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Green">
-            <color red="0.41176470588235292" green="0.82352941176470584" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

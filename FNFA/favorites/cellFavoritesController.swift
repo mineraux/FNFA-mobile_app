@@ -53,7 +53,5 @@ class cellFavoritesController: UITableViewCell {
                     self.isFavBtn.transform = CGAffineTransform.identity
                 }
         })
-        
-        
     }
 }

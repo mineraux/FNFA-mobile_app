@@ -21,6 +21,8 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     var events = [NSMutableDictionary]()
     
+    
+    
     @objc func reloadData(_ notification: Notification) {
         self.tableView.reloadData()
         
@@ -105,6 +107,12 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             stackView.isHidden = true
         }
+        
+        let favEvents4Avril = (modelController?.events
+            .findBy(date: (modelController?.timestamp4Avril)!)?
+            .sorted(by: .date))!
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -112,23 +120,15 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (modelController?.getEventsInFav().count)!
     }
     
-//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
-//        let favDict = modelController?.getEventsInFav()[indexPath.row]
-//
-//        for id in reperetitre {
-//            if (favDict?["id"] as! Int) == id {
-//                cell.tag = 2
-//            }
-//        }
-//    }
+    func tableView(_ tableView: UITableView, willendDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    }
     
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -150,7 +150,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 
         cell.eventName.text = (favDict?["name"] as! String)
         
-        cell.eventCategory.text = (favDict?["category"] as! String)
+        cell.eventCategory.text = (favDict?["category"] as! String).uppercased()
         cell.eventPlace!.text = (favDict?["place"] as! [String]).joined(separator: ", ")
 
         // Set hour event
