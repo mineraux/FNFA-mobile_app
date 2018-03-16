@@ -171,12 +171,12 @@
             </objects>
             <point key="canvasLocation" x="2415" y="643"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Accueil-->
         <scene sceneID="Eho-Eq-BIL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKH-ux-B0J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="logo_home_30" selectedImage="logo_home" id="vj9-EZ-OcS">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-11"/>
+                    <tabBarItem key="tabBarItem" title="Accueil" image="logo_home_30" selectedImage="logo_home" id="vj9-EZ-OcS">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

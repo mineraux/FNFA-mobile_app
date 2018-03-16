@@ -32,12 +32,12 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
+        <!--A propos-->
         <scene sceneID="LGY-IM-U6E">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="58I-XQ-4Qn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="logo_info_30" selectedImage="logo_info" id="BE6-k9-WSg">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-11"/>
+                    <tabBarItem key="tabBarItem" title="A propos" image="logo_info_30" selectedImage="logo_info" id="BE6-k9-WSg">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

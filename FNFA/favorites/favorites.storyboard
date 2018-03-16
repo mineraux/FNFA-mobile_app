@@ -165,12 +165,13 @@
             </objects>
             <point key="canvasLocation" x="1474" y="-128"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Ma sélection-->
         <scene sceneID="aad-oV-Sal">
             <objects>
                 <navigationController storyboardIdentifier="favorites" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="z6e-f8-JYG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="logo_fav_30" selectedImage="logo_fav" id="tvm-yY-yhf">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-11"/>
+                    <tabBarItem key="tabBarItem" title="Ma sélection" image="logo_fav_30" selectedImage="logo_fav" id="tvm-yY-yhf">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
