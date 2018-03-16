@@ -39,39 +39,44 @@ class dropDownBtn: UIButton, dropDownProtocol {
     
     let chevronDropDown = UIImageView()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor(named: "Black")
         chevronDropDown.image = UIImage(named: "chevron-1.png")
-        
-        
         chevronDropDown.translatesAutoresizingMaskIntoConstraints = false
-        
-        
         
         dropView = dropDownView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
         dropView.delegate = self
-        
         dropView.translatesAutoresizingMaskIntoConstraints = false
+        
         NotificationCenter.default.addObserver(self, selector: #selector(daySelected), name: .daySelected, object: nil)
     }
     
     override func didMoveToSuperview() {
-        self.superview?.addSubview(dropView)
-        self.superview?.bringSubview(toFront: dropView)
-        self.superview?.addSubview(chevronDropDown)
         
-        dropView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        dropView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        dropView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        height = dropView.heightAnchor.constraint(equalToConstant: 0)
         
-        chevronDropDown.widthAnchor.constraint(equalToConstant: 21).isActive = true
-        chevronDropDown.heightAnchor.constraint(equalToConstant: 12).isActive = true
-        chevronDropDown.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 65).isActive = true
-        chevronDropDown.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        if self.superview != nil {
+            self.superview?.addSubview(dropView)
+            self.superview?.bringSubview(toFront: dropView)
+            self.superview?.addSubview(chevronDropDown)
+            
+            
+            
+            dropView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+            dropView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            dropView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+            
+            height = dropView.heightAnchor.constraint(equalToConstant: 0)
+            
+            chevronDropDown.widthAnchor.constraint(equalToConstant: 21).isActive = true
+            chevronDropDown.heightAnchor.constraint(equalToConstant: 12).isActive = true
+            chevronDropDown.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 65).isActive = true
+            chevronDropDown.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        }
+
+        
+        
     }
     
     @objc func daySelected(_ notification: Notification) {
