@@ -129,7 +129,7 @@
                                             <outlet property="eventName" destination="auG-Nn-TVh" id="zRf-Hv-ZlH"/>
                                             <outlet property="eventPlaces" destination="Tbh-mg-PDg" id="dYP-4t-6R0"/>
                                             <outlet property="eventThumbnail" destination="4tF-Ct-IxE" id="anL-jg-T2I"/>
-                                            <segue destination="NJW-LF-bj2" kind="showDetail" identifier="test" id="VKM-fg-JNm"/>
+                                            <segue destination="NJW-LF-bj2" kind="show" identifier="test" action="showDetailViewController:sender:" id="VKM-fg-JNm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -346,21 +346,27 @@
         <!--allEventsController-->
         <scene sceneID="0i1-d0-N5K">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yM-Sz-50h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="allo" title="allEventsController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FgK-Bp-vt1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="allEvents" id="BRA-CG-CpV"/>
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RcM-0J-hRm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="RcM-0J-hRm">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="Black"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="Mcf-fs-lFz" kind="relationship" relationship="rootViewController" id="M6a-FJ-5gn"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7yM-Sz-50h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-538" y="78"/>
+            <point key="canvasLocation" x="-668" y="98"/>
         </scene>
     </scenes>
     <resources>
@@ -369,6 +375,9 @@
         <image name="heart_empty" width="56" height="49"/>
         <image name="marker" width="12" height="14"/>
         <image name="seance_scolaire" width="98" height="100"/>
+        <namedColor name="Black">
+            <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

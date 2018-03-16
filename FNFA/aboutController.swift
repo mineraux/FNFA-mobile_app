@@ -39,6 +39,10 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Remove border botton on navigation bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
         containerIntro.layer.cornerRadius = 6
         containerIntro.layer.masksToBounds = true
         

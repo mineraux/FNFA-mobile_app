@@ -26,7 +26,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home Table View Controller-->
+        <!--Accueil-->
         <scene sceneID="eEI-2f-IK7">
             <objects>
                 <tableViewController id="ea7-35-0qp" customClass="HomeTableViewController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,7 +149,7 @@
                             <outlet property="delegate" destination="ea7-35-0qp" id="oVY-7c-hVf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="SYO-vG-Iy5"/>
+                    <navigationItem key="navigationItem" title="Accueil" id="SYO-vG-Iy5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBj-9J-DjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,7 +158,9 @@
         <!--allEvents-->
         <scene sceneID="eMw-G2-pIh">
             <objects>
-                <viewControllerPlaceholder storyboardName="allEvents" id="UDi-TF-KQ8" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="allEvents" id="UDi-TF-KQ8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XHc-VL-dAE"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNY-iB-rF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2353" y="873"/>
@@ -184,7 +186,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Axy-6u-g5y">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="Black"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -349,7 +355,7 @@
                 <tapGestureRecognizer id="jHp-pM-i1z">
                     <connections>
                         <action selector="handleTap:" destination="ucU-Mh-Ej0" id="G19-h4-dEx"/>
-                        <segue destination="UDi-TF-KQ8" kind="showDetail" action="showViewController:sender:" id="ZVH-z3-Myn"/>
+                        <segue destination="UDi-TF-KQ8" kind="show" id="ZVH-z3-Myn"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -714,7 +720,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diA-pV-QbO">
-                                <rect key="frame" x="16" y="294" width="343" height="59.5"/>
+                                <rect key="frame" x="16" y="293" width="343" height="59.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Découvrez l’intégralité du programme du festival national du film d’animation et organisez votre visite grâce à votre page de favoris. </string>
@@ -728,7 +734,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoO-tw-9xk">
-                                <rect key="frame" x="16" y="256" width="343" height="30"/>
+                                <rect key="frame" x="16" y="256" width="343" height="29"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

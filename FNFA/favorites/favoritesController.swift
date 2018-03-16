@@ -13,7 +13,7 @@ extension Notification.Name {
 }
 
 class favoritesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     var modelController: ModelController?
     var dateUsed = [String]()
     var reperetitre = [Int]()
@@ -34,9 +34,18 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        //Remove border botton on navigation bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController

@@ -249,7 +249,7 @@
 				5D2CD57420343E620023073E /* favorites */,
 				5D73FE1D2032F90B007FB93A /* about.storyboard */,
 				5D0B822A205978A000F719E4 /* aboutController.swift */,
-				5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */,
+				FA5707EF205B408000E204A4 /* LunchScreen */,
 				5DAA454B2031DEE500A7408E /* Info.plist */,
 				5D5060062031E325009F7E03 /* JSON Files */,
 				5DDDE66A205A6F8B00ECD84F /* TabBarController.swift */,
@@ -372,6 +372,14 @@
 				FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */,
 			);
 			path = Tomorrow;
+			sourceTree = "<group>";
+		};
+		FA5707EF205B408000E204A4 /* LunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */,
+			);
+			path = LunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
