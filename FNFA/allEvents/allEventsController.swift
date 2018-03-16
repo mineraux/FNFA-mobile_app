@@ -257,7 +257,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "test", sender: self)
+        // performSegue(withIdentifier: "singleEvent", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

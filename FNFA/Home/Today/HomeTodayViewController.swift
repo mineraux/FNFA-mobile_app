@@ -16,10 +16,15 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var sectionTitleSmall: UILabel!
     @IBOutlet weak var seeAllLabel: UILabel!
     @IBOutlet weak var seeAllImage: UIImageView!
+    @IBOutlet weak var seeAllView: UIView!
     
     var filteredEvents = [NSMutableDictionary]()
     let dateFilter = "mercredi 4"
 
+    @IBAction func seeAllAction(_ sender: Any) {
+        // performSegue(withIdentifier: "allEvents", sender: seeAllView)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,10 +126,12 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
         if let cell = sender as? HomeTodayCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
-                let vc = segue.destination as! SingleEventController
-                vc.event = [filteredEvents[indexPath.row]]
-            }
+            let vc = segue.destination as! SingleEventController
+            vc.event = [filteredEvents[indexPath.row]]
+        }
+        
     }
 }

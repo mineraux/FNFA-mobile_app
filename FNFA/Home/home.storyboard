@@ -176,7 +176,7 @@
         <!--Accueil-->
         <scene sceneID="Eho-Eq-BIL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKH-ux-B0J" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKH-ux-B0J" customClass="HomeNavigtionController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Accueil" image="logo_home_30" selectedImage="logo_home" id="vj9-EZ-OcS">
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
@@ -303,7 +303,7 @@
                                             <outlet property="eventPlace" destination="s2h-TM-6la" id="HqI-M8-Bcj"/>
                                             <outlet property="favButton" destination="9UE-DH-ZSv" id="PX1-CS-dcv"/>
                                             <outlet property="locationImage" destination="9mc-eU-Ldq" id="fAU-rN-djC"/>
-                                            <segue destination="5LV-lh-81z" kind="show" id="hzp-eC-CgK"/>
+                                            <segue destination="5LV-lh-81z" kind="show" identifier="singleEvent" id="hzp-eC-CgK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -471,7 +471,7 @@
                                             <outlet property="eventPlace" destination="DYM-57-Nlh" id="R46-FZ-945"/>
                                             <outlet property="favButton" destination="G4b-p5-6mL" id="kC2-jF-RYZ"/>
                                             <outlet property="locationImage" destination="sbd-dk-CvQ" id="dEN-ZN-bMG"/>
-                                            <segue destination="5LV-lh-81z" kind="show" id="pW0-26-wdW"/>
+                                            <segue destination="5LV-lh-81z" kind="show" identifier="" id="pW0-26-wdW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -525,12 +525,14 @@
                         <outlet property="sectionTitleSmall" destination="NLj-CZ-VsC" id="q8L-G3-2u9"/>
                         <outlet property="seeAllImage" destination="RG6-kc-xXJ" id="xUk-r7-TnT"/>
                         <outlet property="seeAllLabel" destination="YOS-dK-67q" id="bfa-Sy-kT1"/>
+                        <outlet property="seeAllView" destination="xKo-Lc-xga" id="zNg-IS-CpT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJd-QE-wN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Y6h-hl-b3H">
                     <connections>
-                        <segue destination="UDi-TF-KQ8" kind="show" id="tCi-pC-X6L"/>
+                        <action selector="seeAllAction:" destination="eg1-nQ-iHw" id="rzB-eF-jHZ"/>
+                        <segue destination="UDi-TF-KQ8" kind="show" identifier="" id="tCi-pC-X6L"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -784,7 +786,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hzp-eC-CgK"/>
-        <segue reference="ZVH-z3-Myn"/>
+        <segue reference="6IH-iV-dFn"/>
+        <segue reference="tCi-pC-X6L"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,6 +19,7 @@ class HomeTableViewController: UITableViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +33,11 @@ class HomeTableViewController: UITableViewController {
         // Observer
         NotificationCenter.default.addObserver(self, selector: #selector(reloadDataHomeTableView), name: .reloadDataHomeTableView, object: nil)
         
+        //Remove border botton on navigation bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        //Disable selection
         tableView.allowsSelection = false;
     }
 
