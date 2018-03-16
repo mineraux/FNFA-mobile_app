@@ -11,6 +11,7 @@ import CoreLocation
 import MapKit
 
 class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+   
 
     @IBOutlet weak var containerIntro: UIView!
     @IBOutlet weak var containerRestauration: UIView!
