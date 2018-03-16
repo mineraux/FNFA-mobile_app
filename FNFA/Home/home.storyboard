@@ -62,39 +62,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="2l5-dk-y46">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="280" id="izQ-mC-KX6">
-                                        <rect key="frame" x="0.0" y="398" width="375" height="280"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="izQ-mC-KX6" id="jcx-0q-1qg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRx-Jc-NcH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
-                                                    <connections>
-                                                        <segue destination="ucU-Mh-Ej0" kind="embed" id="coJ-k8-4kk"/>
-                                                    </connections>
-                                                </containerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="PRx-Jc-NcH" secondAttribute="bottom" id="4W9-GH-na4"/>
-                                                <constraint firstAttribute="trailing" secondItem="PRx-Jc-NcH" secondAttribute="trailing" id="72Q-MS-BNT"/>
-                                                <constraint firstItem="PRx-Jc-NcH" firstAttribute="top" secondItem="jcx-0q-1qg" secondAttribute="top" id="FfK-Eg-kzl"/>
-                                                <constraint firstItem="PRx-Jc-NcH" firstAttribute="leading" secondItem="jcx-0q-1qg" secondAttribute="leading" id="NLn-df-wQE"/>
-                                                <constraint firstItem="PRx-Jc-NcH" firstAttribute="top" secondItem="jcx-0q-1qg" secondAttribute="top" id="P61-sL-DWv"/>
-                                                <constraint firstItem="PRx-Jc-NcH" firstAttribute="leading" secondItem="jcx-0q-1qg" secondAttribute="leading" id="Qcx-9i-mWv"/>
-                                                <constraint firstAttribute="trailing" secondItem="PRx-Jc-NcH" secondAttribute="trailing" id="hYd-hf-2r5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection id="4e0-rQ-i2z" userLabel="Today">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="tWJ-LD-hWl">
-                                        <rect key="frame" x="0.0" y="678" width="375" height="300"/>
+                                        <rect key="frame" x="0.0" y="398" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tWJ-LD-hWl" id="iVi-Vq-4f9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -120,7 +91,7 @@
                             <tableViewSection id="rYS-A1-Cds">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="321" id="r8u-zp-5hA">
-                                        <rect key="frame" x="0.0" y="978" width="375" height="321"/>
+                                        <rect key="frame" x="0.0" y="698" width="375" height="321"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r8u-zp-5hA" id="DFm-V6-z1b">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="321"/>
@@ -206,7 +177,7 @@
             <objects>
                 <viewController title="My selection" id="ucU-Mh-Ej0" customClass="HomeMySelectionViewController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXe-As-dzV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JMo-u0-lZy">
@@ -359,7 +330,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1212" y="481.25937031484261"/>
+            <point key="canvasLocation" x="2775" y="-116"/>
         </scene>
         <!--favorites-->
         <scene sceneID="3uK-oq-6wA">
@@ -786,7 +757,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6IH-iV-dFn"/>
-        <segue reference="tCi-pC-X6L"/>
+        <segue reference="hzp-eC-CgK"/>
+        <segue reference="ZVH-z3-Myn"/>
     </inferredMetricsTieBreakers>
 </document>
