@@ -83,7 +83,6 @@ class ModelController: NSObject {
                 if event["isFav"] as! Bool == true {
                     let image = UIImage(named: "heart_full")
                     BtnAddToFav.setImage(image, for: .normal)
-                    
                 } else {
                     let image = UIImage(named: "heart_empty")
                     BtnAddToFav.setImage(image, for: .normal)

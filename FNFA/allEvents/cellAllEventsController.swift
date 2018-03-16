@@ -41,6 +41,8 @@ class cellAllEventsController: UITableViewCell {
     @IBAction func addToFav(_ sender: Any) {
         modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: BtnAddToFav)
         
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
+        
         UIView.animate(
             withDuration: 0.2,
             animations: {

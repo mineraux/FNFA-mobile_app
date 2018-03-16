@@ -19,7 +19,8 @@ extension String {
 class allEventsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func daySelected(_ notification: Notification) {
-        filteredEvents = (modelController?.events)!
+        filteredEvents = (modelController?.events
+            .sorted(by: .date))!
         
         var title = ((button.titleLabel?.text)!).lowercased()
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == title }
@@ -65,7 +66,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         NotificationCenter.default.addObserver(self, selector: #selector(daySelected), name: .daySelected, object: nil)
         
-        filteredEvents = (modelController?.events)!
+        filteredEvents = (modelController?.events
+            .sorted(by: .date))!
         
         // rowHeight = taille de la cellule + marge inter cellules = 90 + 12 + 12 = 114
         self.tableView.rowHeight = 114
