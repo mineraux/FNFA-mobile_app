@@ -99,7 +99,6 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         
         favIconeManager(indexPath: indexPath, addToFavBtn: tomorrowCell.favButton)
         
-        
         return  tomorrowCell
     }
     
