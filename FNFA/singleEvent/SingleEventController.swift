@@ -18,8 +18,12 @@ class SingleEventController: UIViewController {
     @IBOutlet weak var eventExerpt: UILabel!
     @IBOutlet weak var eventAuthor: UILabel!
     @IBOutlet weak var favIcon: UIButton!
+    @IBOutlet var scroller: UIScrollView!
+    @IBOutlet weak var typePublic: UILabel!
     
     @IBOutlet weak var eventDuration: UILabel!
+    
+    @IBOutlet weak var linkToSingleEvent: UIView!
     
     var modelController: ModelController?
     
@@ -29,6 +33,8 @@ class SingleEventController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scroller.contentSize = CGSize(width: scroller.contentSize.width, height: 700)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
@@ -71,27 +77,40 @@ class SingleEventController: UIViewController {
 
         let hour = String(describing: components.hour ?? 0)
         let minutes = String(describing: components.minute ?? 0)
-        var eventDurationString = hour + " h " + minutes
+        let eventDurationString = hour + " h " + minutes
         eventDuration.text = eventDurationString
 
         if (currentEvent["author"] as! String).count > 0 {
             eventAuthor.text = (currentEvent["author"] as! String) + " | " + (currentEvent["producer"] as! String)
         } else {
-            eventAuthor.text = currentEvent["author"] as! String
+            eventAuthor.text = (currentEvent["author"] as! String)
         }
-        
+
         let eventID = currentEvent["id"] as! Int
         let imageName = String(describing:eventID)
-        
+
         eventThumbnail.image = UIImage(named:imageName)
-        
-//        eventThumbnail.image = eventThumbnail.image!.withRenderingMode(.alwaysTemplate)
-//        eventThumbnail.tintColor = UIColor(named: "Black40")
-        //eventThumbnail.backgroundColor = UIColor.black
-        
-        let overlay: UIView = UIView(frame: CGRect(x: 0, y: 0, width: eventThumbnail.frame.size.width, height: eventThumbnail.frame.size.width))
+
+        let overlay: UIView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: eventThumbnail.frame.size.height))
         overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.2)
         eventThumbnail.addSubview(overlay)
+        
+        if (currentEvent["age"] as! Int) > 0 {
+            typePublic.isHidden = false
+            typePublic.text = "enfants".uppercased()
+        } else {
+            typePublic.isHidden = true
+        }
+        
+        // Redirection vers le site
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(redirectToWebsite))
+        linkToSingleEvent.addGestureRecognizer(gesture)
+    }
+    
+    @objc func redirectToWebsite() {
+        if let url = URL(string: currentEvent["link"] as! String) {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,6 +138,17 @@ class SingleEventController: UIViewController {
             let image = UIImage(named: "heart_empty")
             favIcon.setImage(image, for: .normal)
         }
+        
+        UIView.animate(
+            withDuration: 0.2,
+            animations: {
+                self.favIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        },
+            completion: { _ in
+                UIView.animate(withDuration: 0.2) {
+                    self.favIcon.transform = CGAffineTransform.identity
+                }
+        })
     }
     
 }

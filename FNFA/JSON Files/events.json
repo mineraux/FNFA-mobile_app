@@ -12,6 +12,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/salon-des-nouvelles-ecritures.html",
         "author": "",
         "producer": "",
         "age": 5
@@ -28,6 +29,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T13:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/mercredi-4-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -44,13 +46,14 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T17:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/mercredi-4-avril.html",
         "author": "",
         "producer": "",
         "age": 0
     },
     {
         "id": 4,
-        "name": "En partenariat avec LISAA, en accès libre",
+        "name": "Atelier Jeux Optiques",
         "excerpt": "En partenariat avec LISAA, en accès libre",
         "placeIds": [1],
         "place" : [],
@@ -60,6 +63,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T18:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/atelier-jeux-optiques.html",
         "author": "",
         "producer": "",
         "age": 6
@@ -76,6 +80,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/series.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -92,6 +97,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T19:00:00Z",
         "isFav": false,
+        "image": "https://fnfa-api.herokuapp.com/uploads/events/Le_Casting_d_Andre____Gobelins.png",
         "author": "",
         "producer": "",
         "age": 8
@@ -108,6 +114,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T15:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-1.html",
         "author": "",
         "producer": "",
         "age": 6
@@ -124,6 +131,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T15:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/longs-metrages.html",
         "author": "Alexandre Espigares",
         "producer": "Superprod",
         "age": 7
@@ -141,6 +149,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T15:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-1.html",
         "author": "",
         "producer": "",
         "age": 6
@@ -157,6 +166,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T17:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/longs-metrages.html",
         "author": "Pierre Coré",
         "producer": "La Station Animation, Mandarin Production",
         "age": 6
@@ -173,6 +183,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T17:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/pour-les-tout-petits.html",
         "author": "",
         "producer": "",
         "age": 3
@@ -189,6 +200,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T18:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/dans-les-coulisses-de.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -205,6 +217,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T20:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-3.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -221,6 +234,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-04T23:15:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/film-ouverture.html",
         "author": "Wes Anderson",
         "producer": "American Empirical c/o United Talent Agency",
         "age": 0
@@ -237,6 +251,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T11:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/jeudi-5-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -253,6 +268,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/stand-wacom-tvpaint.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -269,6 +285,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T12:45:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/jeudi-5-avril.html",
         "author": "Mats Grorud",
         "producer": "Les Contes Modernes, Tenk.tv, Cinenic",
         "age": 0
@@ -285,6 +302,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/zapping-anime.html",
         "author": "",
         "producer": "",
         "age": 10
@@ -301,6 +319,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T15:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-1.html",
         "author": "",
         "producer": "",
         "age": 6
@@ -317,6 +336,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T15:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-2.html",
         "author": "",
         "producer": "",
         "age": 5
@@ -333,6 +353,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T15:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-4.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -349,6 +370,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T17:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-8.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -365,6 +387,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T17:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/series.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -381,6 +404,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T20:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-5.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -397,6 +421,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/salon-des-nouvelles-ecritures.html",
         "author": "",
         "producer": "",
         "age": 5
@@ -413,6 +438,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T20:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/jeudi-5-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -429,6 +455,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T17:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/jeudi-5-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -445,6 +472,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/dans-les-coulisses-de.html",
         "author": "Nicolas Deveaux",
         "producer": "Cube créative productions, Arte france",
         "age": 0
@@ -461,6 +489,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T00:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-6.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -477,6 +506,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T22:15:00Z",
         "isFav": false,
+        "link": "http://festival-film-animation.fr/programme/seances-speciales/longs-metrages.html",
         "author": "«RUN» alias Guillaume Renard et Shojirou Nishim",
         "producer": "Ankama Animations",
         "age": 0
@@ -493,6 +523,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-05T16:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/les-pitchs/pitchs-des-series-et-webseries.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -509,6 +540,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T11:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/dans-les-coulisses-de.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -525,6 +557,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T15:45:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/longs-metrages.html",
         "author": "David Alaux",
         "producer": "TAT Productions ",
         "age": 6
@@ -541,6 +574,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T15:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-1.html",
         "author": "",
         "producer": "",
         "age": 6
@@ -557,6 +591,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T15:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-2.html",
         "author": "",
         "producer": "",
         "age": 8
@@ -573,6 +608,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T16:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/les-pitchs/pitchs-des-courts-metrages.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -589,6 +625,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T18:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html?highlight=YToxOntpOjA7czo1OiJmdW5hbiI7fQ==",
         "author": "Denis Do",
         "producer": "Les Films d’ici",
         "age": 0
@@ -605,6 +642,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T20:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-7.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -621,6 +659,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T22:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/soiree-ecrans-rythmiques.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -637,6 +676,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T18:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/stand-wacom-tvpaint.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -653,6 +693,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T11:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -669,6 +710,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T10:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -685,6 +727,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T13:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -701,6 +744,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T13:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -717,6 +761,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T18:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/salon-des-nouvelles-ecritures.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -733,6 +778,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/salon-des-nouvelles-ecritures.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -749,6 +795,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T18:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -765,6 +812,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T12:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -781,6 +829,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T14:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/volet-professionnel-2018/vendredi-6-avril.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -797,6 +846,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-06T21:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/rencontre-des-realisateurs.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -813,6 +863,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T11:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/pour-les-tout-petits.html",
         "author": "Juan Antin",
         "producer": "Folivari",
         "age": 3
@@ -829,6 +880,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T12:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/le-film-pachamama-en-chantier.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -845,6 +897,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/cube-anime-special-famille.html",
         "author": "",
         "producer": "",
         "age": 10
@@ -861,6 +914,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/salon-des-nouvelles-ecritures.html",
         "author": "",
         "producer": "",
         "age": 5
@@ -877,6 +931,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T15:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/longs-metrages.html",
         "author": "Arthur De Pins et Alexis Ducord",
         "producer": "Maybe Movies",
         "age": 7
@@ -893,6 +948,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T16:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/musique-a-limage.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -909,6 +965,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T16:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/series-jeunesse.html",
         "author": "",
         "producer": "",
         "age": 6
@@ -925,6 +982,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T17:03:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/longs-metrages.html",
         "author": "Alexandre Espigares",
         "producer": "Superprod",
         "age": 7
@@ -941,6 +999,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T17:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/focus/les-20-ans-de-vivement-lundi.html",
         "author": "Benjamin Botella, Arnaud Demuynck et Emmanuelle Gorgiard ",
         "producer": "Vivement Lundi !, La Boîte...Productions ",
         "age": 4
@@ -957,6 +1016,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T18:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-5.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -973,6 +1033,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T23:00:00Z",
         "isFav": false,
+        "link": "http://festival-film-animation.fr/programme/seances-speciales/soiree-de-remise-des-prix.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -989,6 +1050,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/rencontre-des-realisateurs.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -1005,6 +1067,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/comp%C3%A9tition/competition-1.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -1021,6 +1084,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T16:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/les-secrets-de-fabrication/musique-a-limage.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -1037,6 +1101,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T20:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/soiree-de-remise-des-prix.html?highlight=YToxOntpOjA7czo4OiJwYWxtYXJlcyI7fQ==",
         "author": "",
         "producer": "",
         "age": 0
@@ -1053,6 +1118,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-07T15:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/focus/la-serie-dans-tous-ses-etats.html?highlight=YTo2OntpOjA7czo1OiJjYXJ0ZSI7aToxO3M6NzoiYmxhbmNoZSI7aToyO3M6NDoiYXJ0ZSI7aTozO3M6MTM6ImNhcnRlIGJsYW5jaGUiO2k6NDtzOjE4OiJjYXJ0ZSBibGFuY2hlIGFydGUiO2k6NTtzOjEyOiJibGFuY2hlIGFydGUiO30=",
         "author": "",
         "producer": "",
         "age": 10
@@ -1069,6 +1135,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T12:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/series-jeunesse.html",
         "author": "",
         "producer": "",
         "age": 6
@@ -1085,6 +1152,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T12:30:00Z",
         "isFav": false,
+        "link": "http://festival-film-animation.fr/programme/seances-speciales/soiree-de-remise-des-prix.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -1101,6 +1169,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/panorama/cube-anime-special-famille.html",
         "author": "",
         "producer": "",
         "age": 10
@@ -1117,6 +1186,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T19:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/salon-des-nouvelles-ecritures.html",
         "author": "",
         "producer": "",
         "age": 5
@@ -1133,6 +1203,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T15:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/longs-metrages.html",
         "author": "Arnaud Bouron et Antoon Krings",
         "producer": "On entertainment",
         "age": 3
@@ -1148,6 +1219,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T16:30:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/focus/les-20-ans-de-vivement-lundi.html",
         "author": "",
         "producer": "",
         "age": 0
@@ -1163,12 +1235,13 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T18:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/programme/seances-speciales/cine-concert.html",
         "author": "Par Lotte Reininger et avec Christine Ott & Anne-Irène Kempf ",
         "producer": "Production Mimiladoré",
         "age": 3
     }, {
         "id": 74,
-        "name": "Formation 'Atelier jeux optiques",
+        "name": "Atelier jeux optiques",
         "excerpt": "En partenariat avec LISAA, en accès libre",
         "placeIds": [1],
         "place" : [],
@@ -1178,6 +1251,7 @@
         "startingDateDayNumber" : "",
         "endingDate": "2018-04-08T18:00:00Z",
         "isFav": false,
+        "link": "http://www.festival-film-animation.fr/autour-des-films-2018/atelier-jeux-optiques.html",
         "author": "",
         "producer": "",
         "age": 6
