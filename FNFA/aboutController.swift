@@ -28,6 +28,14 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     
+    @IBOutlet weak var linkRobin: UIButton!
+    @IBOutlet weak var linkAlexandre: UIButton!
+    @IBOutlet weak var linkElisa: UIButton!
+    @IBOutlet weak var linkClementine: UIButton!
+    @IBOutlet weak var linkCassandre: UIButton!
+    
+    let attributesUnderlinedButton : [NSAttributedStringKey: Any] = [NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,6 +73,20 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         addAnnotation(name: "ESRA", latitute: 48.1288092, longitude: -1.6420402999999624)
         addAnnotation(name: "Grand Logis", latitute: 48.0231681, longitude: -1.7446339000000535)
         addAnnotation(name: "Esplanade Charles de Gaulles ", latitute: 48.1064896, longitude: -1.6767549999999574)
+        
+        let attributeStringRobin = NSMutableAttributedString(string: "http://robinminervini.fr", attributes: attributesUnderlinedButton)
+        let attributeStringAlexandre = NSMutableAttributedString(string: "https://alexandremasse.fr", attributes: attributesUnderlinedButton)
+        let attributeStringElisa = NSMutableAttributedString(string: "http://elisadubois.fr", attributes: attributesUnderlinedButton)
+        let attributeStringClementine = NSMutableAttributedString(string: "http://clementinespinel.com", attributes: attributesUnderlinedButton)
+        let attributeStringCassandre = NSMutableAttributedString(string: "http://cargocollective.com/cassandrely", attributes: attributesUnderlinedButton)
+        
+        
+        linkRobin.setAttributedTitle(attributeStringRobin, for: .normal)
+        linkAlexandre.setAttributedTitle(attributeStringAlexandre, for: .normal)
+        linkElisa.setAttributedTitle(attributeStringElisa, for: .normal)
+        linkClementine.setAttributedTitle(attributeStringClementine, for: .normal)
+        linkCassandre.setAttributedTitle(attributeStringCassandre, for: .normal)
+        
     }
     
     func addAnnotation(name:String!, latitute:Double!, longitude:Double!) -> Void {
@@ -98,4 +120,33 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         }
     }
     
+    @IBAction func goToSiteRobin(_ sender: Any) {
+        if let url = URL(string: "http://www.robinminervini.fr") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    @IBAction func goToSiteAlexandre(_ sender: Any) {
+        if let url = URL(string: "https://www.alexandremasse.fr") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    @IBAction func goToSiteElisa(_ sender: Any) {
+        if let url = URL(string: "http://www.elisadubois.fr") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    @IBAction func goToSiteClementine(_ sender: Any) {
+        if let url = URL(string: "http://www.clementinespinel.com") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    @IBAction func goToSiteCassandre(_ sender: Any) {
+        if let url = URL(string: "http://www.cargocollective.com/cassandrely") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
 }
