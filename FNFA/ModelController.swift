@@ -48,12 +48,10 @@ class ModelController: NSObject {
             }
         }
         
-        
         return favEvents
     }
     
     func removeOfFavs(eventId: Int, filteredEvents:[NSMutableDictionary]) {
-
         for event in events {
             if event["id"] as! Int == eventId {
                 
@@ -139,7 +137,7 @@ class ModelController: NSObject {
         let folderPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         do {
             let filePath = folderPath + "/events.json"
-            print(filePath)
+            //print(filePath)
             let url = URL.init(fileURLWithPath: filePath)
             let data = try Data.init(contentsOf: url)
             events = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
@@ -179,6 +177,7 @@ class ModelController: NSObject {
     func saveJSONTo(_ path: String, which: [NSMutableDictionary], fileName: String)   {
         let filePath = path + "/" + fileName + ".json"
         let url = URL.init(fileURLWithPath: filePath)
+        
         do {
             let data = try JSONSerialization.data(withJSONObject: which, options: [])
             try data.write(to: url)
@@ -203,11 +202,10 @@ class ModelController: NSObject {
             
             let eventPlacesIds = event["placeIds"] as! [Int]
             var eventPlaces  = event["place"] as! [String]
+            
             if eventPlaces.count == 0 {
                 for place in places {
-                    
                     for id in eventPlacesIds {
-                        
                         if(place["id"] as! Int == id) {
                             let placeName = place["name"] as! String
                             eventPlaces.append(placeName)

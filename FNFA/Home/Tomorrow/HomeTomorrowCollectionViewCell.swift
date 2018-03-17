@@ -30,7 +30,6 @@ class HomeTomorrowCollectionViewCell: UICollectionViewCell {
         modelController = appDelegate.modelController
         
         filteredEvents = (modelController?.getEventsByDate(events: (modelController?.events)!, date: "jeudi 5"))!
-        
     }
     
     

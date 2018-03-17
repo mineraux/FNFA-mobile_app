@@ -44,8 +44,14 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        containerIntro.layer.cornerRadius = 6
-        containerIntro.layer.masksToBounds = true
+//        containerIntro.layer.cornerRadius = 6
+//        containerIntro.layer.masksToBounds = true
+//
+//        containerRestauration.layer.cornerRadius = 6
+//        containerRestauration.layer.masksToBounds = true
+//
+//        containerGoToWebSite.layer.cornerRadius = 6
+//        containerGoToWebSite.layer.masksToBounds = true
         
         containerRestauration.layer.cornerRadius = 6
         containerRestauration.layer.masksToBounds = true
@@ -66,7 +72,7 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         
         mapView.delegate = self
         mapView.showsUserLocation = true
-        mapView.layer.cornerRadius = 6
+        //mapView.layer.cornerRadius = 6
         locationManager.delegate = self
         
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);
@@ -111,12 +117,10 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
     

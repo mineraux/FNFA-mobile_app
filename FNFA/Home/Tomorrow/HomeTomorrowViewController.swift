@@ -27,7 +27,7 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         modelController = appDelegate.modelController
         
         filteredEvents = (modelController?.events
-            .findBy(date: Date(timeIntervalSince1970: 1523095200))?
+            .findBy(date: (modelController?.timestamp5Avril)!)?
             .sorted(by: .date))!
         
         let sectionTitleSmallText = "JEUDI"
@@ -41,6 +41,10 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
     }
     
     

@@ -29,8 +29,7 @@ class HomeTodayCollectionViewCell: UICollectionViewCell {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         
-        filteredEvents = (modelController?.getEventsByDate(events: (modelController?.events)!, date: "mercredi 4"))!
-        
+        filteredEvents = (modelController?.getEventsByDate(events: (modelController?.events)!, date: "mercredi 4"))!   
     }
     
     @IBAction func favAction(_ sender: Any) {

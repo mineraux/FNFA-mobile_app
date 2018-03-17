@@ -14,6 +14,9 @@
         <array key="Helvetica.ttc">
             <string>Helvetica</string>
         </array>
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Evenements-->
@@ -21,14 +24,14 @@
             <objects>
                 <viewController id="Mcf-fs-lFz" customClass="allEventsController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9UF-Nn-Vyg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-0R-fJl">
-                                <rect key="frame" x="0.0" y="135" width="320" height="296"/>
+                                <rect key="frame" x="0.0" y="135" width="320" height="384"/>
                                 <color key="backgroundColor" name="Black"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="114" id="vjg-HZ-DEG" customClass="cellAllEventsController" customModule="FNFA" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="114" id="vjg-HZ-DEG" customClass="cellAllEventsController" customModule="FNFA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vjg-HZ-DEG" id="VRH-Pl-vaZ">
@@ -139,7 +142,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKx-S1-Jz5">
-                                <rect key="frame" x="80" y="20" width="240" height="411"/>
+                                <rect key="frame" x="80" y="20" width="240" height="499"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiT-FN-0Ti" userLabel="closeFiltersBtn">
                                         <rect key="frame" x="-35" y="98" width="18" height="22"/>
@@ -147,17 +150,17 @@
                                         <color key="tintColor" name="MauveDark"/>
                                         <state key="normal" image="filtersIco"/>
                                         <connections>
-                                            <action selector="closeFilters:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="FUz-FB-OJF"/>
+                                            <action selector="closeFilters:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="3Qe-jL-SI2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrer ma recherche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-wt-T9O">
-                                        <rect key="frame" x="57.5" y="40" width="125.5" height="16.5"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrer ma recherche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-wt-T9O">
+                                        <rect key="frame" x="45.5" y="40" width="150.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                         <color key="textColor" name="Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-G2-UXm">
-                                        <rect key="frame" x="25" y="121.5" width="144" height="25"/>
+                                        <rect key="frame" x="25" y="122.5" width="144" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Salon des nouvelles écritures"/>
                                         <connections>
@@ -165,7 +168,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6W-Jy-Ftw">
-                                        <rect key="frame" x="25" y="156.5" width="124" height="25"/>
+                                        <rect key="frame" x="25" y="157.5" width="124" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Compétition et panorama"/>
                                         <connections>
@@ -173,7 +176,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL8-ua-3KJ">
-                                        <rect key="frame" x="25" y="86.5" width="81" height="25"/>
+                                        <rect key="frame" x="25" y="87.5" width="81" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Séance spéciale"/>
                                         <connections>
@@ -181,7 +184,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrU-7R-heu">
-                                        <rect key="frame" x="25" y="191.5" width="68" height="25"/>
+                                        <rect key="frame" x="25" y="192.5" width="68" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Long métrage"/>
                                         <connections>
@@ -189,7 +192,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-tX-jrn">
-                                        <rect key="frame" x="25" y="226.5" width="93" height="25"/>
+                                        <rect key="frame" x="25" y="227.5" width="93" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Volet professionnel"/>
                                         <connections>
@@ -197,7 +200,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jra-WW-qJP">
-                                        <rect key="frame" x="25" y="261.5" width="79" height="25"/>
+                                        <rect key="frame" x="25" y="262.5" width="79" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Autour des films"/>
                                         <connections>
@@ -205,7 +208,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYF-aI-Orj">
-                                        <rect key="frame" x="25" y="296.5" width="60" height="25"/>
+                                        <rect key="frame" x="25" y="297.5" width="60" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Cube animé"/>
                                         <connections>
@@ -213,7 +216,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-iY-uP9">
-                                        <rect key="frame" x="25" y="331.5" width="30" height="25"/>
+                                        <rect key="frame" x="25" y="332.5" width="30" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Focus"/>
                                         <connections>
@@ -234,6 +237,7 @@
                                     <constraint firstItem="evZ-G2-UXm" firstAttribute="top" secondItem="dL8-ua-3KJ" secondAttribute="bottom" constant="10" id="ZzL-zb-C4Q"/>
                                     <constraint firstItem="jra-WW-qJP" firstAttribute="top" secondItem="YQ5-tX-jrn" secondAttribute="bottom" constant="10" id="atW-iE-NMs"/>
                                     <constraint firstItem="qiT-FN-0Ti" firstAttribute="top" secondItem="aKx-S1-Jz5" secondAttribute="top" constant="98" id="ayk-Jp-5Rr"/>
+                                    <constraint firstAttribute="width" constant="240" id="h1j-Au-vyA"/>
                                     <constraint firstItem="qiT-FN-0Ti" firstAttribute="leading" secondItem="aKx-S1-Jz5" secondAttribute="leading" constant="-35" id="hQi-KA-Phl"/>
                                     <constraint firstItem="dL8-ua-3KJ" firstAttribute="top" secondItem="hH0-wt-T9O" secondAttribute="bottom" constant="30" id="hR3-j9-DtB"/>
                                     <constraint firstItem="hH0-wt-T9O" firstAttribute="centerX" secondItem="aKx-S1-Jz5" secondAttribute="centerX" id="n2n-Rf-M7U"/>
@@ -250,14 +254,13 @@
                         <constraints>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="bottom" secondItem="4zl-xR-u59" secondAttribute="bottom" id="53E-ni-xuV"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="bottom" secondItem="4zl-xR-u59" secondAttribute="bottom" id="Dio-bh-GfS"/>
-                            <constraint firstItem="rhN-0R-fJl" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="Eva-PJ-KPm"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="115" id="Hid-sB-71v"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" id="MXE-fK-avV"/>
+                            <constraint firstItem="rhN-0R-fJl" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="OhT-n2-tTY"/>
                             <constraint firstItem="4zl-xR-u59" firstAttribute="trailing" secondItem="AU1-6l-8G0" secondAttribute="trailing" constant="20" id="R0G-UF-QMh"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" id="grN-EN-LyT"/>
                             <constraint firstItem="AU1-6l-8G0" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="35" id="jgJ-7v-CQi"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" constant="80" id="kYs-xY-3j2"/>
-                            <constraint firstItem="aKx-S1-Jz5" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="pph-dd-QBe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4zl-xR-u59"/>
                     </view>
@@ -265,7 +268,7 @@
                     <connections>
                         <outlet property="closeFiltersBtn" destination="qiT-FN-0Ti" id="W9R-vV-esg"/>
                         <outlet property="filterLeadingConstraint" destination="kYs-xY-3j2" id="J3Y-Pb-eJ2"/>
-                        <outlet property="filterTrailingConstraint" destination="pph-dd-QBe" id="BkI-Zn-2EC"/>
+                        <outlet property="filterWidthConstraint" destination="h1j-Au-vyA" id="USs-0j-K4P"/>
                         <outlet property="filtersContainer" destination="aKx-S1-Jz5" id="1zg-r0-VZA"/>
                         <outlet property="showFiltersBtn" destination="AU1-6l-8G0" id="Vq4-f4-h9d"/>
                         <outlet property="singleFilter_autour_des_films" destination="jra-WW-qJP" id="cVB-Eo-j30"/>
@@ -286,7 +289,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="287.19999999999999" y="77.811094452773617"/>
+            <point key="canvasLocation" x="286.875" y="77.112676056338032"/>
         </scene>
         <!--Main-->
         <scene sceneID="EPa-Pt-bNQ">
