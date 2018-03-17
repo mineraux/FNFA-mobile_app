@@ -95,7 +95,7 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         
         tomorrowCell.eventImage!.image = UIImage(named:imageName)
         
-        tomorrowCell.layer.cornerRadius = 10;
+        tomorrowCell.layer.cornerRadius = 8;
         
         favIconeManager(indexPath: indexPath, addToFavBtn: tomorrowCell.favButton)
         

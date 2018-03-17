@@ -126,7 +126,7 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
         
         mySelectionCell.eventImage!.image = UIImage(named:imageName)
 
-        mySelectionCell.layer.cornerRadius = 10;
+        mySelectionCell.layer.cornerRadius = 8;
         
         favIconeManager(indexPath: indexPath, addToFavBtn: mySelectionCell.favButton)
         

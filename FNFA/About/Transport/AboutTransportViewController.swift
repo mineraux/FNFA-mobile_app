@@ -46,6 +46,8 @@ class AboutTransportViewController: UIViewController, UICollectionViewDelegate, 
         
         // transportCell.labelTest.text = "yolo"
         
+        transportCell.layer.cornerRadius = 6
+        
         
         return transportCell
     }

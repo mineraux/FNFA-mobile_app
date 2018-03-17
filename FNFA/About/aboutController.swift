@@ -53,19 +53,20 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         containerGoToWebSite.layer.cornerRadius = 6
         containerGoToWebSite.layer.masksToBounds = true
         
-        square.layer.cornerRadius = 4
-        square2.layer.cornerRadius = 4
-        square3.layer.cornerRadius = 4
-        square4.layer.cornerRadius = 4
-        square5.layer.cornerRadius = 4
-        square6.layer.cornerRadius = 4
-        square7.layer.cornerRadius = 4
-        square8.layer.cornerRadius = 4
+        square.layer.cornerRadius = 6
+        square2.layer.cornerRadius = 6
+        square3.layer.cornerRadius = 6
+        square4.layer.cornerRadius = 6
+        square5.layer.cornerRadius = 6
+        square6.layer.cornerRadius = 6
+        square7.layer.cornerRadius = 6
+        // square8.layer.cornerRadius = 6
         
         tableView.allowsSelection = false;
         
         mapView.delegate = self
         mapView.showsUserLocation = true
+        mapView.layer.cornerRadius = 6
         locationManager.delegate = self
         
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);

@@ -99,7 +99,7 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
         
         todayCell.eventImage!.image = UIImage(named:imageName)
         
-        todayCell.layer.cornerRadius = 10;
+        todayCell.layer.cornerRadius = 8;
         
         favIconeManager(indexPath: indexPath, addToFavBtn: todayCell.favButton)
         
