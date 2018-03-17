@@ -25,6 +25,8 @@ class SingleEventController: UIViewController {
     
     @IBOutlet weak var linkToSingleEvent: UIView!
     
+    @IBOutlet weak var eventNameTopConstraint: NSLayoutConstraint!
+    
     var modelController: ModelController?
     
     var event = [NSMutableDictionary]()
@@ -120,6 +122,15 @@ class SingleEventController: UIViewController {
         } else {
             let image = UIImage(named: "heart_empty")
             favIcon.setImage(image, for: .normal)
+        }
+        
+        print(typePublic.text!.count)
+        
+        // Gere le cas ou le type de public n'est pas renseigné
+        if typePublic.text != "ENFANTS" {
+            eventNameTopConstraint.constant = 0
+        } else {
+            eventNameTopConstraint.constant = 20
         }
     }
     

@@ -78,7 +78,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         stackView.axis  = UILayoutConstraintAxis.vertical
         stackView.distribution  = UIStackViewDistribution.equalSpacing
         stackView.alignment = UIStackViewAlignment.center
-        stackView.spacing   = 16.0
+        stackView.spacing = 16.0
         
         stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(textLabel)
@@ -86,23 +86,21 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.view.addSubview(stackView)
         
-        //Constraints
-        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        refreshFav()
-        
-    }
-    
-    // Rafraichit la tableView au chargement pour mettre à jour les favoris
-    override func viewWillAppear(_ animated: Bool) {
-        refreshFav()
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         if modelController?.getEventsInFav().count == 0 {
             stackView.isHidden = false
         } else {
             stackView.isHidden = true
         }
+        
+        refreshFav()
+    }
+    
+    // Rafraichit la tableView au chargement pour mettre à jour les favoris
+    override func viewWillAppear(_ animated: Bool) {
+        refreshFav()
     }
     
     override func didReceiveMemoryWarning() {
