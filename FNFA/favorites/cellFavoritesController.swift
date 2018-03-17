@@ -30,7 +30,11 @@ class cellFavoritesController: UITableViewCell {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         favEvents = (modelController?.getEventsInFav())!
+        filteredEvents = (modelController?.events)!
         
+        
+        let image = UIImage(named: "heart_full")
+        isFavBtn.setImage(image, for: .normal)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -40,7 +44,7 @@ class cellFavoritesController: UITableViewCell {
 
     @IBAction func removeFav(_ sender: Any) {
        
-        modelController?.addToFavs(filteredEvents: favEvents, eventId: eventId!, BtnAddToFav: isFavBtn)
+        modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: isFavBtn)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         
         UIView.animate(
