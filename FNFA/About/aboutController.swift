@@ -60,7 +60,7 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         square5.layer.cornerRadius = 6
         square6.layer.cornerRadius = 6
         square7.layer.cornerRadius = 6
-        // square8.layer.cornerRadius = 6
+        square8.layer.cornerRadius = 6
         
         tableView.allowsSelection = false;
         
@@ -120,20 +120,20 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         return 1
     }
     
-    @IBAction func goToWebSite(_ sender: Any) {
-        if let url = URL(string: "https://www.afca.asso.fr/") {
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
-    
     @IBAction func goToSiteRobin(_ sender: Any) {
         if let url = URL(string: "http://www.robinminervini.fr") {
             UIApplication.shared.open(url, options: [:])
         }
     }
     
+    @IBAction func goToTheWebsite(_ sender: Any) {
+        if let url = URL(string: "https://www.afca.asso.fr/") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
     @IBAction func goToSiteAlexandre(_ sender: Any) {
-        if let url = URL(string: "https://www.alexandremasse.fr") {
+        if let url = URL(string: "https://alexandremasse.fr") {
             UIApplication.shared.open(url, options: [:])
         }
     }
