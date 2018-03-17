@@ -129,7 +129,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         let event = day[indexPath.row]
         
         cell.eventName.text = (event["name"] as! String)
-        cell.eventCategory.text = (event["category"] as! String)
+        cell.eventCategory.text = (event["category"] as! String).uppercased()
         cell.eventPlace.text = (event["place"] as! [String]).joined(separator: ", ")
         
         let dateIso = event["startingDate"]

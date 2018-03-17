@@ -37,9 +37,7 @@
         <scene sceneID="LGY-IM-U6E">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="58I-XQ-4Qn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="A propos" image="logo_info_30" selectedImage="logo_info" id="BE6-k9-WSg">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="A propos" image="tabbar-infos_unselected" selectedImage="tabbar-infos" id="BE6-k9-WSg"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -1084,14 +1082,14 @@ samedi et dimanche.</string>
         <image name="logo_cine" width="46" height="32"/>
         <image name="logo_copie_prive" width="86" height="31"/>
         <image name="logo_ille" width="62" height="43"/>
-        <image name="logo_info" width="27" height="30"/>
-        <image name="logo_info_30" width="27" height="30"/>
         <image name="logo_logis" width="73" height="21"/>
         <image name="logo_procirep" width="68" height="20"/>
         <image name="logo_rennes" width="83" height="30"/>
         <image name="logo_sacd" width="65" height="23"/>
         <image name="logo_sacem" width="57" height="29"/>
         <image name="logo_theatre" width="109" height="37"/>
+        <image name="tabbar-infos" width="25" height="25"/>
+        <image name="tabbar-infos_unselected" width="25" height="25"/>
         <image name="white_heart" width="19" height="16"/>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
