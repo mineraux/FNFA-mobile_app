@@ -30,10 +30,8 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     var sections = [[NSMutableDictionary]()]
     
     @objc func reloadData(_ notification: Notification) {
-        self.tableView.reloadData()
         
-        dateUsed = []
-        reperetitre = []
+        refreshFav()
         
         if modelController?.getEventsInFav().count == 0 {
             stackView.isHidden = false
@@ -47,7 +45,6 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         //Remove border botton on navigation bar
@@ -63,64 +60,43 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.rowHeight = 114
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .reloadData, object: nil)
         
-//        //Image View
-//        let imageView = UIImageView()
-//        imageView.heightAnchor.constraint(equalToConstant: 259.0).isActive = true
-//        imageView.widthAnchor.constraint(equalToConstant: 210.0).isActive = true
-//        imageView.image = UIImage(named: "visuel_wishlist_vide.png")
-//        
-//        //Text Label
-//        let textLabel = UILabel()
-//        textLabel.widthAnchor.constraint(equalToConstant: 259.0).isActive = true
-//        textLabel.numberOfLines = 0
-//        textLabel.text  = "Vous n'avez encore rien ajouté dans votre selection"
-//        textLabel.textAlignment = .center
-//        textLabel.textColor = UIColor.white
-//        
-//        //Stack View
-//        stackView.axis  = UILayoutConstraintAxis.vertical
-//        stackView.distribution  = UIStackViewDistribution.equalSpacing
-//        stackView.alignment = UIStackViewAlignment.center
-//        stackView.spacing   = 16.0
-//        
-//        stackView.addArrangedSubview(imageView)
-//        stackView.addArrangedSubview(textLabel)
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        self.view.addSubview(stackView)
-//        
-//        //Constraints
-//        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        //Image View
+        let imageView = UIImageView()
+        imageView.heightAnchor.constraint(equalToConstant: 259.0).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 210.0).isActive = true
+        imageView.image = UIImage(named: "visuel_wishlist_vide.png")
         
-        dict4Avril = (modelController?.getEventsInFav()
-            .findBy(date: (modelController?.timestamp4Avril)!)?
-            .sorted(by: .date))!
+        //Text Label
+        let textLabel = UILabel()
+        textLabel.widthAnchor.constraint(equalToConstant: 259.0).isActive = true
+        textLabel.numberOfLines = 0
+        textLabel.text  = "Vous n'avez encore rien ajouté dans votre selection"
+        textLabel.textAlignment = .center
+        textLabel.textColor = UIColor.white
         
-        dict5Avril = (modelController?.getEventsInFav()
-            .findBy(date: (modelController?.timestamp5Avril)!)?
-            .sorted(by: .date))!
+        //Stack View
+        stackView.axis  = UILayoutConstraintAxis.vertical
+        stackView.distribution  = UIStackViewDistribution.equalSpacing
+        stackView.alignment = UIStackViewAlignment.center
+        stackView.spacing   = 16.0
         
-        dict6Avril = (modelController?.getEventsInFav()
-            .findBy(date: (modelController?.timestamp5Avril)!)?
-            .sorted(by: .date))!
+        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(textLabel)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        dict7Avril = (modelController?.getEventsInFav()
-            .findBy(date: (modelController?.timestamp5Avril)!)?
-            .sorted(by: .date))!
+        self.view.addSubview(stackView)
         
-        dict8Avril = (modelController?.getEventsInFav()
-            .findBy(date: (modelController?.timestamp5Avril)!)?
-            .sorted(by: .date))!
+        //Constraints
+        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
-        sections = [dict4Avril, dict5Avril, dict6Avril, dict7Avril, dict8Avril]
+        refreshFav()
         
-        tableView.reloadData()
     }
     
     // Rafraichit la tableView au chargement pour mettre à jour les favoris
     override func viewWillAppear(_ animated: Bool) {
-        print("test")
+        refreshFav()
     }
     
     override func didReceiveMemoryWarning() {
@@ -128,37 +104,17 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return sections[section].count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print(sections[section][0]["startingDate"]!)
-        let stratingDate = sections[section][0]["startingDate"] as! String
-        var test = ""
-        
-        var dateIso = stratingDate
-                let formatter = ISO8601DateFormatter()
-                formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
-                formatter.timeZone = TimeZone(identifier: "Europe/Paris")
-        
-        if let date = formatter.date(from: dateIso as! String) {
-            // numero + moi (ex 10 avril)
-            test = date.numberMonthDate
-        }
-        
-        print("__________")
-        
-        return test
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellFavoritesController
-        let favDict = modelController?.getEventsInFav()[indexPath.row]
         
         let day = sections[indexPath.section]
         let event = day[indexPath.row]
@@ -184,112 +140,101 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.eventThumbnail.layer.cornerRadius = 4
         cell.eventThumbnail.layer.masksToBounds = true
         
+        
+        let image = UIImage(named: "heart_full")
+        cell.isFavBtn.setImage(image, for: .normal)
+        
+        
         let imageName = String(describing:cell.eventId!)
         cell.eventThumbnail!.image = UIImage(named:imageName)
-        
-//        cell.eventName.text = (favDict!["name"] as! String)
-//
-//        cell.eventCategory.text = (favDict!["category"] as! String).uppercased()
-//        cell.eventPlace!.text = (favDict!["place"] as! [String]).joined(separator: ", ")
-//
-//        // Set hour event
-//        var dateIso = favDict!["startingDate"]
-//        let formatter = ISO8601DateFormatter()
-//        formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
-//        formatter.timeZone = TimeZone(identifier: "Europe/Paris")
-//
-//        self.tableView.rowHeight = 114
-//        cell.marginTopContainerCell.constant = 0
-//
-//        if let date = formatter.date(from: dateIso as! String) {
-//            cell.eventDate!.text = date.hourDate
-//        }
-//
-//        //mercredi 4
-//
-//        if let date = formatter.date(from: dateIso as! String) {
-//            // jour (ex mercredi)
-//            // numero + moi (ex 10 avril)
-//            let numberMonth = date.nameNumberDate
-//        }
-//
-//        cell.containerCell.layer.cornerRadius = 4
-//        cell.containerCell.layer.masksToBounds = true
-//
-//        cell.eventId = (favDict!["id"] as! Int)
-//
-//        cell.eventThumbnail.layer.cornerRadius = 4
-//        cell.eventThumbnail.layer.masksToBounds = true
-//
-//        let imageName = String(describing:cell.eventId!)
-//        cell.eventThumbnail!.image = UIImage(named:imageName)
-//
-//        // Choppe la date de l'event
-//        if let date = formatter.date(from: dateIso as! String) {
-//            // jour (ex mercredi)
-//            let string = date.nameDate
-//
-//            // numero + moi (ex 10 avril)
-//            let numberMonth = date.numberMonthDate
-//
-//            // Test si la date à déjà été rencontrée
-//            if dateUsed.contains(string) {
-//            } else {
-//                // Dans ce cas, on arrive sur un nouveau jour
-//                dateUsed.append(string)
-//                reperetitre.append((favDict!["id"] as! Int))
-//            }
-//
-//            for id in reperetitre {
-//                if (favDict!["id"] as! Int) == id {
-//                    print(reperetitre)
-//                    cell.tag = 2
-//                } else {
-//                    cell.tag = 1
-//                }
-//            }
-//
-//            if cell.tag == 2 {
-//                self.tableView.rowHeight = (114 + 58)
-//                cell.marginTopContainerCell.constant = 70
-//                let nameDayLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 110, height: 30))
-//                let numberMonthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 155, height: 30))
-//                // Montserrat regular 11
-//                nameDayLabel.center = CGPoint(x: 80, y: 15)
-//                nameDayLabel.textAlignment = .left
-//                nameDayLabel.text = string.uppercased()
-//                nameDayLabel.textColor = UIColor(named: "Black40")
-//                nameDayLabel.font = UIFont(name: "Montserrat-Regular", size: 11)
-//                cell.addSubview(nameDayLabel)
-//
-//                // Montserrat bold 24
-//
-//                numberMonthLabel.center = CGPoint(x: 60, y: 40)
-//                numberMonthLabel.textAlignment = .center
-//                numberMonthLabel.text = numberMonth
-//                numberMonthLabel.textColor = UIColor.white
-//                numberMonthLabel.font = UIFont(name: "Montserrat-Bold", size: 24)
-//                cell.addSubview(numberMonthLabel)
-//            } else {
-//
-//                self.tableView.rowHeight = 114
-//                cell.marginTopContainerCell.constant = 0
-//            }
-//        }
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(44)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as! HeaderView
+        if sections[section].count > 0 {
+            let stratingDate = sections[section][0]["startingDate"] as! String
+            
+            let dateIso = stratingDate
+            let formatter = ISO8601DateFormatter()
+            formatter.formatOptions = [.withYear, .withMonth, .withDay, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
+            formatter.timeZone = TimeZone(identifier: "Europe/Paris")
+            
+            if let date = formatter.date(from: dateIso) {
+                // jour (ex mercredi)
+                headerView.nameDay.text = date.nameDate.uppercased()
+                
+                // numero + moi (ex 10 avril)
+                headerView.numberMonthLabel.text = date.numberMonthDate
+            }
+        }
+
+        return headerView
+    }
+    
+    func refreshFav() {
+        dict4Avril = (modelController?.getEventsInFav()
+            .findBy(date: (modelController?.timestamp4Avril)!)?
+            .sorted(by: .date))!
+        
+        dict5Avril = (modelController?.getEventsInFav()
+            .findBy(date: (modelController?.timestamp5Avril)!)?
+            .sorted(by: .date))!
+        
+        dict6Avril = (modelController?.getEventsInFav()
+            .findBy(date: (modelController?.timestamp6Avril)!)?
+            .sorted(by: .date))!
+        
+        dict7Avril = (modelController?.getEventsInFav()
+            .findBy(date: (modelController?.timestamp7Avril)!)?
+            .sorted(by: .date))!
+        
+        dict8Avril = (modelController?.getEventsInFav()
+            .findBy(date: (modelController?.timestamp8Avril)!)?
+            .sorted(by: .date))!
+        
+        sections = [dict4Avril, dict5Avril, dict6Avril, dict7Avril, dict8Avril]
+        
+        if dict4Avril.count == 0 {
+            sections = sections.filter { $0 != dict4Avril }
+        }
+        
+        if dict5Avril.count == 0 {
+             sections = sections.filter { $0 != dict5Avril }
+        }
+        
+        if dict6Avril.count == 0 {
+             sections = sections.filter { $0 != dict6Avril }
+        }
+        
+        if dict7Avril.count == 0 {
+             sections = sections.filter { $0 != dict7Avril }
+        }
+        
+        if dict8Avril.count == 0 {
+             sections = sections.filter { $0 != dict8Avril }
+        }
+        
+        tableView.reloadData()
+    }
+    
     // Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "test", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SingleEventController {
-            destination.event = [events[(tableView.indexPathForSelectedRow?.row)!]]
+            
+            let row = self.tableView.indexPathForSelectedRow?.row
+            let section = self.tableView.indexPathForSelectedRow?.section
+            
+            destination.event = [sections[section!][row!]]
         }
     }
-    
 }
