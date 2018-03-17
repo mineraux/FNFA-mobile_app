@@ -51,6 +51,11 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
+        // Add background color for scroll bounce
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor(named: "Gold")
+        self.tableView.backgroundView = bgView
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         

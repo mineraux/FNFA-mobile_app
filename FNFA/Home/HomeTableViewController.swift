@@ -37,6 +37,11 @@ class HomeTableViewController: UITableViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
+        // Add background color for scroll bounce
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor(named: "Black")
+        self.tableView.backgroundView = bgView
+        
         //Disable selection
         tableView.allowsSelection = false;
     }

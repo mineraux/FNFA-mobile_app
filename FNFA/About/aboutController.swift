@@ -41,17 +41,16 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         super.viewDidLoad()
 
         //Remove border botton on navigation bar
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-//        containerIntro.layer.cornerRadius = 6
-//        containerIntro.layer.masksToBounds = true
-//
-//        containerRestauration.layer.cornerRadius = 6
-//        containerRestauration.layer.masksToBounds = true
-//
-//        containerGoToWebSite.layer.cornerRadius = 6
-//        containerGoToWebSite.layer.masksToBounds = true
+        // Add background color for scroll bounce
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor(named: "Green")
+        self.tableView.backgroundView = bgView
+        
+        containerIntro.layer.cornerRadius = 6
+        containerIntro.layer.masksToBounds = true
         
         containerRestauration.layer.cornerRadius = 6
         containerRestauration.layer.masksToBounds = true
@@ -72,7 +71,7 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         
         mapView.delegate = self
         mapView.showsUserLocation = true
-        //mapView.layer.cornerRadius = 6
+        mapView.layer.cornerRadius = 6
         locationManager.delegate = self
         
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);
