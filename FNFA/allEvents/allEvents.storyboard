@@ -14,6 +14,9 @@
         <array key="Helvetica.ttc">
             <string>Helvetica</string>
         </array>
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Evenements-->
@@ -147,17 +150,17 @@
                                         <color key="tintColor" name="MauveDark"/>
                                         <state key="normal" image="filtersIco"/>
                                         <connections>
-                                            <action selector="closeFilters:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="FUz-FB-OJF"/>
+                                            <action selector="closeFilters:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="3Qe-jL-SI2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrer ma recherche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-wt-T9O">
-                                        <rect key="frame" x="57.5" y="40" width="125.5" height="16.5"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrer ma recherche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-wt-T9O">
+                                        <rect key="frame" x="45.5" y="40" width="150.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                         <color key="textColor" name="Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-G2-UXm">
-                                        <rect key="frame" x="25" y="121.5" width="144" height="25"/>
+                                        <rect key="frame" x="25" y="122.5" width="144" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Salon des nouvelles écritures"/>
                                         <connections>
@@ -165,7 +168,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6W-Jy-Ftw">
-                                        <rect key="frame" x="25" y="156.5" width="124" height="25"/>
+                                        <rect key="frame" x="25" y="157.5" width="124" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Compétition et panorama"/>
                                         <connections>
@@ -173,7 +176,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL8-ua-3KJ">
-                                        <rect key="frame" x="25" y="86.5" width="81" height="25"/>
+                                        <rect key="frame" x="25" y="87.5" width="81" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Séance spéciale"/>
                                         <connections>
@@ -181,7 +184,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrU-7R-heu">
-                                        <rect key="frame" x="25" y="191.5" width="68" height="25"/>
+                                        <rect key="frame" x="25" y="192.5" width="68" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Long métrage"/>
                                         <connections>
@@ -189,7 +192,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-tX-jrn">
-                                        <rect key="frame" x="25" y="226.5" width="93" height="25"/>
+                                        <rect key="frame" x="25" y="227.5" width="93" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Volet professionnel"/>
                                         <connections>
@@ -197,7 +200,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jra-WW-qJP">
-                                        <rect key="frame" x="25" y="261.5" width="79" height="25"/>
+                                        <rect key="frame" x="25" y="262.5" width="79" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Autour des films"/>
                                         <connections>
@@ -205,7 +208,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYF-aI-Orj">
-                                        <rect key="frame" x="25" y="296.5" width="60" height="25"/>
+                                        <rect key="frame" x="25" y="297.5" width="60" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Cube animé"/>
                                         <connections>
@@ -213,7 +216,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-iY-uP9">
-                                        <rect key="frame" x="25" y="331.5" width="30" height="25"/>
+                                        <rect key="frame" x="25" y="332.5" width="30" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Focus"/>
                                         <connections>
@@ -286,7 +289,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="287.19999999999999" y="77.811094452773617"/>
+            <point key="canvasLocation" x="286.875" y="77.112676056338032"/>
         </scene>
         <!--Main-->
         <scene sceneID="EPa-Pt-bNQ">

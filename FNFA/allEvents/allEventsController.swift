@@ -43,12 +43,12 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var closeFiltersBtn: UIButton!
     
-    
     @IBOutlet weak var filtersContainer: UIView!
     var modelController: ModelController?
     var filteredEvents = [NSMutableDictionary]()
     var valueToPass: NSMutableDictionary?
     var activeFilters = [String]()
+    var arrayFiltersButton = [UIButton]()
     
     // Dropdown stuff
     var button = dropDownBtn()
@@ -86,6 +86,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         // Styles btn close filters
         closeFiltersBtn.layer.cornerRadius = 25
         closeFiltersBtn.contentEdgeInsets = UIEdgeInsets(top: 15, left: 16, bottom: 15, right: 86)
+        
+        arrayFiltersButton = [singleFilter_sceance_spe, singleFilter_volet_pro, singleFilter_competition, singleFilter_long_metrage, singleFilter_volet_professionnel, singleFilter_autour_des_films, singleFilter_cube_anime, singleFilter_focus]
         
         // Styles btn filters
         styleBtn(btn: singleFilter_sceance_spe)
@@ -214,8 +216,15 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBAction func onTouchFiltersBtn(_ sender: UIButton) {
         
+        activeFilters = []
+        
         let titleLowercased = sender.titleLabel?.text?.lowercased()
         let titleCapitalized = titleLowercased?.capitalizingFirstLetter()
+        
+        for filter in arrayFiltersButton {
+            filter.backgroundColor = .clear
+            filter.setTitleColor(color_darkmauve, for: .normal)
+        }
         
         if let index = activeFilters.index(of: (titleCapitalized)!) {
             activeFilters.remove(at: index)
@@ -229,7 +238,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     
         // Gestion du cas où plusieurs filtres sont sélectionnés
-        filteredEvents = (modelController?.events)!
+        filteredEvents =  (modelController?.events
+            .sorted(by: .date))!
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
         
         for filter in activeFilters {
@@ -242,6 +252,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func showFilters(_ sender: Any) {
         filterLeadingConstraint.constant = 60
 
+        tableView.allowsSelection = false
+        
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
             self.tableView.alpha = 0.3
@@ -250,6 +262,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func closeFilters(_ sender: Any) {
         filterLeadingConstraint.constant = view.frame.width + 50
+        
+        tableView.allowsSelection = true
         
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()

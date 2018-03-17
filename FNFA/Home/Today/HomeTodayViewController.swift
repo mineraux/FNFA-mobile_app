@@ -32,7 +32,9 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         
-        filteredEvents = (modelController?.getEventsByDate(events: (modelController?.events)!, date: dateFilter))!
+        filteredEvents = (modelController?.events
+            .findBy(date: (modelController?.timestamp4Avril)!)?
+            .sorted(by: .date))!
         
         let sectionTitleSmallText = "Mercredi"
         
@@ -46,6 +48,10 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
     }
     
     
