@@ -58,10 +58,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-Qr-FR6">
-                                                            <rect key="frame" x="98" y="36" width="185" height="19"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="185" id="q8m-kN-MtM"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="98" y="36" width="180" height="19"/>
                                                             <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
                                                             <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
@@ -112,6 +109,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="fXb-CR-3Uj" secondAttribute="trailing" constant="10" id="NaY-SG-ccB"/>
                                                         <constraint firstItem="H58-aq-GMr" firstAttribute="leading" secondItem="ZEn-Fh-CYL" secondAttribute="leading" constant="10" id="STr-lc-g5f"/>
                                                         <constraint firstAttribute="bottom" secondItem="MIw-dX-EdR" secondAttribute="bottom" constant="13" id="gFT-c8-OOc"/>
+                                                        <constraint firstItem="fXb-CR-3Uj" firstAttribute="leading" secondItem="dc6-Qr-FR6" secondAttribute="trailing" constant="20" id="jFX-IV-deg"/>
                                                         <constraint firstItem="FnO-qv-Fs6" firstAttribute="leading" secondItem="MIw-dX-EdR" secondAttribute="trailing" constant="13" id="n9d-nT-JG5"/>
                                                         <constraint firstItem="a9J-1h-v3P" firstAttribute="leading" secondItem="H58-aq-GMr" secondAttribute="trailing" constant="18" id="oua-pX-MSF"/>
                                                         <constraint firstAttribute="bottom" secondItem="H58-aq-GMr" secondAttribute="bottom" constant="10" id="pA3-cX-tnX"/>
@@ -211,9 +209,6 @@
         <image name="seance_scolaire" width="98" height="100"/>
         <namedColor name="Black">
             <color red="0.031372549020000001" green="0.070588235289999995" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Gold">
-            <color red="0.9882352941176471" green="0.80000000000000004" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Gold">
             <color red="0.9882352941176471" green="0.80000000000000004" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

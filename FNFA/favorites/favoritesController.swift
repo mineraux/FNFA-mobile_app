@@ -97,6 +97,12 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     // Rafraichit la tableView au chargement pour mettre à jour les favoris
     override func viewWillAppear(_ animated: Bool) {
         refreshFav()
+        
+        if modelController?.getEventsInFav().count == 0 {
+            stackView.isHidden = false
+        } else {
+            stackView.isHidden = true
+        }
     }
     
     override func didReceiveMemoryWarning() {

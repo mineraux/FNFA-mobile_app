@@ -28,8 +28,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var filterTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var filterLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var filterWidthConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var showFiltersBtn: UIButton!
     @IBOutlet weak var singleFilter_sceance_spe: UIButton!
@@ -74,7 +74,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.rowHeight = 114
         
         // Valeur à animer pour deployer le volet des filtres
-        filterLeadingConstraint.constant = 60
+        filterLeadingConstraint.constant = view.frame.width + 50
+        filterWidthConstraint.constant = view.frame.width - 50  
         
         // Styles btn show filters
         showFiltersBtn.layer.cornerRadius = 25
