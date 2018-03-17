@@ -29,6 +29,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var filterLeadingConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var showFiltersBtn: UIButton!
     @IBOutlet weak var singleFilter_sceance_spe: UIButton!
@@ -73,7 +74,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.rowHeight = 114
         
         // Valeur à animer pour deployer le volet des filtres
-        filterTrailingConstraint.constant = 355
+        filterLeadingConstraint.constant = 60
         
         // Styles btn show filters
         showFiltersBtn.layer.cornerRadius = 25
@@ -102,7 +103,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         self.view.addSubview(button)
         self.view.bringSubview(toFront: filtersContainer)
         
-        NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.topMargin, multiplier: 1.0, constant: 65.0).isActive = true
+        NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.topMargin, multiplier: 1.0, constant: 35.0).isActive = true
         
         NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.leadingMargin, multiplier: 1.0, constant: 0).isActive = true
         
@@ -238,7 +239,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func showFilters(_ sender: Any) {
-        filterTrailingConstraint.constant = 0
+        filterLeadingConstraint.constant = 60
 
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
@@ -247,7 +248,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func closeFilters(_ sender: Any) {
-        filterTrailingConstraint.constant = 355
+        filterLeadingConstraint.constant = view.frame.width + 50
         
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
