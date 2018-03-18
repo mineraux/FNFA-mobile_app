@@ -128,7 +128,7 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? HomeTomorrowCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
-            let vc = segue.destination as! SingleEventController
+            let vc = segue.destination as! SingleEventTableViewController
             vc.event = [filteredEvents[indexPath.row]]
         }
     }

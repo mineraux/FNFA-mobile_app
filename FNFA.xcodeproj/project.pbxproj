@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0033E736205D416B00FDD501 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033E734205D416B00FDD501 /* HeaderView.swift */; };
 		0033E737205D416B00FDD501 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0033E735205D416B00FDD501 /* HeaderView.xib */; };
-		005804D120430B5C0055F42F /* SingleEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005804D020430B5C0055F42F /* SingleEventController.swift */; };
+		00803C13205EB91A00F2C0BB /* SingleEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00803C12205EB91A00F2C0BB /* SingleEventTableViewController.swift */; };
 		00F18DFD205559CF0048479E /* DropDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F18DFC205559CF0048479E /* DropDownController.swift */; };
 		5D0B822B205978A000F719E4 /* aboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B822A205978A000F719E4 /* aboutController.swift */; };
 		5D2CD57620343E7E0023073E /* favoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2CD57520343E7E0023073E /* favoritesController.swift */; };
@@ -91,7 +91,7 @@
 /* Begin PBXFileReference section */
 		0033E734205D416B00FDD501 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0033E735205D416B00FDD501 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		005804D020430B5C0055F42F /* SingleEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventController.swift; sourceTree = "<group>"; };
+		00803C12205EB91A00F2C0BB /* SingleEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventTableViewController.swift; sourceTree = "<group>"; };
 		00F18DFC205559CF0048479E /* DropDownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
 		5D0B822A205978A000F719E4 /* aboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutController.swift; sourceTree = "<group>"; };
 		5D2CD57520343E7E0023073E /* favoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritesController.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				5D73FE212032FA91007FB93A /* singleEvent.storyboard */,
-				005804D020430B5C0055F42F /* SingleEventController.swift */,
+				00803C12205EB91A00F2C0BB /* SingleEventTableViewController.swift */,
 			);
 			path = singleEvent;
 			sourceTree = "<group>";
@@ -576,6 +576,7 @@
 				A13057EA203340F4003246AF /* HomeController.swift in Sources */,
 				FA109CFC20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift in Sources */,
 				FA109D042036672500B54CAD /* HomeTomorrowCollectionViewCell.swift in Sources */,
+				00803C13205EB91A00F2C0BB /* SingleEventTableViewController.swift in Sources */,
 				A13057EC20334188003246AF /* HomeCollectionViewCell.swift in Sources */,
 				0033E736205D416B00FDD501 /* HeaderView.swift in Sources */,
 			);

@@ -276,7 +276,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SingleEventController {
+        if let destination = segue.destination as? SingleEventTableViewController {
             destination.event = [filteredEvents[(tableView.indexPathForSelectedRow?.row)!]]
         }
     }
