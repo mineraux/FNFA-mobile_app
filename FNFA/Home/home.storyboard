@@ -148,9 +148,7 @@
         <scene sceneID="Eho-Eq-BIL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKH-ux-B0J" customClass="HomeNavigtionController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Le fesitval" image="logo_home_30" selectedImage="logo_home" id="vj9-EZ-OcS">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Le fesitval" image="tabbar-home_unselected" selectedImage="tabbar-home" id="vj9-EZ-OcS"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -332,14 +330,6 @@
             </objects>
             <point key="canvasLocation" x="2775" y="-116"/>
         </scene>
-        <!--favorites-->
-        <scene sceneID="3uK-oq-6wA">
-            <objects>
-                <viewControllerPlaceholder storyboardName="favorites" id="aSs-h3-5bS" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M1O-6s-ZNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2146" y="318"/>
-        </scene>
         <!--Today-->
         <scene sceneID="8C0-Uq-giI">
             <objects>
@@ -386,7 +376,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventCategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq8-x7-dAs">
                                                             <rect key="frame" x="8" y="8" width="138" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="8"/>
+                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="11"/>
                                                             <color key="textColor" red="0.43529411759999997" green="0.52941176469999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -419,7 +409,7 @@
                                                         <constraint firstItem="G4b-p5-6mL" firstAttribute="top" secondItem="AzS-2t-DIe" secondAttribute="top" constant="8" id="pIt-Fe-1RZ"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92K-SA-IIv">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92K-SA-IIv">
                                                     <rect key="frame" x="0.0" y="82" width="199" height="138"/>
                                                 </imageView>
                                             </subviews>
@@ -569,7 +559,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventCategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6W-Cf-662">
                                                             <rect key="frame" x="8" y="8" width="138" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="8"/>
+                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="11"/>
                                                             <color key="textColor" red="0.43529411759999997" green="0.52941176469999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -604,7 +594,7 @@
                                                         <constraint firstItem="4Us-Ou-Xt6" firstAttribute="top" secondItem="ibA-L0-8M4" secondAttribute="top" constant="8" id="x7C-Yv-cLu"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdx-6K-vcY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdx-6K-vcY">
                                                     <rect key="frame" x="0.0" y="82" width="200" height="138"/>
                                                 </imageView>
                                             </subviews>
@@ -744,8 +734,8 @@
     <resources>
         <image name="12" width="1920" height="800"/>
         <image name="heart_empty" width="56" height="49"/>
-        <image name="logo_home" width="27" height="30"/>
-        <image name="logo_home_30" width="27" height="30"/>
+        <image name="tabbar-home" width="25" height="25"/>
+        <image name="tabbar-home_unselected" width="25" height="25"/>
         <namedColor name="Black">
             <color red="0.031372549019607843" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

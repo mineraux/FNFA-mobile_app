@@ -22,7 +22,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         filteredEvents = (modelController?.events
             .sorted(by: .date))!
         
-        var title = ((button.titleLabel?.text)!).lowercased()
+        let title = ((button.titleLabel?.text)!).lowercased()
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == title }
         self.tableView.reloadData()
     }
@@ -85,7 +85,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // Styles btn close filters
         closeFiltersBtn.layer.cornerRadius = 25
-        closeFiltersBtn.contentEdgeInsets = UIEdgeInsets(top: 15, left: 16, bottom: 15, right: 86)
+        closeFiltersBtn.contentEdgeInsets = UIEdgeInsets(top: 15, left: 16, bottom: 15, right: 40)
         
         arrayFiltersButton = [singleFilter_sceance_spe, singleFilter_volet_pro, singleFilter_competition, singleFilter_long_metrage, singleFilter_volet_professionnel, singleFilter_autour_des_films, singleFilter_cube_anime, singleFilter_focus]
         
@@ -215,9 +215,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     @IBAction func onTouchFiltersBtn(_ sender: UIButton) {
-        
-        activeFilters = []
-        
+    
         let titleLowercased = sender.titleLabel?.text?.lowercased()
         let titleCapitalized = titleLowercased?.capitalizingFirstLetter()
         
@@ -230,8 +228,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
             activeFilters.remove(at: index)
             sender.backgroundColor = .clear
             sender.setTitleColor(color_darkmauve, for: .normal)
-            
         } else {
+            activeFilters = []
             activeFilters.append((titleCapitalized)!)
             sender.backgroundColor = color_darkmauve
             sender.setTitleColor(UIColor.white, for: .normal)

@@ -18,7 +18,7 @@ class HomeHeaderViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        headerImage.image = UIImage(named:"home_header")
+        headerImage.image = UIImage(named:"intro-logo")
         
     }
 
