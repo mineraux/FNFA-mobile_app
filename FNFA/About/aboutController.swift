@@ -91,7 +91,6 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         let attributeStringClementine = NSMutableAttributedString(string: "http://clementinespinel.com", attributes: attributesUnderlinedButton)
         let attributeStringCassandre = NSMutableAttributedString(string: "http://cargocollective.com/cassandrely", attributes: attributesUnderlinedButton)
         
-        
         linkRobin.setAttributedTitle(attributeStringRobin, for: .normal)
         linkAlexandre.setAttributedTitle(attributeStringAlexandre, for: .normal)
         linkElisa.setAttributedTitle(attributeStringElisa, for: .normal)

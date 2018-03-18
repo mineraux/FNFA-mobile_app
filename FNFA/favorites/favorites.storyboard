@@ -52,7 +52,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventCategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9J-1h-v3P">
-                                                            <rect key="frame" x="98" y="17" width="77" height="13"/>
+                                                            <rect key="frame" x="98" y="17" width="217" height="13"/>
                                                             <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="11"/>
                                                             <color key="textColor" name="MauveLight"/>
                                                             <nil key="highlightedColor"/>
@@ -102,6 +102,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="a9J-1h-v3P" secondAttribute="trailing" constant="20" id="5fr-Iu-PX0"/>
                                                         <constraint firstItem="dc6-Qr-FR6" firstAttribute="leading" secondItem="H58-aq-GMr" secondAttribute="trailing" constant="18" id="BRb-Ov-L3t"/>
                                                         <constraint firstItem="MIw-dX-EdR" firstAttribute="leading" secondItem="H58-aq-GMr" secondAttribute="trailing" constant="18" id="Cw8-Ps-Eq2"/>
                                                         <constraint firstItem="dc6-Qr-FR6" firstAttribute="centerY" secondItem="ZEn-Fh-CYL" secondAttribute="centerY" id="MJF-2h-aIA"/>

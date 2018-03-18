@@ -136,7 +136,7 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
     
         if let cell = sender as? HomeTodayCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
-            let vc = segue.destination as! SingleEventController
+            let vc = segue.destination as! SingleEventTableViewController
             vc.event = [filteredEvents[indexPath.row]]
         }
         

@@ -23,5 +23,5 @@ class AboutTransportCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var transportIcon3: UIImageView!
     @IBOutlet weak var transportIcon4: UIImageView!
     @IBOutlet weak var transportIcon5: UIImageView!
-    
+
 }
