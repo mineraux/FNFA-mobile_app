@@ -88,10 +88,6 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let mySelectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "mySelectionCell", for: indexPath) as! HomeMySelectionCollectionViewCell
         
-        modelController?.events
-            .findBy(date: Date(timeIntervalSince1970: 1523095200))?
-            .sorted(by: .date)
-        
         let eventDict = modelController?.getEventsInFav()[indexPath.row]
 
         //id

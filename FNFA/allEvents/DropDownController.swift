@@ -183,7 +183,7 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        let cell = UITableViewCell()
         cell.textLabel?.text = dropDownOptions[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor(named: "Black")

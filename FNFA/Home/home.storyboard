@@ -330,14 +330,6 @@
             </objects>
             <point key="canvasLocation" x="2775" y="-116"/>
         </scene>
-        <!--favorites-->
-        <scene sceneID="3uK-oq-6wA">
-            <objects>
-                <viewControllerPlaceholder storyboardName="favorites" id="aSs-h3-5bS" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M1O-6s-ZNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2146" y="318"/>
-        </scene>
         <!--Today-->
         <scene sceneID="8C0-Uq-giI">
             <objects>
