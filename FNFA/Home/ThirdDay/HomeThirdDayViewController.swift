@@ -1,14 +1,14 @@
 //
-//  HomeTomorrowViewController.swift
+//  HomeThirdDayViewController.swift
 //  FNFA
 //
-//  Created by Alexandre Massé on 16/02/2018.
+//  Created by Alexandre Massé on 18/03/2018.
 //  Copyright © 2018 MINERVINI Robin. All rights reserved.
 //
 
 import UIKit
 
-class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeThirdDayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     var modelController: ModelController?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,13 +27,13 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         modelController = appDelegate.modelController
         
         filteredEvents = (modelController?.events
-            .findBy(date: (modelController?.timestamp5Avril)!)?
+            .findBy(date: (modelController?.timestamp6Avril)!)?
             .sorted(by: .date))!
         
-        let sectionTitleSmallText = "JEUDI"
+        let sectionTitleSmallText = "VENDREDI"
         
         sectionTitleSmall.text = sectionTitleSmallText.uppercased()
-        sectionTitle.text = "5 avril"
+        sectionTitle.text = "6 avril"
         seeAllLabel.text = "Voir tout"
         seeAllImage.image = UIImage(named:"chevron")
     }
@@ -63,18 +63,18 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let tomorrowCell = collectionView.dequeueReusableCell(withReuseIdentifier: "tomorrowCell", for: indexPath) as! HomeTomorrowCollectionViewCell
+        let thirdDayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdDayCell", for: indexPath) as! HomeThirdDayCollectionViewCell
         
         let eventDict = filteredEvents[indexPath.row]
         
         //id
-        tomorrowCell.eventId = (eventDict["id"] as! Int)
+        thirdDayCell.eventId = (eventDict["id"] as! Int)
         
         //Category
-        tomorrowCell.eventCategory.text = (eventDict["category"] as! String).uppercased()
+        thirdDayCell.eventCategory.text = (eventDict["category"] as! String).uppercased()
         
         //Name
-        tomorrowCell.eventName.text = (eventDict["name"] as! String)
+        thirdDayCell.eventName.text = (eventDict["name"] as! String)
         
         
         //Heure
@@ -84,26 +84,26 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
         formatter.timeZone = TimeZone(identifier: "Europe/Paris")
         
         if let date = formatter.date(from: dateIso as! String) {
-            tomorrowCell.eventDate!.text = date.hourDate
+            thirdDayCell.eventDate!.text = date.hourDate
         }
         
         //Places
-        tomorrowCell.eventPlace!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
+        thirdDayCell.eventPlace!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
         
         //icone
-        tomorrowCell.locationImage.image = UIImage(named:"location")
+        thirdDayCell.locationImage.image = UIImage(named:"location")
         
         //Image
         let eventID = eventDict["id"] as! Int
         let imageName = String(describing:eventID)
         
-        tomorrowCell.eventImage!.image = UIImage(named:imageName)
+        thirdDayCell.eventImage!.image = UIImage(named:imageName)
         
-        tomorrowCell.layer.cornerRadius = 8;
+        thirdDayCell.layer.cornerRadius = 8;
         
-        favIconeManager(indexPath: indexPath, addToFavBtn: tomorrowCell.favButton)
+        favIconeManager(indexPath: indexPath, addToFavBtn: thirdDayCell.favButton)
         
-        return  tomorrowCell
+        return  thirdDayCell
     }
     
     // Gere quelle icone de favoris afficher pour chaque cell.
@@ -120,16 +120,17 @@ class HomeTomorrowViewController: UIViewController,  UICollectionViewDelegate, U
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let cell = sender as? HomeTomorrowCollectionViewCell,
+        if let cell = sender as? HomeThirdDayCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
             let vc = segue.destination as! SingleEventController
             vc.event = [filteredEvents[indexPath.row]]
         }
     }
+
 }

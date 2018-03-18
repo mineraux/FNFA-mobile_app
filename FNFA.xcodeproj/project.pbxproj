@@ -83,6 +83,8 @@
 		FA109D012036618A00B54CAD /* HomeTodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D002036618A00B54CAD /* HomeTodayCollectionViewCell.swift */; };
 		FA109D042036672500B54CAD /* HomeTomorrowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */; };
 		FA109D062036676D00B54CAD /* HomeTomorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D052036676D00B54CAD /* HomeTomorrowViewController.swift */; };
+		FA6F7E24205EBEF2004131D6 /* HomeThirdDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F7E23205EBEF2004131D6 /* HomeThirdDayViewController.swift */; };
+		FA6F7E26205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F7E25205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift */; };
 		FA894D7E205DD3A900339F8B /* transports.json in Resources */ = {isa = PBXBuildFile; fileRef = FA894D7D205DD3A900339F8B /* transports.json */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +167,8 @@
 		FA109D002036618A00B54CAD /* HomeTodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTomorrowCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA109D052036676D00B54CAD /* HomeTomorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTomorrowViewController.swift; sourceTree = "<group>"; };
+		FA6F7E23205EBEF2004131D6 /* HomeThirdDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThirdDayViewController.swift; sourceTree = "<group>"; };
+		FA6F7E25205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThirdDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA894D7D205DD3A900339F8B /* transports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transports.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +301,7 @@
 				FA109CF82036149D00B54CAD /* My selection */,
 				FA109CFD2036600E00B54CAD /* Today */,
 				FA109D02203666F900B54CAD /* Tomorrow */,
+				FA6F7E22205EB421004131D6 /* ThirdDay */,
 				5D73FE1F2032FA7E007FB93A /* home.storyboard */,
 				A11B5D81205BE36D00236FAF /* HomeNavigtionController.swift */,
 				FA109CF620360E2100B54CAD /* HomeTableViewController.swift */,
@@ -414,6 +419,15 @@
 				5DAA45482031DEE500A7408E /* LaunchScreen.storyboard */,
 			);
 			path = LunchScreen;
+			sourceTree = "<group>";
+		};
+		FA6F7E22205EB421004131D6 /* ThirdDay */ = {
+			isa = PBXGroup;
+			children = (
+				FA6F7E23205EBEF2004131D6 /* HomeThirdDayViewController.swift */,
+				FA6F7E25205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift */,
+			);
+			path = ThirdDay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +550,7 @@
 			files = (
 				A1136DCA205C3BAD00EEA509 /* AboutTransportViewController.swift in Sources */,
 				5D6F768120331D980045D582 /* dateFormatter.swift in Sources */,
+				FA6F7E24205EBEF2004131D6 /* HomeThirdDayViewController.swift in Sources */,
 				005804D120430B5C0055F42F /* SingleEventController.swift in Sources */,
 				A1136DCC205C3D2000EEA509 /* AboutTransportCollectionViewCell.swift in Sources */,
 				FA109CFF2036605C00B54CAD /* HomeTodayViewController.swift in Sources */,
@@ -557,6 +572,7 @@
 				FA109D062036676D00B54CAD /* HomeTomorrowViewController.swift in Sources */,
 				5D2CD5782034463C0023073E /* cellFavoritesController.swift in Sources */,
 				A16C69D8205AEE8900DFA1CC /* Extensions.swift in Sources */,
+				FA6F7E26205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift in Sources */,
 				A13057EA203340F4003246AF /* HomeController.swift in Sources */,
 				FA109CFC20364DBE00B54CAD /* HomeMySelectionCollectionViewCell.swift in Sources */,
 				FA109D042036672500B54CAD /* HomeTomorrowCollectionViewCell.swift in Sources */,
