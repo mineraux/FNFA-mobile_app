@@ -83,6 +83,7 @@
 		FA109D012036618A00B54CAD /* HomeTodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D002036618A00B54CAD /* HomeTodayCollectionViewCell.swift */; };
 		FA109D042036672500B54CAD /* HomeTomorrowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */; };
 		FA109D062036676D00B54CAD /* HomeTomorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA109D052036676D00B54CAD /* HomeTomorrowViewController.swift */; };
+		FA894D7E205DD3A900339F8B /* transports.json in Resources */ = {isa = PBXBuildFile; fileRef = FA894D7D205DD3A900339F8B /* transports.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +165,7 @@
 		FA109D002036618A00B54CAD /* HomeTodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA109D032036672500B54CAD /* HomeTomorrowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTomorrowCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA109D052036676D00B54CAD /* HomeTomorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTomorrowViewController.swift; sourceTree = "<group>"; };
+		FA894D7D205DD3A900339F8B /* transports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transports.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		5D5060062031E325009F7E03 /* JSON Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA894D7D205DD3A900339F8B /* transports.json */,
 				5D5060002031E31D009F7E03 /* categories.json */,
 				5D5060012031E31D009F7E03 /* events.json */,
 				5D5060022031E31D009F7E03 /* places.json */,
@@ -506,6 +509,7 @@
 				A1FD4E3E203C36FF002700B9 /* Raleway-ExtraBoldItalic.ttf in Resources */,
 				A1FD4E3B203C36FF002700B9 /* Raleway-Bold.ttf in Resources */,
 				A1FD4E3D203C36FF002700B9 /* Raleway-ExtraBold.ttf in Resources */,
+				FA894D7E205DD3A900339F8B /* transports.json in Resources */,
 				5D73FE242032FA9D007FB93A /* favorites.storyboard in Resources */,
 				A1FD4E66203C3913002700B9 /* Montserrat-Italic.ttf in Resources */,
 				A1FD4E39203C36FF002700B9 /* Raleway-Black.ttf in Resources */,

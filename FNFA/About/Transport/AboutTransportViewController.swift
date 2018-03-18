@@ -9,14 +9,21 @@
 import UIKit
 
 class AboutTransportViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    var modelController: ModelController?
+    var transports = [NSMutableDictionary]()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        modelController = appDelegate.modelController
 
-        // Do any additional setup after loading the view.
+        transports = (modelController?.transports)!
+        
+        print(transports)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,14 +44,49 @@ class AboutTransportViewController: UIViewController, UICollectionViewDelegate, 
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return transports.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let transportCell = collectionView.dequeueReusableCell(withReuseIdentifier: "transportCell", for: indexPath) as! AboutTransportCollectionViewCell
         
-        // transportCell.labelTest.text = "yolo"
+        let transportDict = transports[indexPath.row]
+        
+        //city
+        transportCell.city.text = (transportDict["city"] as? String)?.uppercased()
+        
+        //icon
+        transportCell.locationIcon.image = UIImage(named:"location")
+        
+        //place
+        transportCell.place.text = transportDict["place"] as? String
+        
+        //address
+        transportCell.address.text = transportDict["address"] as? String
+        
+        //phone
+        transportCell.phone.text = transportDict["phone"] as? String
+        
+        //busStop
+        transportCell.busStop.text = transportDict["busStop"] as? String
+        
+        //metroStop
+        transportCell.metroStop.text = transportDict["metroStop"] as? String
+        
+        //TRansport Icon
+        let iconArray = (transportDict["logos"] as! NSArray)
+        let totalIcon = iconArray.count
+        let outletIconArray = [
+            transportCell.transportIcon1,
+            transportCell.transportIcon2,
+            transportCell.transportIcon3,
+            transportCell.transportIcon4,
+            transportCell.transportIcon5,
+        ]
+        for i in 0...(totalIcon - 1) {
+            outletIconArray[i]?.image = UIImage(named:(iconArray[i] as? String)!)
+        }
         
         transportCell.layer.cornerRadius = 6
         

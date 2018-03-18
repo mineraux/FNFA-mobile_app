@@ -14,7 +14,7 @@ extension Notification.Name {
 
 class HomeTableViewController: UITableViewController {
 
-       @objc func reloadDataHomeTableView(_ notification: Notification) {
+    @objc func reloadDataHomeTableView(_ notification: Notification) {
         self.tableView.reloadData()
         
     }

@@ -13,6 +13,8 @@ class ModelController: NSObject {
     var categories = [NSMutableDictionary]()
     var events = [NSMutableDictionary]()
     var places = [NSMutableDictionary]()
+    var transports = [NSMutableDictionary]()
+    
     let timestamp4Avril = Date(timeIntervalSince1970: 1522836000), // 4 Avril 2018, 12:00
     timestamp5Avril = Date(timeIntervalSince1970: 1522922400), // 5 Avril 2018, 12:00
     timestamp6Avril = Date(timeIntervalSince1970: 1523008800), // 6 Avril 2018, 12:00
@@ -38,6 +40,7 @@ class ModelController: NSObject {
         let folderPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         saveJSONTo(folderPath, which: events, fileName: "events")
         saveJSONTo(folderPath, which: categories, fileName: "categories")
+        saveJSONTo(folderPath, which: transports, fileName: "transports")
     }
     
     func getEventsInFav() -> [NSMutableDictionary]{
@@ -130,6 +133,16 @@ class ModelController: NSObject {
                 print(error)
             }
         }
+        if let URL = Bundle.main.url(forResource: "transports", withExtension: "json")  {
+            do {
+                let data = try Data.init(contentsOf: URL)
+                transports = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
+            }
+            catch {
+                print(error)
+            }
+        }
+        
     }
     
     func loadSavedJSON() -> Bool {
@@ -137,7 +150,7 @@ class ModelController: NSObject {
         let folderPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         do {
             let filePath = folderPath + "/events.json"
-            //print(filePath)
+            print(filePath)
             let url = URL.init(fileURLWithPath: filePath)
             let data = try Data.init(contentsOf: url)
             events = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
@@ -161,6 +174,16 @@ class ModelController: NSObject {
             do {
                 let data = try Data.init(contentsOf: URL)
                 categories = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
+            }
+            catch {
+                print(error)
+            }
+        }
+        
+        if let URL = Bundle.main.url(forResource: "transports", withExtension: "json")  {
+            do {
+                let data = try Data.init(contentsOf: URL)
+                transports = try JSONSerialization.jsonObject(with: data as Data, options: [.mutableContainers]) as! [NSMutableDictionary]
             }
             catch {
                 print(error)

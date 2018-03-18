@@ -32,6 +32,7 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         
+        
         filteredEvents = (modelController?.events
             .findBy(date: (modelController?.timestamp4Avril)!)?
             .sorted(by: .date))!

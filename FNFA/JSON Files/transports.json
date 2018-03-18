@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "city": "Rennes",
+        "place": "Cinéma Arvor",
+        "address": "29 rue d’Antrain",
+        "phone": "02 99 38 78 04",
+        "busStop": "Bus arrêt : Sainte-Anne ou Hôtel Dieu",
+        "logos" : [
+            "transport_c1",
+            "transport_c5",
+            "transport_9",
+            "transport_12"
+        ],
+        "metroStop": "Métro arrêt : Sainte-Anne"
+    },
+    {
+        "id": 2,
+        "city": "Rennes",
+        "place": "Cinéma TNB",
+        "address": "1 rue Saint-Hélier",
+        "phone": "02 99 31 55 33",
+        "busStop": "Bus arrêt : Liberté TNB",
+        "logos" : [
+            "transport_c1",
+            "transport_c2",
+            "transport_11"
+        ],
+        "metroStop": "Métro arrêt : Charles de Gaulle"
+    },
+    {
+        "id": 3,
+        "city": "Rennes",
+        "place": "ESRA",
+        "address": "1 rue Xavier Grall",
+        "phone": "02 99 36 64 64",
+        "busStop": "Bus arrêt : Pâtis Tatelin",
+        "logos" : [
+            "transport_41ex",
+            "transport_50",
+            "transport_70"
+        ],
+        "metroStop": ""
+    },
+    {
+        "id": 4,
+        "city": "Bruz",
+        "place": "Le Grand Logis et la Médiathèque",
+        "address": "10 avenue du Général de Gaulle",
+        "phone": "02 99 05 30 62 / 02 99 05 30 60",
+        "busStop": "Bus depuis Rennes (30min) direction Bruz - Arrêt : Bruz Centre",
+        "logos" : [
+            "transport_57",
+            "transport_59"
+        ],
+        "metroStop": ""
+    }
+
+]
