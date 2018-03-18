@@ -1041,14 +1041,14 @@ samedi et dimanche.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cen-eX-nXy" userLabel="City">
-                                                    <rect key="frame" x="20" y="16" width="18" height="12"/>
+                                                    <rect key="frame" x="20" y="16" width="17.5" height="12"/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                                     <color key="textColor" name="MauveDark"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="place avec un label long" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OA-uN-LUl" userLabel="Place">
-                                                    <rect key="frame" x="36" y="30" width="159" height="33"/>
+                                                    <rect key="frame" x="36" y="30" width="159" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -1061,21 +1061,21 @@ samedi et dimanche.</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-ea-7CG" userLabel="Address">
-                                                    <rect key="frame" x="20" y="66" width="41" height="13"/>
+                                                    <rect key="frame" x="20" y="49.5" width="40.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
                                                     <color key="textColor" red="0.19607843137254902" green="0.23921568627450979" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WY-0o-2Oa" userLabel="Phone">
-                                                    <rect key="frame" x="20" y="80" width="33" height="13"/>
+                                                    <rect key="frame" x="20" y="63.5" width="33" height="13"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
                                                     <color key="textColor" name="MauveDark"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ouverture au grand public à partir de 13h" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEe-tC-Swc" userLabel="Opening">
-                                                    <rect key="frame" x="20" y="98" width="175" height="28"/>
+                                                    <rect key="frame" x="20" y="81.5" width="175" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="175" id="nLS-fA-Sgg"/>
                                                         <constraint firstAttribute="height" constant="28" id="t2F-Zo-XUR"/>
@@ -1085,54 +1085,54 @@ samedi et dimanche.</string>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCÈS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wru-s6-F19" userLabel="Acces">
-                                                    <rect key="frame" x="20" y="130" width="38" height="14"/>
+                                                    <rect key="frame" x="20" y="113.5" width="38" height="13"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="busStop un peu trop long pour voir un peu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k35-C9-rvp">
-                                                    <rect key="frame" x="20" y="146" width="175" height="26"/>
+                                                    <rect key="frame" x="20" y="128.5" width="175" height="26"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mH-X5-NMa">
-                                                    <rect key="frame" x="20" y="177" width="15" height="15"/>
+                                                    <rect key="frame" x="20" y="159.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="LaQ-Ik-rpM"/>
                                                         <constraint firstAttribute="width" constant="15" id="snh-NA-JZd"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IDp-yT-qdO">
-                                                    <rect key="frame" x="47" y="177" width="15" height="15"/>
+                                                    <rect key="frame" x="47" y="159.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="VgQ-xy-7bw"/>
                                                         <constraint firstAttribute="width" constant="15" id="rdl-IW-5Ww"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E25-W1-yRL">
-                                                    <rect key="frame" x="74" y="177" width="15" height="15"/>
+                                                    <rect key="frame" x="74" y="159.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="Eps-oB-Nex"/>
                                                         <constraint firstAttribute="width" constant="15" id="a5h-R2-ZJL"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nkI-rE-UC5">
-                                                    <rect key="frame" x="101" y="177" width="15" height="15"/>
+                                                    <rect key="frame" x="101" y="159.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="2pL-8a-a7k"/>
                                                         <constraint firstAttribute="height" constant="15" id="sVq-wT-FvY"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5h-Fr-Azf">
-                                                    <rect key="frame" x="128" y="177" width="15" height="15"/>
+                                                    <rect key="frame" x="128" y="159.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="Jff-bx-pI1"/>
                                                         <constraint firstAttribute="width" constant="15" id="Tvq-7n-Sh3"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="metroStop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-AQ-GoO" userLabel="metroStop">
-                                                    <rect key="frame" x="20" y="197" width="54" height="13"/>
+                                                    <rect key="frame" x="20" y="179.5" width="54" height="13"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>

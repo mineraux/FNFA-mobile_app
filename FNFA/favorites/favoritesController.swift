@@ -75,7 +75,7 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         let textLabel = UILabel()
         textLabel.widthAnchor.constraint(equalToConstant: 259.0).isActive = true
         textLabel.numberOfLines = 0
-        textLabel.text  = "Vous n'avez encore rien ajouté dans votre selection"
+        textLabel.text  = "Vous n'avez rien ajouté dans votre selection"
         textLabel.textAlignment = .center
         textLabel.textColor = UIColor.white
         

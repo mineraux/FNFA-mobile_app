@@ -38,15 +38,15 @@
                         <sections>
                             <tableViewSection id="5WA-qz-DAZ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="398" id="GUe-7Q-VKM">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="310" id="GUe-7Q-VKM">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GUe-7Q-VKM" id="MBP-3b-eru">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnS-uM-jMp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                                                     <connections>
                                                         <segue destination="oZe-Db-HaM" kind="embed" id="exq-xZ-eSf"/>
                                                     </connections>
@@ -65,7 +65,7 @@
                             <tableViewSection id="4e0-rQ-i2z" userLabel="Today">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="tWJ-LD-hWl">
-                                        <rect key="frame" x="0.0" y="398" width="320" height="300"/>
+                                        <rect key="frame" x="0.0" y="310" width="320" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tWJ-LD-hWl" id="iVi-Vq-4f9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
@@ -91,7 +91,7 @@
                             <tableViewSection id="rYS-A1-Cds">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="321" id="r8u-zp-5hA">
-                                        <rect key="frame" x="0.0" y="698" width="320" height="321"/>
+                                        <rect key="frame" x="0.0" y="610" width="320" height="321"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r8u-zp-5hA" id="DFm-V6-z1b">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="321"/>
@@ -124,7 +124,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBj-9J-DjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="605.84707646176912"/>
+            <point key="canvasLocation" x="180" y="605.28169014084506"/>
         </scene>
         <!--allEvents-->
         <scene sceneID="eMw-G2-pIh">
@@ -460,9 +460,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-dK-67q">
-                                        <rect key="frame" x="0.0" y="6" width="46" height="14"/>
+                                        <rect key="frame" x="-4" y="6" width="50" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                         <color key="textColor" name="SkyBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -497,7 +497,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1212" y="900.44977511244383"/>
+            <point key="canvasLocation" x="1211.25" y="900"/>
         </scene>
         <!--Tomorrow-->
         <scene sceneID="TPh-Nb-9Qf">
@@ -631,9 +631,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuO-YI-lqx">
-                                        <rect key="frame" x="0.0" y="6" width="46" height="14"/>
+                                        <rect key="frame" x="-5" y="6" width="51" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                         <color key="textColor" name="SkyBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -666,24 +666,24 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1212" y="1329.9850074962519"/>
+            <point key="canvasLocation" x="1211.25" y="1329.4014084507041"/>
         </scene>
         <!--Home Header View Controller-->
         <scene sceneID="epH-GZ-O9O">
             <objects>
                 <viewController id="oZe-Db-HaM" customClass="HomeHeaderViewController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="top" id="Xuq-rZ-ILP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbp-Zv-IZe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="158.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="qbp-Zv-IZe" secondAttribute="height" multiplier="3000:1920" id="ODn-2A-h7g"/>
+                                    <constraint firstAttribute="width" secondItem="qbp-Zv-IZe" secondAttribute="height" multiplier="750:372" id="ODn-2A-h7g"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diA-pV-QbO">
-                                <rect key="frame" x="16" y="258.5" width="288" height="79"/>
+                                <rect key="frame" x="16" y="212" width="288" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Découvrez l’intégralité du programme du festival national du film d’animation et organisez votre visite grâce à votre page de favoris. </string>
@@ -697,7 +697,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoO-tw-9xk">
-                                <rect key="frame" x="16" y="221" width="288" height="29.5"/>
+                                <rect key="frame" x="16" y="174.5" width="288" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

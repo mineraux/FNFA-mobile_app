@@ -106,6 +106,9 @@ class ModelController: NSObject {
     
     // private
     func loadDefaultJSON() {
+        
+        print("load default Json")
+        
         if let URL = Bundle.main.url(forResource: "categories", withExtension: "json")  {
             do {
                 let data = try Data.init(contentsOf: URL)
@@ -142,6 +145,10 @@ class ModelController: NSObject {
                 print(error)
             }
         }
+        
+        setEventCategory()
+        setEventPlaces()
+        setStartingDateDayNumber()
         
     }
     

@@ -187,6 +187,11 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = dropDownOptions[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor(named: "Black")
+        
+        //Set background color on selection
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor(named: "MauveDark")
+        cell.selectedBackgroundView = bgColorView
         return cell
     }
     

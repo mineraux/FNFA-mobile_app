@@ -31,7 +31,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Single Event Controller-->
+        <!--Détails-->
         <scene sceneID="EIk-ct-ED6">
             <objects>
                 <viewController storyboardIdentifier="singleEventSB" extendedLayoutIncludesOpaqueBars="YES" id="FpM-5m-XIx" customClass="SingleEventController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,7 +201,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rJU-CH-PZW"/>
                     </scrollView>
-                    <navigationItem key="navigationItem" id="8y4-Zw-qA8"/>
+                    <navigationItem key="navigationItem" title="Détails" id="8y4-Zw-qA8"/>
                     <connections>
                         <outlet property="eventAuthor" destination="ILB-7H-N61" id="IUM-5d-aOO"/>
                         <outlet property="eventCategory" destination="LLw-z4-MLj" id="eZz-jI-itg"/>

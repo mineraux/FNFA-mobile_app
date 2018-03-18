@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Evenements-->
+        <!--Évenements-->
         <scene sceneID="Oeo-OX-pvg">
             <objects>
                 <viewController id="Mcf-fs-lFz" customClass="allEventsController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-0R-fJl">
-                                <rect key="frame" x="0.0" y="135" width="320" height="384"/>
+                                <rect key="frame" x="0.0" y="100" width="320" height="419"/>
                                 <color key="backgroundColor" name="Black"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="114" id="vjg-HZ-DEG" customClass="cellAllEventsController" customModule="FNFA" customModuleProvider="target">
@@ -48,13 +48,13 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventCategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-az-3pv">
-                                                            <rect key="frame" x="98" y="17" width="72" height="13"/>
+                                                            <rect key="frame" x="98" y="17" width="172" height="13"/>
                                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                                             <color key="textColor" name="MauveLight"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auG-Nn-TVh">
-                                                            <rect key="frame" x="98" y="36" width="125" height="19"/>
+                                                            <rect key="frame" x="98" y="36" width="140" height="19"/>
                                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                                             <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
@@ -72,10 +72,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8o-yI-gZo">
-                                                            <rect key="frame" x="243" y="34" width="27" height="23"/>
+                                                            <rect key="frame" x="246" y="35" width="24" height="21"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="27" id="aPR-YX-gG2"/>
-                                                                <constraint firstAttribute="height" constant="23" id="j5a-rH-EYS"/>
+                                                                <constraint firstAttribute="width" constant="24" id="aPR-YX-gG2"/>
+                                                                <constraint firstAttribute="height" constant="21" id="j5a-rH-EYS"/>
                                                             </constraints>
                                                             <state key="normal" image="heart_empty"/>
                                                             <connections>
@@ -92,11 +92,12 @@
                                                         <constraint firstItem="6JW-hp-vEc" firstAttribute="leading" secondItem="4tF-Ct-IxE" secondAttribute="trailing" constant="18" id="34e-kZ-mPE"/>
                                                         <constraint firstItem="auG-Nn-TVh" firstAttribute="leading" secondItem="4tF-Ct-IxE" secondAttribute="trailing" constant="18" id="Dzo-tA-zLl"/>
                                                         <constraint firstItem="i8o-yI-gZo" firstAttribute="centerY" secondItem="Rfu-wb-TUs" secondAttribute="centerY" id="FLb-mb-hEG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zfB-az-3pv" secondAttribute="trailing" constant="10" id="I9Z-qi-lvj"/>
                                                         <constraint firstItem="4tF-Ct-IxE" firstAttribute="top" secondItem="Rfu-wb-TUs" secondAttribute="top" constant="10" id="IYe-eC-bRr"/>
                                                         <constraint firstItem="Tbh-mg-PDg" firstAttribute="leading" secondItem="rj4-sE-bli" secondAttribute="trailing" constant="5" id="L2i-SR-ACJ"/>
                                                         <constraint firstAttribute="bottom" secondItem="4tF-Ct-IxE" secondAttribute="bottom" constant="10" id="LSD-A1-Os9"/>
                                                         <constraint firstItem="zfB-az-3pv" firstAttribute="leading" secondItem="4tF-Ct-IxE" secondAttribute="trailing" constant="18" id="Lje-uv-ZkK"/>
-                                                        <constraint firstItem="i8o-yI-gZo" firstAttribute="leading" secondItem="auG-Nn-TVh" secondAttribute="trailing" constant="20" id="M4c-ey-qvm"/>
+                                                        <constraint firstItem="i8o-yI-gZo" firstAttribute="leading" secondItem="auG-Nn-TVh" secondAttribute="trailing" constant="8" id="M4c-ey-qvm"/>
                                                         <constraint firstAttribute="trailing" secondItem="i8o-yI-gZo" secondAttribute="trailing" constant="10" id="TE8-ZL-OyP"/>
                                                         <constraint firstAttribute="bottom" secondItem="rj4-sE-bli" secondAttribute="bottom" constant="19" id="Yfo-hz-2LU"/>
                                                         <constraint firstAttribute="bottom" secondItem="6JW-hp-vEc" secondAttribute="bottom" constant="17" id="Zh0-Gb-mtK"/>
@@ -130,7 +131,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU1-6l-8G0">
-                                <rect key="frame" x="261" y="55" width="39" height="29"/>
+                                <rect key="frame" x="261" y="30" width="39" height="29"/>
                                 <color key="backgroundColor" name="MauveLight"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,7 +152,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-G2-UXm">
-                                        <rect key="frame" x="25" y="122.5" width="144" height="25"/>
+                                        <rect key="frame" x="25" y="112.5" width="144" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Salon des nouvelles écritures"/>
                                         <connections>
@@ -159,7 +160,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6W-Jy-Ftw">
-                                        <rect key="frame" x="25" y="157.5" width="124" height="25"/>
+                                        <rect key="frame" x="25" y="147.5" width="124" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Compétition et panorama"/>
                                         <connections>
@@ -167,7 +168,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL8-ua-3KJ">
-                                        <rect key="frame" x="25" y="87.5" width="81" height="25"/>
+                                        <rect key="frame" x="25" y="77.5" width="81" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Séance spéciale"/>
                                         <connections>
@@ -175,7 +176,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrU-7R-heu">
-                                        <rect key="frame" x="25" y="192.5" width="68" height="25"/>
+                                        <rect key="frame" x="25" y="182.5" width="68" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Long métrage"/>
                                         <connections>
@@ -183,7 +184,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-tX-jrn">
-                                        <rect key="frame" x="25" y="227.5" width="93" height="25"/>
+                                        <rect key="frame" x="25" y="217.5" width="93" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Volet professionnel"/>
                                         <connections>
@@ -191,7 +192,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jra-WW-qJP">
-                                        <rect key="frame" x="25" y="262.5" width="79" height="25"/>
+                                        <rect key="frame" x="25" y="252.5" width="79" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Autour des films"/>
                                         <connections>
@@ -199,7 +200,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYF-aI-Orj">
-                                        <rect key="frame" x="25" y="297.5" width="60" height="25"/>
+                                        <rect key="frame" x="25" y="287.5" width="60" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Cube animé"/>
                                         <connections>
@@ -207,7 +208,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-iY-uP9">
-                                        <rect key="frame" x="25" y="332.5" width="30" height="25"/>
+                                        <rect key="frame" x="25" y="322.5" width="30" height="25"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <state key="normal" title="Focus"/>
                                         <connections>
@@ -228,7 +229,7 @@
                                     <constraint firstItem="evZ-G2-UXm" firstAttribute="top" secondItem="dL8-ua-3KJ" secondAttribute="bottom" constant="10" id="ZzL-zb-C4Q"/>
                                     <constraint firstItem="jra-WW-qJP" firstAttribute="top" secondItem="YQ5-tX-jrn" secondAttribute="bottom" constant="10" id="atW-iE-NMs"/>
                                     <constraint firstAttribute="width" constant="240" id="h1j-Au-vyA"/>
-                                    <constraint firstItem="dL8-ua-3KJ" firstAttribute="top" secondItem="hH0-wt-T9O" secondAttribute="bottom" constant="30" id="hR3-j9-DtB"/>
+                                    <constraint firstItem="dL8-ua-3KJ" firstAttribute="top" secondItem="hH0-wt-T9O" secondAttribute="bottom" constant="20" id="hR3-j9-DtB"/>
                                     <constraint firstItem="hH0-wt-T9O" firstAttribute="centerX" secondItem="aKx-S1-Jz5" secondAttribute="centerX" id="n2n-Rf-M7U"/>
                                     <constraint firstItem="uTZ-iY-uP9" firstAttribute="leading" secondItem="aKx-S1-Jz5" secondAttribute="leading" constant="25" id="nVQ-zy-EqW"/>
                                     <constraint firstItem="FrU-7R-heu" firstAttribute="leading" secondItem="aKx-S1-Jz5" secondAttribute="leading" constant="25" id="qtc-2g-0zw"/>
@@ -253,18 +254,18 @@
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="bottom" secondItem="4zl-xR-u59" secondAttribute="bottom" id="53E-ni-xuV"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="bottom" secondItem="4zl-xR-u59" secondAttribute="bottom" id="Dio-bh-GfS"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="leading" secondItem="qiT-FN-0Ti" secondAttribute="trailing" constant="-30" id="GRL-pC-nq1"/>
-                            <constraint firstItem="rhN-0R-fJl" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="115" id="Hid-sB-71v"/>
+                            <constraint firstItem="rhN-0R-fJl" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="80" id="Hid-sB-71v"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" id="MXE-fK-avV"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="trailing" secondItem="4zl-xR-u59" secondAttribute="trailing" id="OhT-n2-tTY"/>
                             <constraint firstItem="qiT-FN-0Ti" firstAttribute="top" secondItem="9UF-Nn-Vyg" secondAttribute="top" constant="118" id="Qvq-kI-fa9"/>
                             <constraint firstItem="4zl-xR-u59" firstAttribute="trailing" secondItem="AU1-6l-8G0" secondAttribute="trailing" constant="20" id="R0G-UF-QMh"/>
                             <constraint firstItem="rhN-0R-fJl" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" id="grN-EN-LyT"/>
-                            <constraint firstItem="AU1-6l-8G0" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="35" id="jgJ-7v-CQi"/>
+                            <constraint firstItem="AU1-6l-8G0" firstAttribute="top" secondItem="4zl-xR-u59" secondAttribute="top" constant="10" id="jgJ-7v-CQi"/>
                             <constraint firstItem="aKx-S1-Jz5" firstAttribute="leading" secondItem="4zl-xR-u59" secondAttribute="leading" constant="80" id="kYs-xY-3j2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4zl-xR-u59"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Evenements" id="QCk-TY-c9t"/>
+                    <navigationItem key="navigationItem" title="Évenements" id="QCk-TY-c9t"/>
                     <connections>
                         <outlet property="closeFiltersBtn" destination="qiT-FN-0Ti" id="W9R-vV-esg"/>
                         <outlet property="filterLeadingConstraint" destination="kYs-xY-3j2" id="J3Y-Pb-eJ2"/>
