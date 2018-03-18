@@ -151,7 +151,7 @@ class HomeMySelectionViewController: UIViewController, UICollectionViewDelegate,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? HomeMySelectionCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
-            let vc = segue.destination as! SingleEventController
+            let vc = segue.destination as! SingleEventTableViewController
             vc.event = [(modelController?.getEventsInFav()[indexPath.row])!]
         }
     }
