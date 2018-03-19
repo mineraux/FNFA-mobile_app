@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class cellAllEventsController: UITableViewCell {
 
@@ -39,6 +40,32 @@ class cellAllEventsController: UITableViewCell {
     }
 
     @IBAction func addToFav(_ sender: Any) {
+        let events = modelController?.events
+        
+        for event in events! {
+            if (event["id"] as! Int) == eventId {
+                if (event["isFav"] as! Bool) == false {
+                    let eventDateIso = event["startingDate"] as! String
+                    timedNotification(date: eventDateIso) { (success) in
+                        if success {
+                            print("Successfully Notified")
+                        }
+                    }
+                } else {
+                    UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+                        var identifiers: [String] = []
+                        for notification:UNNotificationRequest in notificationRequests {
+                            if notification.identifier == "customNotification\(String(describing: self.eventId))" {
+                                identifiers.append(notification.identifier)
+                            }
+                        }
+                        print("customNotification\(String(describing: self.eventId!)) canceled")
+                        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+                    }
+                }
+            }
+        }
+        
         modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: BtnAddToFav)
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
@@ -53,5 +80,31 @@ class cellAllEventsController: UITableViewCell {
                     self.BtnAddToFav.transform = CGAffineTransform.identity
                 }
         })
+    }
+    
+    func timedNotification(date: String, completion: @escaping (_ Success: Bool) -> ()) {
+        let formatter = ISO8601DateFormatter()
+        formatter.timeZone = TimeZone(identifier: "Europe/Paris")
+        let updatedAt = formatter.date(from: date)!
+        
+        var components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: updatedAt)
+        components.hour? -= 1
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Festival national du film d'animation"
+        content.subtitle = "Un de vos programme favoris va bientôt commencer."
+        content.body = "\(eventName.text!) commence dans 1h. Rendez vous ici : \(eventPlaces.text!)"
+        
+        let request = UNNotificationRequest(identifier: "customNotification\(String(describing: eventId!))", content:content, trigger:trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if error != nil {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
     }
 }

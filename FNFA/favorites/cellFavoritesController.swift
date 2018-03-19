@@ -42,8 +42,18 @@ class cellFavoritesController: UITableViewCell {
         // Configure the view for the selected state
     }
     
-
-    @IBAction func removeFav(_ sender: Any) {       
+    @IBAction func removeFav(_ sender: Any) {
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+            var identifiers: [String] = []
+            for notification:UNNotificationRequest in notificationRequests {
+                if notification.identifier == "customNotification" {
+                    identifiers.append(notification.identifier)
+                }
+            }
+            print("customNotification\(String(describing: self.eventId!)) canceled")
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+        }
+        
         modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: isFavBtn)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var modelController: ModelController?
@@ -28,6 +29,15 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
+            
+            if error != nil {
+                print("Authorization Unsuccessfull")
+            } else {
+                print("Authorization successfull")
+            }
+        }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
