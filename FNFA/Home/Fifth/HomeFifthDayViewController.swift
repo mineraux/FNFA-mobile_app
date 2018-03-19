@@ -96,8 +96,8 @@ class HomeFifthDayViewController: UIViewController, UICollectionViewDelegate, UI
         //Image
         let eventID = eventDict["id"] as! Int
         let imageName = String(describing:eventID)
-        
         fifthDayCell.eventImage!.image = UIImage(named:imageName)
+    
         
         fifthDayCell.layer.cornerRadius = 8;
         
@@ -126,12 +126,14 @@ class HomeFifthDayViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var tagSender = ((sender as! UITapGestureRecognizer).view?.tag)!
-        
-        if tagSender != 0 {
-            tagSender -= 100
-            let vc = segue.destination as! allEventsController
-            vc.dayIndex = tagSender
+        if sender is UITapGestureRecognizer?{
+            var tagSender = ((sender as! UITapGestureRecognizer).view?.tag)!
+            
+            if tagSender != 0 {
+                tagSender -= 100
+                let vc = segue.destination as! allEventsController
+                vc.dayIndex = tagSender
+            }
         }
         
         if let cell = sender as? HomeFifthDayCollectionViewCell,

@@ -35,7 +35,6 @@ class HomeMySelectionCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func favAction(_ sender: Any) {
-        print(filteredEvents)
     
         modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: favButton)
         

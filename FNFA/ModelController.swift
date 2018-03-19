@@ -257,8 +257,6 @@ class ModelController: NSObject {
             if let date = formatter.date(from: test) {
                 event["startingDateDayNumber"]! = date.nameNumberDate
                 if (event["id"] as! Int) == 29 {
-                    print(event)
-                    print(formatter.timeZone)
                 }
             }
         }

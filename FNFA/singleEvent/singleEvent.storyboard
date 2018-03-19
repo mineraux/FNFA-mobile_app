@@ -149,7 +149,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxL-Tj-IWi">
-                                                    <rect key="frame" x="20" y="547" width="335" height="120"/>
+                                                    <rect key="frame" x="20" y="526.5" width="335" height="120"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_linkToSite" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-VP-h1M">
                                                             <rect key="frame" x="0.0" y="0.0" width="335" height="120"/>
@@ -221,7 +221,7 @@
                                                 <constraint firstItem="MOi-2D-cpn" firstAttribute="leading" secondItem="5RS-Ke-QE3" secondAttribute="leading" constant="20" id="YkZ-0b-Rde"/>
                                                 <constraint firstItem="gJQ-dH-ufC" firstAttribute="top" secondItem="9vf-qy-n9j" secondAttribute="bottom" constant="10" id="aOt-vG-9rL"/>
                                                 <constraint firstAttribute="trailing" secondItem="Mq3-fs-AxB" secondAttribute="trailing" id="fnm-0i-T27"/>
-                                                <constraint firstItem="gxL-Tj-IWi" firstAttribute="top" secondItem="MOi-2D-cpn" secondAttribute="bottom" constant="50" id="hPJ-dD-pP8"/>
+                                                <constraint firstItem="gxL-Tj-IWi" firstAttribute="top" secondItem="MOi-2D-cpn" secondAttribute="bottom" constant="30" id="hPJ-dD-pP8"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="OLx-st-F9x" secondAttribute="trailing" constant="20" id="jP5-u3-Vra"/>
                                                 <constraint firstItem="OLx-st-F9x" firstAttribute="leading" secondItem="5RS-Ke-QE3" secondAttribute="leading" constant="20" id="kxk-X1-2wc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="W7H-0T-bYr" secondAttribute="trailing" constant="20" id="mTq-Py-WZL"/>
@@ -253,6 +253,7 @@
                         <outlet property="eventThumbnail" destination="Mq3-fs-AxB" id="Sit-cM-qFV"/>
                         <outlet property="favIcon" destination="q0b-gd-2YF" id="afY-ob-CCL"/>
                         <outlet property="linkToSingleEvent" destination="gxL-Tj-IWi" id="PVd-H0-Qah"/>
+                        <outlet property="linkToSiteTopConstraint" destination="hPJ-dD-pP8" id="utr-W3-NyH"/>
                         <outlet property="typePublic" destination="gJQ-dH-ufC" id="JUq-bC-TmB"/>
                     </connections>
                 </tableViewController>

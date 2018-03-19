@@ -242,8 +242,6 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
             .sorted(by: .date))!
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
         
-        print(modelController?.events)
-        
         for filter in activeFilters {
             filteredEvents = filteredEvents.filter { $0["category"] as? String == filter }
         }

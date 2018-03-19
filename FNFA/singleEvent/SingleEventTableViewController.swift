@@ -26,6 +26,8 @@ class SingleEventTableViewController: UITableViewController {
     
     @IBOutlet weak var eventNameTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var linkToSiteTopConstraint: NSLayoutConstraint!
+    
     var modelController: ModelController?
     
     var event = [NSMutableDictionary]()
@@ -101,6 +103,8 @@ class SingleEventTableViewController: UITableViewController {
             typePublic.isHidden = true
         }
         
+        tableView.allowsSelection = false
+        
          //Redirection vers le site
                 let gesture = UITapGestureRecognizer(target: self, action: #selector(redirectToWebsite))
                 linkToSingleEvent.addGestureRecognizer(gesture)
@@ -126,6 +130,12 @@ class SingleEventTableViewController: UITableViewController {
             eventNameTopConstraint.constant = 0
         } else {
             eventNameTopConstraint.constant = 20
+        }
+        
+        if eventAuthor.text == "" {
+            linkToSiteTopConstraint.constant = 0
+        } else {
+            linkToSiteTopConstraint.constant = 30
         }
     }
     

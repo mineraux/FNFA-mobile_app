@@ -126,12 +126,14 @@ class HomeThirdDayViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var tagSender = ((sender as! UITapGestureRecognizer).view?.tag)!
-        
-        if tagSender != 0 {
-            tagSender -= 100
-            let vc = segue.destination as! allEventsController
-            vc.dayIndex = tagSender
+        if sender is UITapGestureRecognizer?{
+            var tagSender = ((sender as! UITapGestureRecognizer).view?.tag)!
+            
+            if tagSender != 0 {
+                tagSender -= 100
+                let vc = segue.destination as! allEventsController
+                vc.dayIndex = tagSender
+            }
         }
         
         if let cell = sender as? HomeThirdDayCollectionViewCell,
