@@ -43,6 +43,8 @@ class dropDownBtn: UIButton, dropDownProtocol {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor(named: "Black")
+        
+        self.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 20)
         chevronDropDown.image = UIImage(named: "chevron-1.png")
         chevronDropDown.translatesAutoresizingMaskIntoConstraints = false
         
@@ -61,17 +63,15 @@ class dropDownBtn: UIButton, dropDownProtocol {
             self.superview?.bringSubview(toFront: dropView)
             self.superview?.addSubview(chevronDropDown)
             
-            
-            
             dropView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
             dropView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            dropView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+            dropView.widthAnchor.constraint(equalTo: self.widthAnchor, constant: 60).isActive = true
             
             height = dropView.heightAnchor.constraint(equalToConstant: 0)
             
             chevronDropDown.widthAnchor.constraint(equalToConstant: 21).isActive = true
             chevronDropDown.heightAnchor.constraint(equalToConstant: 12).isActive = true
-            chevronDropDown.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 65).isActive = true
+            chevronDropDown.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 80).isActive = true
             chevronDropDown.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         }
 
@@ -97,8 +97,8 @@ class dropDownBtn: UIButton, dropDownProtocol {
             
             NSLayoutConstraint.deactivate([self.height])
             
-            if self.dropView.tableView.contentSize.height > 250 {
-                self.height.constant = 250
+            if self.dropView.tableView.contentSize.height > 200 {
+                self.height.constant = 247
             } else {
                 self.height.constant = self.dropView.tableView.contentSize.height
             }
@@ -154,15 +154,18 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         super.init(frame: frame)
         tableView.backgroundColor = UIColor(named: "Black")
         self.backgroundColor = UIColor(named: "Black")
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 6
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.alwaysBounceVertical = false
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         self.addSubview(tableView)
         
-        tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -186,12 +189,14 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell()
         cell.textLabel?.text = dropDownOptions[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.font = UIFont(name: "Montserrat-Bold", size: 20)
         cell.backgroundColor = UIColor(named: "Black")
         
         //Set background color on selection
         let bgColorView = UIView()
         bgColorView.backgroundColor = UIColor(named: "MauveDark")
         cell.selectedBackgroundView = bgColorView
+        
         return cell
     }
     

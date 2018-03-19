@@ -1,5 +1,5 @@
 //
-//  HomeThirdDayViewController.swift
+//  HomeFourthDayViewController.swift
 //  FNFA
 //
 //  Created by Alexandre Massé on 18/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeThirdDayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+class HomeFourthDayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     var modelController: ModelController?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,13 +27,13 @@ class HomeThirdDayViewController: UIViewController, UICollectionViewDelegate, UI
         modelController = appDelegate.modelController
         
         filteredEvents = (modelController?.events
-            .findBy(date: (modelController?.timestamp6Avril)!)?
+            .findBy(date: (modelController?.timestamp7Avril)!)?
             .sorted(by: .date))!
         
-        let sectionTitleSmallText = "VENDREDI"
+        let sectionTitleSmallText = "SAMEDI"
         
         sectionTitleSmall.text = sectionTitleSmallText.uppercased()
-        sectionTitle.text = "6 avril"
+        sectionTitle.text = "7 avril"
         seeAllLabel.text = "Voir tout"
         seeAllImage.image = UIImage(named:"chevron")
     }
@@ -63,18 +63,18 @@ class HomeThirdDayViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let thirdDayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdDayCell", for: indexPath) as! HomeThirdDayCollectionViewCell
+        let fourthDayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "fourthDayCell", for: indexPath) as! HomeFourthDayCollectionViewCell
         
         let eventDict = filteredEvents[indexPath.row]
         
         //id
-        thirdDayCell.eventId = (eventDict["id"] as! Int)
+        fourthDayCell.eventId = (eventDict["id"] as! Int)
         
         //Category
-        thirdDayCell.eventCategory.text = (eventDict["category"] as! String).uppercased()
+        fourthDayCell.eventCategory.text = (eventDict["category"] as! String).uppercased()
         
         //Name
-        thirdDayCell.eventName.text = (eventDict["name"] as! String)
+        fourthDayCell.eventName.text = (eventDict["name"] as! String)
         
         
         //Heure
@@ -84,26 +84,26 @@ class HomeThirdDayViewController: UIViewController, UICollectionViewDelegate, UI
         formatter.timeZone = TimeZone(identifier: "Europe/Paris")
         
         if let date = formatter.date(from: dateIso as! String) {
-            thirdDayCell.eventDate!.text = date.hourDate
+            fourthDayCell.eventDate!.text = date.hourDate
         }
         
         //Places
-        thirdDayCell.eventPlace!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
+        fourthDayCell.eventPlace!.text = (eventDict["place"] as! [String]).joined(separator: ", ")
         
         //icone
-        thirdDayCell.locationImage.image = UIImage(named:"location")
+        fourthDayCell.locationImage.image = UIImage(named:"location")
         
         //Image
         let eventID = eventDict["id"] as! Int
         let imageName = String(describing:eventID)
         
-        thirdDayCell.eventImage!.image = UIImage(named:imageName)
+        fourthDayCell.eventImage!.image = UIImage(named:imageName)
         
-        thirdDayCell.layer.cornerRadius = 8;
+        fourthDayCell.layer.cornerRadius = 8;
         
-        favIconeManager(indexPath: indexPath, addToFavBtn: thirdDayCell.favButton)
+        favIconeManager(indexPath: indexPath, addToFavBtn: fourthDayCell.favButton)
         
-        return  thirdDayCell
+        return  fourthDayCell
     }
     
     // Gere quelle icone de favoris afficher pour chaque cell.
@@ -126,11 +126,12 @@ class HomeThirdDayViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let cell = sender as? HomeThirdDayCollectionViewCell,
+        if let cell = sender as? HomeFourthDayCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
             let vc = segue.destination as! SingleEventTableViewController
             vc.event = [filteredEvents[indexPath.row]]
         }
     }
-
+    
 }
+
