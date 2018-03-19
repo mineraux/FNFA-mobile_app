@@ -88,6 +88,8 @@
 		FA6F7E24205EBEF2004131D6 /* HomeThirdDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F7E23205EBEF2004131D6 /* HomeThirdDayViewController.swift */; };
 		FA6F7E26205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F7E25205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift */; };
 		FA894D7E205DD3A900339F8B /* transports.json in Resources */ = {isa = PBXBuildFile; fileRef = FA894D7D205DD3A900339F8B /* transports.json */; };
+		FAF60E73205F4E78001C5FCE /* HomeFifthDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60E72205F4E78001C5FCE /* HomeFifthDayCollectionViewCell.swift */; };
+		FAF60E75205F4E9E001C5FCE /* HomeFifthDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60E74205F4E9E001C5FCE /* HomeFifthDayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +176,8 @@
 		FA6F7E23205EBEF2004131D6 /* HomeThirdDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThirdDayViewController.swift; sourceTree = "<group>"; };
 		FA6F7E25205EDB11004131D6 /* HomeThirdDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThirdDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA894D7D205DD3A900339F8B /* transports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transports.json; sourceTree = "<group>"; };
+		FAF60E72205F4E78001C5FCE /* HomeFifthDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFifthDayCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAF60E74205F4E9E001C5FCE /* HomeFifthDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFifthDayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +311,7 @@
 				FA109D02203666F900B54CAD /* Tomorrow */,
 				FA6F7E22205EB421004131D6 /* ThirdDay */,
 				FA657536205F1A9B00A5BA8F /* Fourth */,
+				FAF60E71205F4E1B001C5FCE /* Fifth */,
 				5D73FE1F2032FA7E007FB93A /* home.storyboard */,
 				FA657534205F1A6600A5BA8F /* HomeNavigtionController.swift */,
 				FA109CF620360E2100B54CAD /* HomeTableViewController.swift */,
@@ -444,6 +449,15 @@
 			path = ThirdDay;
 			sourceTree = "<group>";
 		};
+		FAF60E71205F4E1B001C5FCE /* Fifth */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60E74205F4E9E001C5FCE /* HomeFifthDayViewController.swift */,
+				FAF60E72205F4E78001C5FCE /* HomeFifthDayCollectionViewCell.swift */,
+			);
+			path = Fifth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,6 +578,7 @@
 			files = (
 				A1136DCA205C3BAD00EEA509 /* AboutTransportViewController.swift in Sources */,
 				5D6F768120331D980045D582 /* dateFormatter.swift in Sources */,
+				FAF60E75205F4E9E001C5FCE /* HomeFifthDayViewController.swift in Sources */,
 				FA6F7E24205EBEF2004131D6 /* HomeThirdDayViewController.swift in Sources */,
 				A1136DCC205C3D2000EEA509 /* AboutTransportCollectionViewCell.swift in Sources */,
 				FA109CFF2036605C00B54CAD /* HomeTodayViewController.swift in Sources */,
@@ -576,6 +591,7 @@
 				5DAA45402031DEE500A7408E /* AppDelegate.swift in Sources */,
 				5DAA45522031E11500A7408E /* TableViewController.swift in Sources */,
 				A1FABCD020568BD70001F3CE /* HomeHeaderViewController.swift in Sources */,
+				FAF60E73205F4E78001C5FCE /* HomeFifthDayCollectionViewCell.swift in Sources */,
 				5D2CD57620343E7E0023073E /* favoritesController.swift in Sources */,
 				FA109D012036618A00B54CAD /* HomeTodayCollectionViewCell.swift in Sources */,
 				FA109CFA20364BC600B54CAD /* HomeMySelectionViewController.swift in Sources */,

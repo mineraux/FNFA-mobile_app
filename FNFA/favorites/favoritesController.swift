@@ -67,8 +67,9 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         
         //Image View
         let imageView = UIImageView()
-        imageView.heightAnchor.constraint(equalToConstant: 259.0).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 210.0).isActive = true
+        // imageView.heightAnchor.constraint(equalToConstant: 259.0).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 240.0).isActive = true
+        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 259/210).isActive = true
         imageView.image = UIImage(named: "visuel_wishlist_vide.png")
         
         //Text Label
@@ -80,8 +81,8 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         textLabel.textColor = UIColor.white
         
         //Stack View
-        stackView.axis  = UILayoutConstraintAxis.vertical
-        stackView.distribution  = UIStackViewDistribution.equalSpacing
+        stackView.axis = UILayoutConstraintAxis.vertical
+        stackView.distribution = UIStackViewDistribution.equalSpacing
         stackView.alignment = UIStackViewAlignment.center
         stackView.spacing = 16.0
         
@@ -91,8 +92,11 @@ class favoritesController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.view.addSubview(stackView)
         
-        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10)
+        //stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10)
+        
+       stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -25).isActive = true
         
         if modelController?.getEventsInFav().count == 0 {
             stackView.isHidden = false

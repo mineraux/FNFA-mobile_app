@@ -142,9 +142,10 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         btn.backgroundColor = .clear
         btn.layer.cornerRadius = 18
         btn.layer.borderWidth = 2
-        btn.layer.borderColor = UIColor(named: "Black40")?.cgColor
-        btn.setTitleColor(UIColor(named: "Black40"), for: .normal)
+        btn.layer.borderColor = UIColor(named: "MauveSelectionMenu")?.cgColor
+        btn.setTitleColor(UIColor(named: "MauveSelectionMenu"), for: [])
         btn.setTitle(btn.titleLabel?.text?.uppercased(), for: .normal)
+        btn.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 10)
         btn.contentEdgeInsets = UIEdgeInsets(top: 12, left: 17, bottom: 12, right: 17)
     }
 
@@ -221,18 +222,18 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         
         for filter in arrayFiltersButton {
             filter.backgroundColor = .clear
-            filter.setTitleColor(color_darkmauve, for: .normal)
+            filter.setTitleColor(color_darkmauve, for: [])
         }
         
         if let index = activeFilters.index(of: (titleCapitalized)!) {
             activeFilters.remove(at: index)
             sender.backgroundColor = .clear
-            sender.setTitleColor(color_darkmauve, for: .normal)
+            sender.setTitleColor(color_darkmauve, for: [])
         } else {
             activeFilters = []
             activeFilters.append((titleCapitalized)!)
-            sender.backgroundColor = color_darkmauve
-            sender.setTitleColor(UIColor.white, for: .normal)
+            sender.backgroundColor = UIColor(named: "MauveSelectionMenu")
+            sender.setTitleColor(UIColor.white, for: [])
         }
     
         // Gestion du cas où plusieurs filtres sont sélectionnés

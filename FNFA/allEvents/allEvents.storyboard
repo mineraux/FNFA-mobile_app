@@ -14,8 +14,14 @@
         <array key="Helvetica.ttc">
             <string>Helvetica</string>
         </array>
-        <array key="Montserrat-Bold.ttf">
-            <string>Montserrat-Bold</string>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+        <array key="SFUIText.ttf">
+            <string>.SFUIText</string>
         </array>
     </customFonts>
     <scenes>
@@ -27,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-0R-fJl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-0R-fJl">
                                 <rect key="frame" x="0.0" y="100" width="320" height="419"/>
                                 <color key="backgroundColor" name="Black"/>
                                 <prototypes>
@@ -146,70 +152,65 @@
                                 <rect key="frame" x="80" y="20" width="240" height="499"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrer ma recherche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-wt-T9O">
-                                        <rect key="frame" x="45.5" y="40" width="150.5" height="17.5"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                        <rect key="frame" x="53.5" y="35" width="133" height="17"/>
+                                        <fontDescription key="fontDescription" name=".SFUIText" family=".SF UI Text" pointSize="14"/>
                                         <color key="textColor" name="Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-G2-UXm">
-                                        <rect key="frame" x="25" y="112.5" width="144" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-G2-UXm">
+                                        <rect key="frame" x="25" y="108" width="144" height="25"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                         <state key="normal" title="Salon des nouvelles écritures"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="AGz-1f-sy0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6W-Jy-Ftw">
-                                        <rect key="frame" x="25" y="147.5" width="124" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6W-Jy-Ftw">
+                                        <rect key="frame" x="25" y="143" width="194" height="32"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Compétition et panorama"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="Aem-8Y-cMx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL8-ua-3KJ">
-                                        <rect key="frame" x="25" y="77.5" width="81" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL8-ua-3KJ">
+                                        <rect key="frame" x="25" y="72" width="91" height="26"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                         <state key="normal" title="Séance spéciale"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="y4n-hh-2Dp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrU-7R-heu">
-                                        <rect key="frame" x="25" y="182.5" width="68" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrU-7R-heu">
+                                        <rect key="frame" x="25" y="185" width="113" height="34"/>
                                         <state key="normal" title="Long métrage"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="et9-nA-APo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-tX-jrn">
-                                        <rect key="frame" x="25" y="217.5" width="93" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-tX-jrn">
+                                        <rect key="frame" x="25" y="229" width="155" height="34"/>
                                         <state key="normal" title="Volet professionnel"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="xrk-Of-Rr9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jra-WW-qJP">
-                                        <rect key="frame" x="25" y="252.5" width="79" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jra-WW-qJP">
+                                        <rect key="frame" x="25" y="273" width="132" height="34"/>
                                         <state key="normal" title="Autour des films"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="EoF-wT-1kL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYF-aI-Orj">
-                                        <rect key="frame" x="25" y="287.5" width="60" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYF-aI-Orj">
+                                        <rect key="frame" x="25" y="317" width="97" height="34"/>
                                         <state key="normal" title="Cube animé"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="kKl-CX-iYU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-iY-uP9">
-                                        <rect key="frame" x="25" y="322.5" width="30" height="25"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-iY-uP9">
+                                        <rect key="frame" x="25" y="361" width="49" height="34"/>
                                         <state key="normal" title="Focus"/>
                                         <connections>
                                             <action selector="onTouchFiltersBtn:" destination="Mcf-fs-lFz" eventType="touchUpInside" id="ytB-RM-3gk"/>
@@ -236,7 +237,7 @@
                                     <constraint firstItem="evZ-G2-UXm" firstAttribute="leading" secondItem="aKx-S1-Jz5" secondAttribute="leading" constant="25" id="tFY-xr-SUp"/>
                                     <constraint firstItem="jra-WW-qJP" firstAttribute="leading" secondItem="aKx-S1-Jz5" secondAttribute="leading" constant="25" id="u0g-RP-hOb"/>
                                     <constraint firstItem="FrU-7R-heu" firstAttribute="top" secondItem="P6W-Jy-Ftw" secondAttribute="bottom" constant="10" id="vGq-IU-bAv"/>
-                                    <constraint firstItem="hH0-wt-T9O" firstAttribute="top" secondItem="aKx-S1-Jz5" secondAttribute="top" constant="40" id="wsU-Op-Gq8"/>
+                                    <constraint firstItem="hH0-wt-T9O" firstAttribute="top" secondItem="aKx-S1-Jz5" secondAttribute="top" constant="35" id="wsU-Op-Gq8"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiT-FN-0Ti" userLabel="closeFiltersBtn">

@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="-199" y="-395"/>
         </scene>
-        <!--Single Event Table View Controller-->
+        <!--Détails-->
         <scene sceneID="z7n-62-RGE">
             <objects>
                 <tableViewController storyboardIdentifier="singleEventSB" id="RnX-mD-yjb" customClass="SingleEventTableViewController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,7 +240,7 @@
                             <outlet property="delegate" destination="RnX-mD-yjb" id="kvg-oG-opr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8sE-I8-Zb1"/>
+                    <navigationItem key="navigationItem" title="Détails" id="8sE-I8-Zb1"/>
                     <connections>
                         <outlet property="eventAuthor" destination="MOi-2D-cpn" id="1fT-hV-WxF"/>
                         <outlet property="eventCategory" destination="9vf-qy-n9j" id="m1V-n2-dva"/>

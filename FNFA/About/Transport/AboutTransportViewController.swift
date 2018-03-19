@@ -19,10 +19,8 @@ class AboutTransportViewController: UIViewController, UICollectionViewDelegate, 
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
-
-        transports = (modelController?.transports)!
         
-        print(transports)
+        transports = (modelController?.transports)!
         
     }
 
