@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class cellFavoritesController: UITableViewCell {
     
@@ -42,8 +43,7 @@ class cellFavoritesController: UITableViewCell {
     }
     
 
-    @IBAction func removeFav(_ sender: Any) {
-       
+    @IBAction func removeFav(_ sender: Any) {       
         modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: isFavBtn)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadData"), object: nil)
         

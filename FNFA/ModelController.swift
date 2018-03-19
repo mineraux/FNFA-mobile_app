@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import UserNotifications
 
 class ModelController: NSObject {
     var categories = [NSMutableDictionary]()

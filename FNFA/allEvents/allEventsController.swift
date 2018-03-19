@@ -60,6 +60,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         modelController = appDelegate.modelController
         

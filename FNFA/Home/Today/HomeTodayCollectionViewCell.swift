@@ -7,6 +7,14 @@
 //
 
 import UIKit
+import UserNotifications
+extension UITableViewCell: UNUserNotificationCenterDelegate {
+    
+    public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert])
+    }
+    
+}
 
 class HomeTodayCollectionViewCell: UICollectionViewCell {
     
@@ -33,6 +41,12 @@ class HomeTodayCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func favAction(_ sender: Any) {
+        
+        modelController?.timedNotification(inSeconds: 3) { (success) in
+            if success {
+                print("Notified")
+            }
+        }
         
         modelController?.addToFavs(filteredEvents: filteredEvents, eventId: eventId!, BtnAddToFav: favButton)
         
