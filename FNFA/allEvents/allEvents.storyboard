@@ -25,7 +25,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Évenements-->
+        <!--Événements-->
         <scene sceneID="Oeo-OX-pvg">
             <objects>
                 <viewController id="Mcf-fs-lFz" customClass="allEventsController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
@@ -266,7 +266,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4zl-xR-u59"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Évenements" id="QCk-TY-c9t"/>
+                    <navigationItem key="navigationItem" title="Événements" id="QCk-TY-c9t"/>
                     <connections>
                         <outlet property="closeFiltersBtn" destination="qiT-FN-0Ti" id="W9R-vV-esg"/>
                         <outlet property="filterLeadingConstraint" destination="kYs-xY-3j2" id="J3Y-Pb-eJ2"/>

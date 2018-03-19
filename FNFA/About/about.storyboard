@@ -39,11 +39,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--A propos-->
+        <!--Informations-->
         <scene sceneID="LGY-IM-U6E">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="58I-XQ-4Qn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="A propos" image="tabbar-infos_unselected" selectedImage="tabbar-infos" id="BE6-k9-WSg"/>
+                    <tabBarItem key="tabBarItem" title="Informations" image="tabbar-infos_unselected" selectedImage="tabbar-infos" id="BE6-k9-WSg"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -144,26 +144,30 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour les séances du TNB uniquement, réservation à partir du 4 avril sur toute la durée du Festival." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDJ-nf-GyC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDJ-nf-GyC">
                                                     <rect key="frame" x="16" y="573.5" width="288" height="49.5"/>
+                                                    <string key="text">Pour les séances du TNB uniquement, pré-vente à partir du 4 avril sur toute la
+durée du Festival.</string>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carte abonnée des salles partenaires (TNB, Arvor et Le Grand Logis) acceptée." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPr-Hm-XLE">
-                                                    <rect key="frame" x="16" y="637" width="288" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPr-Hm-XLE">
+                                                    <rect key="frame" x="16" y="637" width="288" height="49.5"/>
+                                                    <string key="text">Carte abonné des salles partenaires (TNB, Arvor et Le Grand Logis) acceptée
+hors ciné-concert.</string>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarif tout public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2F-Jg-Bpg">
-                                                    <rect key="frame" x="16" y="700" width="113" height="15"/>
+                                                    <rect key="frame" x="16" y="716.5" width="113" height="15"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarif scolaire et structures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZg-tQ-kRU">
-                                                    <rect key="frame" x="16" y="865" width="164.5" height="13"/>
+                                                    <rect key="frame" x="16" y="881.5" width="164.5" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="KRm-Lg-hvP"/>
                                                     </constraints>
@@ -172,7 +176,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yVB-ij-cib">
-                                                    <rect key="frame" x="16" y="893" width="61" height="85"/>
+                                                    <rect key="frame" x="16" y="909.5" width="61" height="85"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWp-nf-Wvx">
                                                             <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
@@ -203,7 +207,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-lt-Hb5">
-                                                    <rect key="frame" x="87" y="893" width="61" height="85"/>
+                                                    <rect key="frame" x="87" y="909.5" width="61" height="85"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iw-iW-7UT">
                                                             <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
@@ -234,7 +238,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6k-yd-csh" userLabel="Restauration Container">
-                                                    <rect key="frame" x="16" y="1018" width="288" height="300"/>
+                                                    <rect key="frame" x="16" y="1034.5" width="288" height="300"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restauration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-Rl-Ame">
                                                             <rect key="frame" x="20" y="20" width="149" height="27"/>
@@ -266,8 +270,8 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLB-Ea-duG">
                                                                     <rect key="frame" x="0.0" y="31" width="61" height="61"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xc-jC-rIP">
-                                                                            <rect key="frame" x="18" y="20" width="27" height="22"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xc-jC-rIP">
+                                                                            <rect key="frame" x="18" y="20" width="28" height="22"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
                                                                             <nil key="textColor"/>
@@ -376,7 +380,7 @@ samedi et dimanche.</string>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nos cinémas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTa-En-5FM">
-                                                    <rect key="frame" x="16" y="1358" width="147.5" height="27"/>
+                                                    <rect key="frame" x="16" y="1374.5" width="147.5" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="Yf9-iD-0e5"/>
                                                     </constraints>
@@ -385,7 +389,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toutes les salles sont accessibles aux personnes à mobilité réduite." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-H3-LPb">
-                                                    <rect key="frame" x="16" y="1393" width="288" height="33"/>
+                                                    <rect key="frame" x="16" y="1409.5" width="288" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="Eer-e0-IdP"/>
                                                     </constraints>
@@ -394,13 +398,13 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xyj-DA-I4m">
-                                                    <rect key="frame" x="16" y="1446" width="288" height="250"/>
+                                                    <rect key="frame" x="16" y="1462.5" width="288" height="250"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="250" id="2rq-cw-GGV"/>
                                                     </constraints>
                                                 </mapView>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1b-nC-8zw" userLabel="Transport Container View">
-                                                    <rect key="frame" x="0.0" y="1716" width="320" height="215"/>
+                                                    <rect key="frame" x="0.0" y="1732.5" width="320" height="215"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="215" id="inT-Fa-azN"/>
                                                     </constraints>
@@ -409,7 +413,7 @@ samedi et dimanche.</string>
                                                     </connections>
                                                 </containerView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36K-Nt-LWk">
-                                                    <rect key="frame" x="16" y="1993" width="288" height="90"/>
+                                                    <rect key="frame" x="16" y="2009.5" width="288" height="90"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-2" translatesAutoresizingMaskIntoConstraints="NO" id="ngp-hW-CPD">
                                                             <rect key="frame" x="250" y="35" width="13" height="20"/>
@@ -439,7 +443,7 @@ samedi et dimanche.</string>
                                                     </connections>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partenaires" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGU-n3-Rpg">
-                                                    <rect key="frame" x="16" y="2123" width="132.5" height="27"/>
+                                                    <rect key="frame" x="16" y="2139.5" width="132.5" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="z06-Gv-dD8"/>
                                                     </constraints>
@@ -448,7 +452,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organisé par" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdD-WT-XTS">
-                                                    <rect key="frame" x="16" y="2168" width="72" height="12"/>
+                                                    <rect key="frame" x="16" y="2184.5" width="72" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="6Mw-Uq-J1b"/>
                                                     </constraints>
@@ -457,13 +461,13 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_afca" translatesAutoresizingMaskIntoConstraints="NO" id="6Yq-lS-AKk">
-                                                    <rect key="frame" x="16" y="2190" width="84" height="33"/>
+                                                    <rect key="frame" x="16" y="2206.5" width="84" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="6Yq-lS-AKk" secondAttribute="height" multiplier="120:47" id="emo-fE-KBU"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En partenariat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1q-iC-bxf">
-                                                    <rect key="frame" x="16" y="2253" width="79" height="12"/>
+                                                    <rect key="frame" x="16" y="2269.5" width="79" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="YOv-aX-8KU"/>
                                                     </constraints>
@@ -472,7 +476,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cC5-cc-eOn">
-                                                    <rect key="frame" x="16" y="2275" width="289" height="34"/>
+                                                    <rect key="frame" x="16" y="2291.5" width="289" height="34"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_theatre" translatesAutoresizingMaskIntoConstraints="NO" id="ZJe-p1-HKB">
                                                             <rect key="frame" x="0.0" y="0.0" width="102.5" height="34"/>
@@ -495,7 +499,7 @@ samedi et dimanche.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avec le soutien de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bu-wi-rlI">
-                                                    <rect key="frame" x="16" y="2339" width="103.5" height="12"/>
+                                                    <rect key="frame" x="16" y="2355.5" width="103.5" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="9Pn-8T-fnN"/>
                                                     </constraints>
@@ -504,7 +508,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="4aH-lQ-Zhl">
-                                                    <rect key="frame" x="16" y="2361" width="288" height="31"/>
+                                                    <rect key="frame" x="16" y="2377.5" width="288" height="31"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_sacd" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-a0-STX">
                                                             <rect key="frame" x="0.0" y="2" width="55" height="27.5"/>
@@ -527,7 +531,7 @@ samedi et dimanche.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-GD-dG8">
-                                                    <rect key="frame" x="32" y="2412" width="272" height="47"/>
+                                                    <rect key="frame" x="32" y="2428.5" width="272" height="47"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_procirep" translatesAutoresizingMaskIntoConstraints="NO" id="deZ-cl-0gA">
                                                             <rect key="frame" x="0.0" y="13.5" width="76" height="20"/>
@@ -550,7 +554,7 @@ samedi et dimanche.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crédits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-G0-HRU">
-                                                    <rect key="frame" x="16" y="2557" width="82.5" height="27"/>
+                                                    <rect key="frame" x="16" y="2573.5" width="82.5" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="HJ1-bI-VAx"/>
                                                     </constraints>
@@ -559,7 +563,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NON-z1-v8b">
-                                                    <rect key="frame" x="99.5" y="2599" width="121.5" height="16"/>
+                                                    <rect key="frame" x="99.5" y="2615.5" width="121.5" height="16"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-Xv-oHu">
                                                             <rect key="frame" x="0.0" y="0.0" width="66.5" height="16"/>
@@ -583,7 +587,7 @@ samedi et dimanche.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Développeurs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgg-Ah-rDN">
-                                                    <rect key="frame" x="16" y="2635" width="79.5" height="13"/>
+                                                    <rect key="frame" x="16" y="2651.5" width="79.5" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="xUg-TL-bdR"/>
                                                     </constraints>
@@ -592,7 +596,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexande Massé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NST-6F-gxu">
-                                                    <rect key="frame" x="16" y="2663" width="105.5" height="17"/>
+                                                    <rect key="frame" x="16" y="2679.5" width="105.5" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="ct4-M3-YFB"/>
                                                     </constraints>
@@ -601,7 +605,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbz-LU-BUc" userLabel="Link Robin">
-                                                    <rect key="frame" x="16" y="2736.5" width="113" height="25"/>
+                                                    <rect key="frame" x="16" y="2753" width="113" height="25"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
                                                     <state key="normal" title="http://robinminervini.fr">
                                                         <color key="titleColor" name="Black"/>
@@ -611,13 +615,13 @@ samedi et dimanche.</string>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robin Minervini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10h-U5-oOd">
-                                                    <rect key="frame" x="16" y="2720" width="98" height="16.5"/>
+                                                    <rect key="frame" x="16" y="2736.5" width="98" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="14"/>
                                                     <color key="textColor" name="Black"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhc-T0-dp4" userLabel="Link Alex">
-                                                    <rect key="frame" x="16" y="2680" width="125" height="25"/>
+                                                    <rect key="frame" x="16" y="2696.5" width="125" height="25"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
                                                     <state key="normal" title="https://alexandremasse.fr">
                                                         <color key="titleColor" name="Black"/>
@@ -627,7 +631,7 @@ samedi et dimanche.</string>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED2-Af-ayi">
-                                                    <rect key="frame" x="16" y="2786.5" width="56.5" height="13"/>
+                                                    <rect key="frame" x="16" y="2803" width="56.5" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="fnO-Te-2lc"/>
                                                     </constraints>
@@ -636,7 +640,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elisa Dubois" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWC-iT-dWc">
-                                                    <rect key="frame" x="16" y="2814.5" width="78" height="17"/>
+                                                    <rect key="frame" x="16" y="2831" width="78" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="LVa-cr-Xyr"/>
                                                     </constraints>
@@ -645,7 +649,7 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnI-iw-AQl">
-                                                    <rect key="frame" x="16" y="2831.5" width="100" height="25"/>
+                                                    <rect key="frame" x="16" y="2848" width="100" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="tY0-pj-V3W"/>
                                                     </constraints>
@@ -658,13 +662,13 @@ samedi et dimanche.</string>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clémentine Espinel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWW-4j-xfa">
-                                                    <rect key="frame" x="16" y="2871.5" width="124.5" height="16.5"/>
+                                                    <rect key="frame" x="16" y="2888" width="124.5" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="14"/>
                                                     <color key="textColor" name="Black"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9f-xw-5i4">
-                                                    <rect key="frame" x="16" y="2888" width="140" height="25"/>
+                                                    <rect key="frame" x="16" y="2904.5" width="140" height="25"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
                                                     <state key="normal" title="http://clementinespinel.com">
                                                         <color key="titleColor" name="Black"/>
@@ -674,13 +678,13 @@ samedi et dimanche.</string>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cassandre Leguay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKI-ih-x4N">
-                                                    <rect key="frame" x="16" y="2928" width="119" height="16.5"/>
+                                                    <rect key="frame" x="16" y="2944.5" width="119" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="14"/>
                                                     <color key="textColor" name="Black"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EU-NG-rAm">
-                                                    <rect key="frame" x="16" y="2944.5" width="188" height="25"/>
+                                                    <rect key="frame" x="16" y="2961" width="188" height="25"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
                                                     <state key="normal" title="http://cargocollective.com/cassandrely">
                                                         <color key="titleColor" name="Black"/>
@@ -690,7 +694,7 @@ samedi et dimanche.</string>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réalisé par Gobelins, l'école de l'image, en partenariat avec l'AFCA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1M6-UH-eOq">
-                                                    <rect key="frame" x="16" y="2989.5" width="289" height="33"/>
+                                                    <rect key="frame" x="16" y="3006" width="289" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="kya-S2-DYY"/>
                                                     </constraints>
@@ -699,20 +703,20 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoGobelins" translatesAutoresizingMaskIntoConstraints="NO" id="Dxn-fe-hqe">
-                                                    <rect key="frame" x="146" y="3047.5" width="28" height="51"/>
+                                                    <rect key="frame" x="146" y="3064" width="28" height="51"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="51" id="uH1-d5-UFQ"/>
                                                         <constraint firstAttribute="width" constant="28" id="zPu-Fd-pq7"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_rennes" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-Dj-GuF">
-                                                    <rect key="frame" x="16" y="2477" width="87" height="30"/>
+                                                    <rect key="frame" x="16" y="2493.5" width="87" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="87" id="Xgo-hm-6Mc"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-qi-9pR" userLabel="Tarif view">
-                                                    <rect key="frame" x="16" y="730" width="288" height="120"/>
+                                                    <rect key="frame" x="16" y="746.5" width="288" height="120"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Onl-b7-o9Q">
                                                             <rect key="frame" x="0.0" y="0.0" width="61" height="85"/>
@@ -860,7 +864,7 @@ samedi et dimanche.</string>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toutes les salles sont accessibles aux personnes à mobilité réduite." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44X-Vw-SyA">
-                                                    <rect key="frame" x="16" y="1939" width="288" height="34"/>
+                                                    <rect key="frame" x="16" y="1955.5" width="288" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="d5b-Ku-Ji4"/>
                                                     </constraints>
@@ -1040,7 +1044,7 @@ samedi et dimanche.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cen-eX-nXy" userLabel="City">
-                                                    <rect key="frame" x="20" y="16" width="16" height="12"/>
+                                                    <rect key="frame" x="20" y="16" width="17.5" height="12"/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                                     <color key="textColor" name="MauveDark"/>
                                                     <nil key="highlightedColor"/>
@@ -1060,14 +1064,14 @@ samedi et dimanche.</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-ea-7CG" userLabel="Address">
-                                                    <rect key="frame" x="20" y="49.5" width="39.5" height="13"/>
+                                                    <rect key="frame" x="20" y="49.5" width="40.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
                                                     <color key="textColor" red="0.19607843137254902" green="0.23921568627450979" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WY-0o-2Oa" userLabel="Phone">
-                                                    <rect key="frame" x="20" y="63.5" width="31" height="13"/>
+                                                    <rect key="frame" x="20" y="63.5" width="33" height="13"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
                                                     <color key="textColor" name="MauveDark"/>
                                                     <nil key="highlightedColor"/>
@@ -1084,7 +1088,7 @@ samedi et dimanche.</string>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCÈS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wru-s6-F19" userLabel="Acces">
-                                                    <rect key="frame" x="20" y="113.5" width="37" height="13"/>
+                                                    <rect key="frame" x="20" y="113.5" width="38" height="13"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -1131,7 +1135,7 @@ samedi et dimanche.</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="metroStop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-AQ-GoO" userLabel="metroStop">
-                                                    <rect key="frame" x="20" y="179.5" width="52" height="13"/>
+                                                    <rect key="frame" x="20" y="179.5" width="54" height="13"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>

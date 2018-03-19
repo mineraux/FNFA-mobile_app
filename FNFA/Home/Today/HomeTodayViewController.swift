@@ -133,12 +133,18 @@ class HomeTodayViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+        var tagSender = ((sender as! UITapGestureRecognizer).view?.tag)!
+        
+        if tagSender != 0 {
+            tagSender -= 100
+            let vc = segue.destination as! allEventsController
+            vc.dayIndex = tagSender
+        }
+        
         if let cell = sender as? HomeTodayCollectionViewCell,
             let indexPath = self.collectionView.indexPath(for: cell) {
             let vc = segue.destination as! SingleEventTableViewController
             vc.event = [filteredEvents[indexPath.row]]
         }
-        
     }
 }

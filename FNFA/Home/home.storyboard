@@ -533,7 +533,7 @@
                                 <color key="textColor" name="Gold"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-Lc-xga" userLabel="seeAllView">
+                            <view tag="100" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-Lc-xga" userLabel="seeAllView">
                                 <rect key="frame" x="226" y="33" width="78" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -697,7 +697,7 @@
                                     <outlet property="delegate" destination="0Bi-oR-uhb" id="cxl-6m-7XW"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mSk-TW-59O" userLabel="seeAllView">
+                            <view tag="101" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mSk-TW-59O" userLabel="seeAllView">
                                 <rect key="frame" x="227" y="35" width="77" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -866,7 +866,7 @@
                                 <color key="textColor" name="Gold"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8d-gL-KWT" userLabel="seeAllView">
+                            <view tag="102" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8d-gL-KWT" userLabel="seeAllView">
                                 <rect key="frame" x="226" y="35" width="78" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1104,7 +1104,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRx-Hv-ukF" userLabel="seeAllView">
+                            <view tag="103" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRx-Hv-ukF" userLabel="seeAllView">
                                 <rect key="frame" x="226" y="35" width="78" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1273,7 +1273,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-vV-hyJ" userLabel="seeAllView">
+                            <view tag="104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-vV-hyJ" userLabel="seeAllView">
                                 <rect key="frame" x="226" y="35" width="78" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1332,7 +1332,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6IH-iV-dFn"/>
-        <segue reference="Gzd-Bx-KSl"/>
+        <segue reference="w7V-eX-umq"/>
+        <segue reference="8Iq-eY-Gf5"/>
     </inferredMetricsTieBreakers>
 </document>

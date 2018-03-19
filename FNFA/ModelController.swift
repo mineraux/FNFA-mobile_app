@@ -249,13 +249,17 @@ class ModelController: NSObject {
     }
     
     func setStartingDateDayNumber() {
-        
         for event in events {
             let formatter = ISO8601DateFormatter()
+            formatter.timeZone = TimeZone(identifier: "Europe/Paris")
             let dateIso = event["startingDate"]!
             let test = dateIso as! String
             if let date = formatter.date(from: test) {
                 event["startingDateDayNumber"]! = date.nameNumberDate
+                if (event["id"] as! Int) == 29 {
+                    print(event)
+                    print(formatter.timeZone)
+                }
             }
         }
     }

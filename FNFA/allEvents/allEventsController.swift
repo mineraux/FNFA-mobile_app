@@ -49,6 +49,7 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
     var valueToPass: NSMutableDictionary?
     var activeFilters = [String]()
     var arrayFiltersButton = [UIButton]()
+    var dayIndex = 0
     
     // Dropdown stuff
     var button = dropDownBtn()
@@ -128,8 +129,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         
-        button.setTitle(button.dropView.dropDownOptions[0], for: .normal)
-        filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
+        button.setTitle(button.dropView.dropDownOptions[dayIndex], for: .normal)
+        filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[dayIndex].lowercased() }
         tableView.reloadData()
     }
     
@@ -240,6 +241,8 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         filteredEvents =  (modelController?.events
             .sorted(by: .date))!
         filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
+        
+        print(modelController?.events)
         
         for filter in activeFilters {
             filteredEvents = filteredEvents.filter { $0["category"] as? String == filter }
