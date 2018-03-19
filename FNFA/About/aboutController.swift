@@ -96,7 +96,6 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         linkElisa.setAttributedTitle(attributeStringElisa, for: .normal)
         linkClementine.setAttributedTitle(attributeStringClementine, for: .normal)
         linkCassandre.setAttributedTitle(attributeStringCassandre, for: .normal)
-        
     }
     
     func addAnnotation(name:String!, latitute:Double!, longitude:Double!) -> Void {

@@ -113,7 +113,7 @@
 		5D73FE232032FA9D007FB93A /* favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = favorites.storyboard; sourceTree = "<group>"; };
 		5D73FE2720330102007FB93A /* allEventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allEventsController.swift; sourceTree = "<group>"; };
 		5D98A3CF20348081004ACDBD /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
-		5DAA453C2031DEE500A7408E /* FNFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FNFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DAA453C2031DEE500A7408E /* FNFA 2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FNFA 2018.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAA453F2031DEE500A7408E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAA45442031DEE500A7408E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DAA45492031DEE500A7408E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		5DAA453D2031DEE500A7408E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DAA453C2031DEE500A7408E /* FNFA.app */,
+				5DAA453C2031DEE500A7408E /* FNFA 2018.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -475,7 +475,7 @@
 			);
 			name = FNFA;
 			productName = FNFA;
-			productReference = 5DAA453C2031DEE500A7408E /* FNFA.app */;
+			productReference = 5DAA453C2031DEE500A7408E /* FNFA 2018.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -683,7 +683,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -734,7 +734,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -747,11 +747,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q43SQQN57W;
+				DEVELOPMENT_TEAM = 2L7XR8B7C8;
 				INFOPLIST_FILE = FNFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gobelins.FNFA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.fnfa2018.festival;
+				PRODUCT_NAME = "FNFA 2018";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -762,11 +762,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q43SQQN57W;
+				DEVELOPMENT_TEAM = 2L7XR8B7C8;
 				INFOPLIST_FILE = FNFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gobelins.FNFA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.fnfa2018.festival;
+				PRODUCT_NAME = "FNFA 2018";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
