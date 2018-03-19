@@ -74,7 +74,7 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         mapView.layer.cornerRadius = 6
         locationManager.delegate = self
         
-        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15);
         let mapCenterView:CLLocationCoordinate2D = CLLocationCoordinate2DMake(48.117056, -1.678498)
         let region:MKCoordinateRegion = MKCoordinateRegionMake(mapCenterView, span)
         mapView.setRegion(region, animated: true)
@@ -129,7 +129,7 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     @IBAction func goToTheWebsite(_ sender: Any) {
-        if let url = URL(string: "https://www.afca.asso.fr/") {
+        if let url = URL(string: "http://www.festival-film-animation.fr") {
             UIApplication.shared.open(url, options: [:])
         }
     }

@@ -31,16 +31,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main-->
-        <scene sceneID="dXT-fH-rsM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="kKc-nb-GlB" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="xmK-R5-thZ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zoX-MQ-crt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1307" y="-13"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="WsM-H1-rnx">
             <objects>

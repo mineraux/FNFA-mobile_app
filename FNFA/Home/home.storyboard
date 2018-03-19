@@ -222,11 +222,11 @@
             </objects>
             <point key="canvasLocation" x="2508" y="385"/>
         </scene>
-        <!--Le fesitval-->
+        <!--Le festival-->
         <scene sceneID="Eho-Eq-BIL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKH-ux-B0J" customClass="HomeNavigtionController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Le fesitval" image="tabbar-home_unselected" selectedImage="tabbar-home" id="vj9-EZ-OcS"/>
+                    <tabBarItem key="tabBarItem" title="Le festival" image="tabbar-home_unselected" selectedImage="tabbar-home" id="vj9-EZ-OcS"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -247,166 +247,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKn-fS-EeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-602" y="606"/>
-        </scene>
-        <!--My selection-->
-        <scene sceneID="afj-Zp-beM">
-            <objects>
-                <viewController title="My selection" id="ucU-Mh-Ej0" customClass="HomeMySelectionViewController" customModule="FNFA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dXe-As-dzV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JMo-u0-lZy">
-                                <rect key="frame" x="0.0" y="55" width="545" height="220"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Black"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="tny-3a-zpc">
-                                    <size key="itemSize" width="200" height="220"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mySelectionCell" id="r7j-9A-5aJ" userLabel="mySelectionCell" customClass="HomeMySelectionCollectionViewCell" customModule="FNFA" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="200" height="220"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-F8-CFP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="82"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-HA-GjY">
-                                                            <rect key="frame" x="8" y="29" width="184" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="14"/>
-                                                            <color key="textColor" name="Black"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dq-JR-OTr">
-                                                            <rect key="frame" x="8" y="51" width="35" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="12"/>
-                                                            <color key="textColor" name="Black"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventCategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiD-A3-b9V">
-                                                            <rect key="frame" x="8" y="8" width="138" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="8"/>
-                                                            <color key="textColor" red="0.43529411759999997" green="0.52941176469999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventPlace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-TM-6la">
-                                                            <rect key="frame" x="56" y="51" width="136" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
-                                                            <color key="textColor" name="Black"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9mc-eU-Ldq">
-                                                            <rect key="frame" x="44" y="56" width="8" height="10"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UE-DH-ZSv">
-                                                            <rect key="frame" x="174" y="8" width="18" height="15"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="18" id="3JN-Gf-wU1"/>
-                                                                <constraint firstAttribute="height" constant="15" id="VMy-aR-RYm"/>
-                                                            </constraints>
-                                                            <state key="normal" image="heart_empty"/>
-                                                            <connections>
-                                                                <action selector="favAction:" destination="r7j-9A-5aJ" eventType="touchUpInside" id="Z7u-KT-eKj"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="9UE-DH-ZSv" firstAttribute="top" secondItem="yaT-F8-CFP" secondAttribute="top" constant="8" id="YlJ-FY-gPG"/>
-                                                        <constraint firstAttribute="trailing" secondItem="9UE-DH-ZSv" secondAttribute="trailing" constant="8" id="zEZ-wh-iwy"/>
-                                                    </constraints>
-                                                </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-o2-cAx">
-                                                    <rect key="frame" x="0.0" y="82" width="200" height="138"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="yaT-F8-CFP" secondAttribute="bottom" constant="138" id="0Xn-LN-Awn"/>
-                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="leading" secondItem="r7j-9A-5aJ" secondAttribute="leading" id="2Qx-bP-Z0w"/>
-                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="leading" secondItem="XaD-o2-cAx" secondAttribute="leading" id="8dM-5x-dnV"/>
-                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="trailing" secondItem="XaD-o2-cAx" secondAttribute="trailing" id="ReK-YU-gha"/>
-                                            <constraint firstItem="yaT-F8-CFP" firstAttribute="top" secondItem="r7j-9A-5aJ" secondAttribute="top" id="Wm8-8b-nFS"/>
-                                            <constraint firstAttribute="trailing" secondItem="yaT-F8-CFP" secondAttribute="trailing" id="hJw-06-FgT"/>
-                                            <constraint firstAttribute="bottom" secondItem="XaD-o2-cAx" secondAttribute="bottom" id="hdI-JL-bdl"/>
-                                            <constraint firstItem="XaD-o2-cAx" firstAttribute="top" secondItem="yaT-F8-CFP" secondAttribute="bottom" id="mTi-Ub-9yZ"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="eventCategory" destination="RiD-A3-b9V" id="8FH-cY-Tjf"/>
-                                            <outlet property="eventDate" destination="1dq-JR-OTr" id="K5p-w9-ZSr"/>
-                                            <outlet property="eventImage" destination="XaD-o2-cAx" id="Mdq-1q-nRK"/>
-                                            <outlet property="eventName" destination="CdF-HA-GjY" id="cQX-JV-tcM"/>
-                                            <outlet property="eventPlace" destination="s2h-TM-6la" id="HqI-M8-Bcj"/>
-                                            <outlet property="favButton" destination="9UE-DH-ZSv" id="PX1-CS-dcv"/>
-                                            <outlet property="locationImage" destination="9mc-eU-Ldq" id="fAU-rN-djC"/>
-                                            <segue destination="5LV-lh-81z" kind="show" identifier="singleEvent" id="hzp-eC-CgK"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="ucU-Mh-Ej0" id="uA6-ky-pwj"/>
-                                    <outlet property="delegate" destination="ucU-Mh-Ej0" id="5CN-OA-0Zk"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ma Sélection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqb-zI-PQp">
-                                <rect key="frame" x="21" y="20" width="157" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-Az-hX1" userLabel="seeAllView">
-                                <rect key="frame" x="463" y="17" width="66" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paQ-7F-nYh">
-                                        <rect key="frame" x="0.0" y="6" width="46" height="14"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                        <color key="textColor" name="SkyBlue"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4Z-L6-fmU">
-                                        <rect key="frame" x="50" y="6" width="16" height="14"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jHp-pM-i1z" appends="YES" id="7Or-cn-CFU"/>
-                                </connections>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" name="Black"/>
-                        <viewLayoutGuide key="safeArea" id="cQl-wu-GAg"/>
-                    </view>
-                    <connections>
-                        <outlet property="collectionView" destination="JMo-u0-lZy" id="R5y-gU-Gmt"/>
-                        <outlet property="sectionTitle" destination="Oqb-zI-PQp" id="1lR-ea-Oug"/>
-                        <outlet property="seeAllImage" destination="S4Z-L6-fmU" id="0mr-XI-yDG"/>
-                        <outlet property="seeAllLabel" destination="paQ-7F-nYh" id="RVg-kP-p5c"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8w3-dU-ZEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="jHp-pM-i1z">
-                    <connections>
-                        <action selector="handleTap:" destination="ucU-Mh-Ej0" id="G19-h4-dEx"/>
-                        <segue destination="UDi-TF-KQ8" kind="show" id="ZVH-z3-Myn"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="2775" y="-116"/>
         </scene>
         <!--Today-->
         <scene sceneID="8C0-Uq-giI">
@@ -519,7 +359,7 @@
                                     <outlet property="delegate" destination="eg1-nQ-iHw" id="myr-Y7-RrR"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awM-dq-Dkj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awM-dq-Dkj">
                                 <rect key="frame" x="20" y="39" width="198" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
@@ -537,7 +377,7 @@
                                 <rect key="frame" x="221" y="41" width="83" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-dK-67q">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-dK-67q">
                                         <rect key="frame" x="5" y="6" width="58" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
@@ -697,7 +537,7 @@
                                     <outlet property="delegate" destination="0Bi-oR-uhb" id="cxl-6m-7XW"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-S9-IXk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-S9-IXk">
                                 <rect key="frame" x="22" y="38" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
@@ -708,7 +548,7 @@
                                 <rect key="frame" x="217" y="40" width="87" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuO-YI-lqx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuO-YI-lqx">
                                         <rect key="frame" x="5" y="6" width="62" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
@@ -866,7 +706,7 @@
                                 <color key="textColor" name="Gold"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb4-nd-kjY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb4-nd-kjY">
                                 <rect key="frame" x="21" y="39" width="197" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
@@ -877,7 +717,7 @@
                                 <rect key="frame" x="213" y="41" width="91" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-yb-n76">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-yb-n76">
                                         <rect key="frame" x="12" y="7" width="59" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
@@ -930,7 +770,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diA-pV-QbO">
-                                <rect key="frame" x="16" y="210.5" width="288" height="78.5"/>
+                                <rect key="frame" x="16" y="212" width="288" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Découvrez l’intégralité du programme du festival national du film d’animation et organisez votre visite grâce à votre page de favoris. </string>
@@ -944,7 +784,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoO-tw-9xk">
-                                <rect key="frame" x="16" y="174.5" width="288" height="28"/>
+                                <rect key="frame" x="16" y="174.5" width="288" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1097,7 +937,7 @@
                                 <color key="textColor" name="Gold"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-fo-jWw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-fo-jWw">
                                 <rect key="frame" x="21" y="38" width="197" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
@@ -1108,7 +948,7 @@
                                 <rect key="frame" x="220" y="40" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-mn-nqm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-mn-nqm">
                                         <rect key="frame" x="6" y="6" width="58" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
@@ -1266,7 +1106,7 @@
                                 <color key="textColor" name="Gold"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YA-cZ-H7K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YA-cZ-H7K">
                                 <rect key="frame" x="21" y="38" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
@@ -1277,7 +1117,7 @@
                                 <rect key="frame" x="221" y="40" width="83" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngr-zy-GHf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voir tout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngr-zy-GHf">
                                         <rect key="frame" x="5" y="6" width="58" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
@@ -1317,7 +1157,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="12" width="1920" height="800"/>
         <image name="heart_empty" width="56" height="49"/>
         <image name="tabbar-home" width="25" height="25"/>
         <image name="tabbar-home_unselected" width="25" height="25"/>
@@ -1332,7 +1171,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pW0-26-wdW"/>
-        <segue reference="tCi-pC-X6L"/>
+        <segue reference="w7V-eX-umq"/>
+        <segue reference="8Iq-eY-Gf5"/>
     </inferredMetricsTieBreakers>
 </document>
