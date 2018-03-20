@@ -34,6 +34,8 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
     @IBOutlet weak var linkElisa: UIButton!
     @IBOutlet weak var linkClementine: UIButton!
     @IBOutlet weak var linkCassandre: UIButton!
+    @IBOutlet weak var textWithAsterisqueBefore: UILabel!
+    @IBOutlet weak var textWithAsterisqueAfter: UILabel!
     
     let attributesUnderlinedButton : [NSAttributedStringKey: Any] = [NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
     
@@ -48,7 +50,7 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         let bgView = UIView()
         bgView.backgroundColor = UIColor(named: "Green")
         self.tableView.backgroundView = bgView
-        
+        tableView.allowsSelection = false;
         containerIntro.layer.cornerRadius = 6
         containerIntro.layer.masksToBounds = true
         
@@ -67,8 +69,46 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         square7.layer.cornerRadius = 6
         square8.layer.cornerRadius = 6
         
-        tableView.allowsSelection = false;
+        //ASRERIX
         
+        //Create Attachment
+        let asterisqueBefore =  NSTextAttachment()
+        asterisqueBefore.image = UIImage(named:"asterisque")
+        //Set bound to reposition
+        let asterisqueBeforeImageOffsetY:CGFloat = 2;
+        asterisqueBefore.bounds = CGRect(x: 0, y: asterisqueBeforeImageOffsetY , width: 7, height: 7)
+        //Create string with attachment
+        let attachmentString = NSAttributedString(attachment: asterisqueBefore)
+        //Initialize mutable string
+        let asterisqueBeforeCompleteText = NSMutableAttributedString(string: "")
+        //Add image to mutable string
+        asterisqueBeforeCompleteText.append(attachmentString)
+        //Add your text to mutable string
+        let textAfterIcon = NSMutableAttributedString(string: " carnet de fidélité, tarif de groupe et carte abonné non acceptés")
+        asterisqueBeforeCompleteText.append(textAfterIcon)
+        textWithAsterisqueBefore.attributedText = asterisqueBeforeCompleteText;
+        
+        //Create Attachment
+        let asterisqueAfter =  NSTextAttachment()
+        asterisqueAfter.image = UIImage(named:"asterisque")
+        //Set bound to reposition
+        let asterisqueAfterImageOffsetY:CGFloat = 2;
+        asterisqueAfter.bounds = CGRect(x: 0, y: asterisqueAfterImageOffsetY , width: 7, height: 7)
+        //Create string with attachment
+        let attachmentString2 = NSAttributedString(attachment: asterisqueAfter)
+        //Initialize mutable string
+        let asterisqueAfterCompleteText = NSMutableAttributedString(string: "")
+        //Add image to mutable string
+        asterisqueAfterCompleteText.append(attachmentString2)
+        //Add your text to mutable string
+        let textBeforeIcon = NSMutableAttributedString(string: "Ciné-concert ")
+        asterisqueAfterCompleteText.insert(textBeforeIcon, at: 0)
+        textWithAsterisqueAfter.attributedText = asterisqueAfterCompleteText;
+        
+        
+        //MAP
+        
+    
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.layer.cornerRadius = 6
