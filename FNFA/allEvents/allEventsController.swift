@@ -239,9 +239,30 @@ class allEventsController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     
         // Gestion du cas où plusieurs filtres sont sélectionnés
-        filteredEvents =  (modelController?.events
-            .sorted(by: .date))!
-        filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == button.dropView.dropDownOptions[0].lowercased() }
+
+        if (button.titleLabel?.text?.lowercased())! == "mercredi 4" {
+            filteredEvents =  (modelController?.events
+                .findBy(date: (modelController?.timestamp4Avril)!)?
+                .sorted(by: .date))!
+        } else if (button.titleLabel?.text?.lowercased())! == "jeudi 5" {
+            filteredEvents =  (modelController?.events
+                .findBy(date: (modelController?.timestamp5Avril)!)?
+                .sorted(by: .date))!
+        } else if (button.titleLabel?.text?.lowercased())! == "vendredi 6" {
+            filteredEvents =  (modelController?.events
+                .findBy(date: (modelController?.timestamp6Avril)!)?
+                .sorted(by: .date))!
+        } else if (button.titleLabel?.text?.lowercased())! == "samedi 7" {
+            filteredEvents =  (modelController?.events
+                .findBy(date: (modelController?.timestamp7Avril)!)?
+                .sorted(by: .date))!
+        } else if (button.titleLabel?.text?.lowercased())! == "dimanche 8" {
+            filteredEvents =  (modelController?.events
+                .findBy(date: (modelController?.timestamp8Avril)!)?
+                .sorted(by: .date))!
+        }
+        
+        filteredEvents = filteredEvents.filter { $0["startingDateDayNumber"] as? String == (button.titleLabel?.text?.lowercased())! }
         
         for filter in activeFilters {
             filteredEvents = filteredEvents.filter { $0["category"] as? String == filter }

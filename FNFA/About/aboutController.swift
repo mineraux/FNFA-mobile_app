@@ -80,6 +80,8 @@ class aboutController: UITableViewController, CLLocationManagerDelegate, MKMapVi
         mapView.setRegion(region, animated: true)
         
         addAnnotation(name: "TNB", latitute: 48.10796740000001, longitude: -1.6725616999999602)
+        addAnnotation(name: "France 3 Bretagne", latitute: 48.108465, longitude: -1.673220)
+        addAnnotation(name: "Musée de Bretagne", latitute: 48.105178, longitude: -1.674629)
         addAnnotation(name: "Arvor", latitute: 48.1159954, longitude: -1.6791138999999475)
         addAnnotation(name: "ESRA", latitute: 48.1288092, longitude: -1.6420402999999624)
         addAnnotation(name: "Grand Logis", latitute: 48.0231681, longitude: -1.7446339000000535)

@@ -15,6 +15,8 @@ class AboutTransportCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var place: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var openHour: UILabel!
+    @IBOutlet weak var heightOpenHour: NSLayoutConstraint!
     @IBOutlet weak var busStop: UILabel!
     @IBOutlet weak var metroStop: UILabel!
     
