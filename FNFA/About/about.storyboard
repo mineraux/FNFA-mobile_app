@@ -565,23 +565,23 @@ samedi et dimanche.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NON-z1-v8b">
-                                                    <rect key="frame" x="99.5" y="2726.5" width="121.5" height="16"/>
+                                                    <rect key="frame" x="102.5" y="2726.5" width="116.5" height="16"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-Xv-oHu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="66.5" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fait avec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-Xv-oHu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="56" height="16"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="14"/>
                                                             <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_heart" translatesAutoresizingMaskIntoConstraints="NO" id="V0n-gB-DWe">
-                                                            <rect key="frame" x="76.5" y="0.0" width="19" height="16"/>
+                                                            <rect key="frame" x="66" y="0.0" width="19" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="19" id="HvB-HS-6Da"/>
                                                                 <constraint firstAttribute="height" constant="16" id="QFm-RF-Mnn"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8N-lS-ycW">
-                                                            <rect key="frame" x="105.5" y="0.0" width="16" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="par" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8N-lS-ycW">
+                                                            <rect key="frame" x="95" y="0.0" width="21.5" height="16"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                             <color key="textColor" name="Black"/>
                                                             <nil key="highlightedColor"/>
