@@ -66,6 +66,13 @@ class AboutTransportViewController: UIViewController, UICollectionViewDelegate, 
         //phone
         transportCell.phone.text = transportDict["phone"] as? String
         
+        //openHour
+        transportCell.openHour.text = transportDict["openHour"] as? String
+        
+        if (transportCell.openHour.text)!.count == 0 {
+            transportCell.heightOpenHour.constant = 0
+        }
+        
         //busStop
         transportCell.busStop.text = transportDict["busStop"] as? String
         

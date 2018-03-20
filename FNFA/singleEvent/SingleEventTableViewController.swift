@@ -103,7 +103,7 @@ class SingleEventTableViewController: UITableViewController {
         
         if (currentEvent["age"] as! Int) > 0 {
             typePublic.isHidden = false
-            typePublic.text = "enfants".uppercased()
+            typePublic.text = "enfants".uppercased() + " (\(currentEvent["age"]!) ans)"
         } else {
             typePublic.isHidden = true
         }
@@ -142,6 +142,7 @@ class SingleEventTableViewController: UITableViewController {
         } else {
             linkToSiteTopConstraint.constant = 30
         }
+        
     }
     
     @IBAction func toggleFavorite(_ sender: Any) {

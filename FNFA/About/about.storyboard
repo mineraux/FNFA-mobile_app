@@ -1203,8 +1203,10 @@ samedi et dimanche.</string>
                                             <outlet property="address" destination="nK7-ea-7CG" id="hsj-he-akI"/>
                                             <outlet property="busStop" destination="k35-C9-rvp" id="rar-QH-pfd"/>
                                             <outlet property="city" destination="cen-eX-nXy" id="a2P-Oa-ttC"/>
+                                            <outlet property="heightOpenHour" destination="t2F-Zo-XUR" id="eFX-n2-bdi"/>
                                             <outlet property="locationIcon" destination="sBy-s0-pRW" id="fkT-xl-1Vf"/>
                                             <outlet property="metroStop" destination="EM5-AQ-GoO" id="ysU-Qk-xGR"/>
+                                            <outlet property="openHour" destination="nEe-tC-Swc" id="70X-ws-XVF"/>
                                             <outlet property="phone" destination="8WY-0o-2Oa" id="6fD-cL-MjI"/>
                                             <outlet property="place" destination="2OA-uN-LUl" id="zxK-5T-Jkc"/>
                                             <outlet property="transportIcon1" destination="2mH-X5-NMa" id="5aX-wH-XCh"/>
